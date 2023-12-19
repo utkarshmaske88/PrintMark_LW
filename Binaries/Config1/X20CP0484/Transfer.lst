@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0?>
+<Transfer xmlns="http://br-automation.co.at/AS/Transfer">
+  <OperatingSystem Version="G4.93"/>
+  <Hardware Target="SG4"/>
+  <Operation Delete="Cutter.br"/>
+  <Operation Delete="MpAxis.br"/>
+  <Operation Delete="asieccon.br"/>
+  <Operation Delete="dataobj.br"/>
+  <Operation Delete="MpCom.br"/>
+  <Operation Delete="MpBase.br"/>
+  <Operation Delete="Acp10_MC.br"/>
+  <Operation Delete="sys_lib.br"/>
+  <Operation Delete="brsystem.br"/>
+  <Operation Delete="Acp10man.br"/>
+  <Operation Delete="fileio.br"/>
+  <Operation Delete="astime.br"/>
+  <Operation Download="asfw.br" Memory="SystemROM"/>
+  <Operation Download="ashwd.br" Memory="SystemROM"/>
+  <Operation Download="arconfig.br" Memory="SystemROM"/>
+  <Operation Download="sysconf.br" Memory="SystemROM"/>
+  <Operation Restart="warm"/>
+  <Operation Download="Acp10map.br" Memory="UserROM"/>
+  <Operation Download="acp10cfg.br" Memory="UserROM"/>
+  <Operation Download="NcGlobal.br" Memory="UserROM"/>
+  <Operation Download="powerlnk.br" Memory="UserROM"/>
+  <Operation Download="Acp10par.br" Memory="UserROM"/>
+  <Operation Download="runtime.br" Memory="UserROM"/>
+  <Operation Download="astime.br" Memory="UserROM"/>
+  <Operation Download="fileio.br" Memory="UserROM"/>
+  <Operation Download="Acp10man.br" Memory="UserROM"/>
+  <Operation Download="brsystem.br" Memory="UserROM"/>
+  <Operation Download="sys_lib.br" Memory="UserROM"/>
+  <Operation Download="Acp10_MC.br" Memory="UserROM"/>
+  <Operation Download="Acp10sys.br" Memory="UserROM"/>
+  <Operation Download="gAxMsa.br" Memory="UserROM"/>
+  <Operation Download="gAxMsi.br" Memory="UserROM"/>
+  <Operation Download="acp10etxen.br" Memory="UserROM"/>
+  <Operation Download="gAxSlavea.br" Memory="UserROM"/>
+  <Operation Download="gAxSlavei.br" Memory="UserROM"/>
+  <Operation Restart="warm"/>
+  <Operation Download="asbrstr.br" Memory="UserROM"/>
+  <Operation Download="arsvcreg.br" Memory="UserROM"/>
+  <Operation Download="MpBase.br" Memory="UserROM"/>
+  <Operation Download="MpCom.br" Memory="UserROM"/>
+  <Operation Download="dataobj.br" Memory="UserROM"/>
+  <Operation Download="asieccon.br" Memory="UserROM"/>
+  <Operation Download="MpAxis.br" Memory="UserROM"/>
+  <Operation Download="udbdef.br" Memory="UserROM"/>
+  <Operation Download="TCData.br" Memory="SystemROM"/>
+  <Operation Download="FWRules.br" Memory="UserROM"/>
+  <Operation Download="slaveaxis.br" Memory="UserROM"/>
+  <Operation Download="ashwac.br" Memory="UserROM"/>
+  <Operation Download="User.br" Memory="UserROM"/>
+  <Operation Download="masteraxis.br" Memory="UserROM"/>
+  <Operation Download="iomap.br" Memory="UserROM"/>
+  <Operation Download="Role.br" Memory="UserROM"/>
+  <Operation Download="Cutter.br" Memory="UserROM"/>
+</Transfer>

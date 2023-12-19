@@ -1,0 +1,110 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=Cutter 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=179 Type=0 Scope=0 Force=0 Index=7 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                             iFb_SlaveAx                              MpAxisBasic    0 "                                                               *"    0   24    1    0    1    1         
+                                  MpLink                                    UDINT    0 "                                                        90430904"    1    7    1   10    0    0         
+                                  Enable                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                              ErrorReset                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                              Parameters                                    UDINT    0 "                                                        61728588"    1    7    1   10    0    0         
+                                  Update                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                    Axis                                    UDINT    0 "                                                        90429676"    1    7    1   10    0    0         
+                                   Power                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                    Home                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                            MoveVelocity                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                            MoveAbsolute                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                            MoveAdditive                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                    Stop                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                             JogPositive                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                             JogNegative                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                Autotune                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                Simulate                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                             TorqueLimit                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                            ReleaseBrake                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                  Active                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               0"    1    4    1   10    0    0         
+                              UpdateDone                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                Position                                    LREAL    0 "                                                          1032.0"    1   14    1   10    0    0         
+                                Velocity                                     REAL    0 "                                                             0.0"    1    8    1   10    0    0         
+                             CommandBusy                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                          CommandAborted                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                 PowerOn                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                 IsHomed                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                              InVelocity                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                            iAxStep_enum                                     DINT    0 "                                                               4"    0    4    1   10    1    0 e,0,enIN
+
+                         BasicParameters                       MpAxisBasicParType    0 "                                                               *"    0   24    1    0    1    0         
+                            Acceleration                                     REAL    0 "                                                               *"    1    8    1   10    0    0         
+                            Deceleration                                     REAL    0 "                                                               *"    1    8    1   10    0    0         
+                                Velocity                                     REAL    0 "                                                               *"    1    8    1   10    0    0         
+                                Position                                    LREAL    0 "                                                               *"    1   14    1   10    0    0         
+                                Distance                                    LREAL    0 "                                                               *"    1   14    1   10    0    0         
+                               Direction                                     DINT    0 "                                                               *"    1    4    1   10    0    0 e,0,mpAX
+
+                                    Home                         MpAxisHomingType    0 "                                                               *"    1   24    1    0    0    0         
+                                    Mode                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                                Position                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                           StartVelocity                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                          HomingVelocity                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                            SensorOffset                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                            Acceleration                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                          StartDirection                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                         HomingDirection                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                       NoDirectionChange                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                              SwitchEdge                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                          ReferencePulse                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+          ReferencePulseBlockingDistance                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             TorqueLimit                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+             BlockDetectionPositionError                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                  PositionErrorStopLimit                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                  EndlessPositionDataRef                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                                     Jog                            MpAxisJogType    0 "                                                               *"    1   24    1    0    0    0         
+                            Acceleration                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                            Deceleration                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                                Velocity                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                              LowerLimit                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                              UpperLimit                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                                    Stop                           MpAxisStopType    0 "                                                               *"    1   24    1    0    0    0         
+                            Deceleration                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                             StopInPhase                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
+                                   Phase                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                        StopAfterTrigger               MpAxisStopAfterTriggerType    0 "                                                               *"    1   24    1    0    0    0         
+                                  Enable                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
+                         TriggerDistance                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                    ForceTriggerDistance                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
+                                  Source                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,20,mpA
+
+                                    Edge                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                                  Torque                    MpAxisTorqueLimitType    0 "                                                               *"    1   24    1    0    0    0         
+                                   Limit                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                                  Window                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                              CyclicRead                MpAxisCyclicReadSetupType    0 "                                                               *"    1   24    1    0    0    0         
+                              TorqueMode                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                            LagErrorMode                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                           MotorTempMode                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                         UserChannelMode                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                                Autotune                       MpAxisAutotuneType    0 "                                                               *"    1   24    1    0    0    0         
+                                    Mode                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                             FeedForward                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mpAX
+
+                                Vertical                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
+                       MaxCurrentPercent                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                         MaxSpeedPercent                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                             MaxDistance                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+               ProportionalAmplification                                     REAL    0 "                                                               *"    2    8    1   10    0    0         
+                                icmdHome                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
+                              icmdUpdate                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                           UPPER_CUT_POS                                     REAL    0 "                                                          3013.0"    0    8    1   10    1    0         
+                           LOWER_CUT_POS                                     REAL    0 "                                                          2653.0"    0    8    1   10    0    0         
