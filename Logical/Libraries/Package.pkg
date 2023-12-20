@@ -15,5 +15,7 @@
     <Object Type="Library" Language="Binary" Description="mapp components diagnosis,hierarchy and unit handling">MpCom</Object>
     <Object Type="Library" Language="binary" Description="The SYS_LIB library contains functions for memory management and operating system manipulation as well as hardware-specific functions.">sys_lib</Object>
     <Object Type="Library" Language="binary" Description="The BRSystem library provides the user with a number of system functions for e.g. handling permanent memory, accessing exception information, etc.">brsystem</Object>
+    <Object Type="Library" Language="binary" Description="Add-on library to ACP10_MC for registration mark handling">MC_RegMa</Object>
+    <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
   </Objects>
 </Package>

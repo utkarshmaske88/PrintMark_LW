@@ -4,7 +4,9 @@ TYPE
 		(
 		enINITA,
 		enSTARTA,
+		enNEEGHOMEMOVE,
 		enPOWER_ONA,
+		enPOSHOMINGSEC,
 		enPOSHOMING,
 		enNEGHOMING,
 		enHOMEA,

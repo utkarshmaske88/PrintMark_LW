@@ -8,5 +8,7 @@
     <File>SingCutter.st</File>
     <File>MultCutter.st</File>
     <File>CamAutoSingle.st</File>
+    <File>CamAutoMulti.st</File>
+    <File>RegCap.st</File>
   </Files>
 </Program>

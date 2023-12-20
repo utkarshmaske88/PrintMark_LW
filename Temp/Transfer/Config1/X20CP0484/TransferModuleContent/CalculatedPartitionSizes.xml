@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CFG>
+  <PROJECT ID="PrintMarkLabWork_Config1" OSVERSION="G4.93" INITIALTRANSFER="true" />
+  <FILESYSTEM>
+    <VOL ID="0" PARTITIONS="3">
+      <PARTITION ID="0" LABEL="SYSTEM" MINSIZE="33655148" />
+      <PARTITION ID="1" LABEL="RPSHD" MINSIZE="93292328" />
+      <PARTITION ID="2" LABEL="RPSHDS" MINSIZE="29876136" />
+      <PARTITION ID="3" LABEL="USER" MINSIZE="10485760" />
+    </VOL>
+  </FILESYSTEM>
+</CFG>

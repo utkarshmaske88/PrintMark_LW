@@ -3,13 +3,28 @@
 typedef enum AxStep_enum
 {	enINITA = 0,
 	enSTARTA = 1,
-	enPOWER_ONA = 2,
-	enPOSHOMING = 3,
-	enNEGHOMING = 4,
-	enHOMEA = 5,
-	enOPERATIONA = 6,
-	enERRORA = 7,
+	enNEEGHOMEMOVE = 2,
+	enPOWER_ONA = 3,
+	enPOSHOMINGSEC = 4,
+	enPOSHOMING = 5,
+	enNEGHOMING = 6,
+	enHOMEA = 7,
+	enOPERATIONA = 8,
+	enERRORA = 9,
 } AxStep_enum;
+#endif
+
+#ifndef __AS__TYPE_ACP10APNWCPA_typ
+#define __AS__TYPE_ACP10APNWCPA_typ
+typedef struct ACP10APNWCPA_typ
+{	unsigned long tx_nc_object;
+	unsigned short tx_par_id;
+	unsigned char tx_nr;
+	unsigned char rx_nr;
+	unsigned char rx_ipl_mode;
+	unsigned char reserve1;
+	unsigned short reserve2;
+} ACP10APNWCPA_typ;
 #endif
 
 #ifndef __AS__TYPE_MpAxisMoveDirectionEnum
@@ -685,6 +700,163 @@ typedef struct MpComInternalDataType
 } MpComInternalDataType;
 #endif
 
+#ifndef __AS__TYPE_MC_BR_CFG_RM2_REF
+#define __AS__TYPE_MC_BR_CFG_RM2_REF
+typedef struct MC_BR_CFG_RM2_REF
+{	float ProductLength;
+	float RegMarkPosition;
+	float RegMarkOffset;
+	float DistanceToSensor;
+} MC_BR_CFG_RM2_REF;
+#endif
+
+#ifndef __AS__TYPE_MC_BR_ADV_RM2_REF
+#define __AS__TYPE_MC_BR_ADV_RM2_REF
+typedef struct MC_BR_ADV_RM2_REF
+{	unsigned short Mode;
+	unsigned short EventSourceParID;
+	unsigned char Edge;
+	float MinWidth;
+	float MaxWidth;
+	float WindowNeg;
+	float WindowPos;
+	signed long SensorDelay;
+	plcbit CorrectCurrentCycle;
+	float CorrectionValueLimitNeg;
+	float CorrectionValueLimitPos;
+	plcbit DisableWidthEvaluationAtStart;
+} MC_BR_ADV_RM2_REF;
+#endif
+
+#ifndef __AS__TYPE_MC_BR_ADDINFO_RM2_REF
+#define __AS__TYPE_MC_BR_ADDINFO_RM2_REF
+typedef struct MC_BR_ADDINFO_RM2_REF
+{	float ActLength;
+	float AverageProductLength;
+	float CutLength;
+	unsigned short QueueElements;
+	plcbit LimitNegActive;
+	plcbit LimitPosActive;
+	float ActualCorrectionValue;
+} MC_BR_ADDINFO_RM2_REF;
+#endif
+
+#ifndef __AS__TYPE_MC_BR_RM2_IMG_REF
+#define __AS__TYPE_MC_BR_RM2_IMG_REF
+typedef struct MC_BR_RM2_IMG_REF
+{	unsigned short EventSourceParID;
+	unsigned char Edge;
+	unsigned char Reserve;
+	signed long MinWidth;
+	signed long MaxWidth;
+	signed long WindowNeg;
+	signed long WindowPos;
+	signed long LatchTDelay;
+	signed long LatchIV;
+	signed long LatchIVL;
+	float SPTDelay;
+} MC_BR_RM2_IMG_REF;
+#endif
+
+#ifndef __AS__TYPE_MC_RMC002_FIFO_TYP
+#define __AS__TYPE_MC_RMC002_FIFO_TYP
+typedef struct MC_RMC002_FIFO_TYP
+{	unsigned short QueueElements;
+	unsigned char IdxWriteIn;
+	unsigned char IdxReadOut;
+	signed long BufferRM[256];
+	signed long BufferPL[256];
+} MC_RMC002_FIFO_TYP;
+#endif
+
+#ifndef __AS__TYPE_MC_0117_IS_TYP
+#define __AS__TYPE_MC_0117_IS_TYP
+typedef struct MC_0117_IS_TYP
+{	plcbit SearchRM;
+	plcbit IgnoreSearchRM;
+	plcbit InitData;
+	unsigned char Reserve1;
+	signed long CutPosition;
+	signed long oldFBCutPosition;
+	signed long oldFBCutPositionCL;
+	signed long ProductLength;
+	signed long ProductLengthAtCut;
+	signed long RegMarkPosition;
+	signed long RegMarkOffset;
+	signed long DistanceToSensor;
+	unsigned short Mode;
+	unsigned short EventSourceParID;
+	unsigned char Edge;
+	plcbit DisableWidthEvaluationAtStart;
+	unsigned short Reserve2;
+	signed long MinWidth;
+	signed long MaxWidth;
+	signed long WindowNeg;
+	signed long WindowPos;
+	signed long SensorDelay;
+	signed long CorrectionValueLimitNeg;
+	signed long CorrectionValueLimitPos;
+	plcbit CorrectCurrentCycle;
+	plcbit Active;
+	plcbit Valid;
+	plcbit Busy;
+	unsigned char Reserve3;
+	plcbit Error;
+	unsigned short ErrorID;
+	plcbit DataInitialized;
+	plcbit SearchDone;
+	unsigned short ProductsWithoutRM;
+	unsigned long ValidRMs;
+	signed long CorrectionValue;
+	signed long CorrectionValueUnlimited;
+	signed long ActLength;
+	signed long AverageProductLength;
+	signed long ArrayProductLength[50];
+	unsigned char idxProductLengths;
+	unsigned char cntAverage;
+	plcbit LimitNegActive;
+	plcbit LimitPosActive;
+	signed long CutLength;
+	MC_BR_RM2_IMG_REF IMG;
+	unsigned char state;
+	unsigned char LastState;
+	unsigned char NextState;
+	unsigned char Reserve4;
+	unsigned short BitCompInfo;
+	unsigned short BitIndex;
+	unsigned short BitOffset;
+	unsigned short LatchIndex;
+	unsigned short DelayIndex;
+	unsigned short Reserve8;
+	unsigned char BitRecIndex;
+	unsigned char LockID;
+	unsigned char LockIDPar;
+	plcbit IgnoreLatchErrorCountOnce;
+	signed long LatchPos;
+	signed long oldLatchPos;
+	unsigned short LatchPosOffset;
+	unsigned char LatchPosRecIndex;
+	unsigned char LatchErrCount;
+	unsigned char oldLatchErrCount;
+	unsigned char LatchStatusCount;
+	plcbit LatchReconfiguredtoSearch;
+	unsigned char SavedFrDrvCnt;
+	unsigned char WaitForTelegrams;
+	plcbit PerformLengthCalculation;
+	plcbit ModeAcceptAllTrigger;
+	plcbit ModeSignalWidth;
+	unsigned char ProductCntToStart;
+	plcbit PerformLimitation;
+	plcbit FiFoUsed;
+	plcbit RMOccuredOnce;
+	MC_RMC002_FIFO_TYP FIFOBuffer;
+	signed long MasterAxisPositionAtBeginning;
+	signed long DelayTime;
+	float SPTDelayTime;
+	signed long LatchTime;
+} MC_0117_IS_TYP;
+#endif
+
 struct MpAxisBasic
 {	struct MpComIdentType(* MpLink);
 	struct MpAxisBasicParType(* Parameters);
@@ -789,6 +961,31 @@ struct MC_MoveVelocity
 	plcbit C_Error;
 };
 _BUR_PUBLIC void MC_MoveVelocity(struct MC_MoveVelocity* inst);
+struct MC_BR_RegMarkCapture002
+{	unsigned long Master;
+	unsigned long Axis;
+	signed long CutPosition;
+	MC_BR_CFG_RM2_REF Configuration;
+	MC_BR_ADV_RM2_REF AdvancedParameters;
+	unsigned short ErrorID;
+	unsigned long ValidRMs;
+	unsigned short ProductsWithoutRM;
+	float CorrectionValue;
+	MC_BR_ADDINFO_RM2_REF AdditionalInfo;
+	MC_0117_IS_TYP IS;
+	unsigned long C_Master;
+	unsigned long C_Axis;
+	plcbit Enable;
+	plcbit SearchRM;
+	plcbit InitData;
+	plcbit Active;
+	plcbit Valid;
+	plcbit Busy;
+	plcbit Error;
+	plcbit DataInitialized;
+	plcbit SearchDone;
+};
+_BUR_PUBLIC void MC_BR_RegMarkCapture002(struct MC_BR_RegMarkCapture002* inst);
 _BUR_LOCAL float iVl_OldAcc;
 _BUR_LOCAL float HOMING_VEL;
 _BUR_LOCAL float HOFFSET_SINGLE;
@@ -822,3 +1019,9 @@ _BUR_LOCAL struct MpAxisBasic iFb_AxisMater;
 _BUR_LOCAL MpAxisBasicParType iParamMaster;
 _BUR_LOCAL MpAxisBasicParType iParaSlave;
 _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
+_BUR_LOCAL struct MC_BR_RegMarkCapture002 iFb_RegCap;
+_BUR_LOCAL ACP10APNWCPA_typ iRegCapAdvPar;
+_BUR_LOCAL MC_BR_CFG_RM2_REF iRegCapConfig;
+_BUR_LOCAL double iAbsVal;
+_BUR_LOCAL plcbit icmdMoveAbsoulte;
+_BUR_LOCAL double HOFFSET_NEGDUAL;

@@ -56,4 +56,12 @@ VAR
 	iParamMaster : MpAxisBasicParType;
 	iParaSlave : MpAxisBasicParType;
 	iFb_CamSequ : MpAxisCamSequencer;
+	iFb_RegCap : MC_BR_RegMarkCapture002;
+	iRegCapAdvPar : ACP10APNWCPA_typ;
+	iRegCapConfig : MC_BR_CFG_RM2_REF;
+	iAbsVal : LREAL;
+	icmdMoveAbsoulte : BOOL;
+END_VAR
+VAR CONSTANT
+	HOFFSET_NEGDUAL : LREAL := 33;
 END_VAR

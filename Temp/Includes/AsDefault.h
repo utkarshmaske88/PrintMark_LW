@@ -19,7 +19,9 @@ extern "C"
 	#include <brsystem.h>
 	#include <AsIecCon.h>
 	#include <Acp10_MC.h>
+	#include <MpAlarmX.h>
 	#include <MpAxis.h>
+	#include <MC_RegMa.h>
 #ifdef __cplusplus
 };
 #endif

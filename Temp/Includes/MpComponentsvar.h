@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1702970568_3_
-#define _BUR_1702970568_3_
+#ifndef _BUR_1703079134_1_
+#define _BUR_1703079134_1_
 
 #include <bur/plctypes.h>
 
@@ -13,8 +13,9 @@
 
 
 /* Variables */
-_GLOBAL struct MpComIdentType gAxisSlave;
-_GLOBAL struct MpComIdentType gAxisMaster;
+_GLOBAL struct MpComIdentType gmlSlave;
+_GLOBAL struct MpComIdentType gmlMaster;
+_GLOBAL struct MpComIdentType gAlarmXCore;
 
 
 
@@ -30,5 +31,5 @@ __asm__(".ascii \"iecfile \\\"Temp/Includes/AS_TempDecl/Config1/GlobalComponents
 __asm__(".previous");
 
 
-#endif /* _BUR_1702970568_3_ */
+#endif /* _BUR_1703079134_1_ */
 

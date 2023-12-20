@@ -1,2 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<breakpoints />
+<breakpoints>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/Cutter/Cutter/CamAutoMulti.st</file>
+    <position>114</position>
+    <condition></condition>
+    <instance></instance>
+    <program>Cutter</program>
+  </breakpoint>
+</breakpoints>

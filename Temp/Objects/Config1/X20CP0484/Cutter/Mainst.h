@@ -66,6 +66,22 @@ typedef struct {
 } _4byte_bit_field_;
 #endif
 
+#ifndef __AS__TYPE_AxStep_enum
+#define __AS__TYPE_AxStep_enum
+typedef enum AxStep_enum
+{	enINITA = 0,
+	enSTARTA = 1,
+	enNEEGHOMEMOVE = 2,
+	enPOWER_ONA = 3,
+	enPOSHOMINGSEC = 4,
+	enPOSHOMING = 5,
+	enNEGHOMING = 6,
+	enHOMEA = 7,
+	enOPERATIONA = 8,
+	enERRORA = 9,
+} AxStep_enum;
+#endif
+
 #ifndef __AS__TYPE_ACP10SWVER_typ
 #define __AS__TYPE_ACP10SWVER_typ
 typedef struct ACP10SWVER_typ
@@ -1792,18 +1808,32 @@ struct MpAxisCamSequencer
 	plcbit PhasingDone;
 };
 _BUR_PUBLIC void MpAxisCamSequencer(struct MpAxisCamSequencer* inst);
+_BUR_LOCAL float HOMING_VEL;
+_BUR_LOCAL float HOFFSET_SINGLE;
+_BUR_LOCAL plcbit icmdUpdate;
+_BUR_LOCAL float START_VEL;
+_BUR_LOCAL MpAxisBasicParType iBasicParameters;
+_BUR_LOCAL plcbit icmdPower;
+_BUR_LOCAL plcbit icmdHome;
+_BUR_LOCAL_RETAIN plcbit icmdMoveVelocity;
+_BUR_LOCAL plcbit icmdMoveAdditive;
+_BUR_LOCAL_RETAIN plcbit icmdStop;
+_BUR_LOCAL plcbit icmdErrorReset;
+_BUR_LOCAL AxStep_enum iAxStep_enum;
 _BUR_LOCAL struct MpAxisBasic iFb_SlaveAx;
+_BUR_LOCAL float UPPER_CUT_POS;
 _BUR_LOCAL MpAxisCamSequencerParType iAx_CamSequence;
-_BUR_LOCAL struct MpAxisBasic iFb_AxisSlave;
+_BUR_LOCAL float LOWER_CUT_POS;
 _BUR_LOCAL struct MpAxisBasic iFb_AxisMater;
 _BUR_LOCAL MpAxisBasicParType iParamMaster;
-_BUR_LOCAL MpAxisBasicParType iParaSlave;
 _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
 _GLOBAL ACP10AXIS_typ gAxMaster;
 _GLOBAL ACP10AXIS_typ gAxSlave;
-_GLOBAL MpComIdentType gAxisMaster;
-_GLOBAL MpComIdentType gAxisSlave;
+_GLOBAL MpComIdentType gmlMaster;
+_GLOBAL MpComIdentType gmlSlave;
 _GLOBAL unsigned short ACP10PAR_PCTRL_S_ACT;
+_GLOBAL unsigned char ncAT_ONCE;
 _GLOBAL unsigned char ncONLYCOMP;
 _GLOBAL unsigned char ncST_END;
+static void __AS__Action__SingleCutter(void);
 static void __AS__Action__CamSingle(void);

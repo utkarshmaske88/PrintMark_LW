@@ -1,13 +1,14 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1702986439_2_
-#define _BUR_1702986439_2_
+#ifndef _BUR_1703075234_1_
+#define _BUR_1703075234_1_
 
 #include <bur/plctypes.h>
 
 /* Constants */
 #ifdef _REPLACE_CONST
+ #define HOFFSET_NEGDUAL 33.0
  #define LOWER_CUT_POS 2653.0f
  #define UPPER_CUT_POS 3013.0f
  #define START_VEL 145.0f
@@ -20,6 +21,7 @@
  #define HOFFSET_SINGLE 1033.0f
  #define HOMING_VEL 500.0f
 #else
+ _LOCAL_CONST double HOFFSET_NEGDUAL;
  _LOCAL_CONST float LOWER_CUT_POS;
  _LOCAL_CONST float UPPER_CUT_POS;
  _LOCAL_CONST float START_VEL;
@@ -35,6 +37,11 @@
 
 
 /* Variables */
+_BUR_LOCAL plcbit icmdMoveAbsoulte;
+_BUR_LOCAL double iAbsVal;
+_BUR_LOCAL struct MC_BR_CFG_RM2_REF iRegCapConfig;
+_BUR_LOCAL struct ACP10APNWCPA_typ iRegCapAdvPar;
+_BUR_LOCAL struct MC_BR_RegMarkCapture002 iFb_RegCap;
 _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
 _BUR_LOCAL struct MpAxisBasicParType iParaSlave;
 _BUR_LOCAL struct MpAxisBasicParType iParamMaster;
@@ -66,6 +73,7 @@ __asm__(".section \".plc\"");
 
 /* Used IEC files */
 __asm__(".ascii \"iecfile \\\"Logical/Cutter/Cutter/Variables.var\\\" scope \\\"local\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAxis/MpAxis.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/Acp10_MC/acp10_mc.fun\\\" scope \\\"global\\\"\\n\"");
 
@@ -74,5 +82,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/Acp10_MC/acp10_mc.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1702986439_2_ */
+#endif /* _BUR_1703075234_1_ */
 

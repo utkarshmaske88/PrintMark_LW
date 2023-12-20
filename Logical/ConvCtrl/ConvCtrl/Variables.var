@@ -1,0 +1,62 @@
+VAR
+	iVl_OldAcc : REAL; (*old accelartion *)
+END_VAR
+VAR CONSTANT
+	HOMING_VEL : REAL := 500;
+	HOFFSET_SINGLE : REAL := 1033;
+	SPEED : REAL := 0.25; (*speed*)
+	ZEROSPD : REAL := 0; (*zero speed to assign*)
+	SCALSPEEDTEN : REAL := 10000; (*scaling of speed*)
+	INIT_FIHNRD : REAL := 500; (*inital value five hundread*)
+	INIT_FTHOUSAND : REAL := 5000; (*inital five thousand *)
+	INIT_THOUSAND : REAL := 1000; (*inital value thousand*)
+END_VAR
+VAR
+	iMi_LogoNegDir : BOOL; (*negtive direction hmi button*)
+	icmdUpdate : BOOL; (*update command*)
+END_VAR
+VAR CONSTANT
+	START_VEL : REAL := 145;
+END_VAR
+VAR
+	iBasicParameters : MpAxisBasicParType; (*basic parameters for axis*)
+	icmdPower : BOOL; (*powering on the axis*)
+	icmdHome : BOOL; (*hooming the axis*)
+END_VAR
+VAR RETAIN
+	icmdMoveVelocity : BOOL; (*move velocity for axis*)
+END_VAR
+VAR
+	icmdMoveAdditive : BOOL; (*move additive axis*)
+END_VAR
+VAR RETAIN
+	icmdStop : BOOL; (*stopping the axis*)
+END_VAR
+VAR
+	iVl_OldAccNeg : REAL; (*old accelation for axis*)
+	icmdErrorReset : BOOL; (*error reseting the axis*)
+	iFb_MC_MoveVelocity_0 : MC_MoveVelocity; (*funciton bloack for velocity*)
+	iAxStep_enum : AxStep_enum; (*steps for logo conveyor*)
+	iVl_OldVelocity : REAL; (*old velocity for logo  conveyor*)
+	iFb_MasterAx : MpAxisBasic; (*basic function for axis*)
+END_VAR
+VAR CONSTANT
+	UPPER_CUT_POS : REAL := 3013;
+END_VAR
+VAR
+	HOFFSET_DUAL : REAL := 133;
+	iAx_CamSequence : MpAxisCamSequencerParType; (*Cam Seq Structure*)
+END_VAR
+VAR CONSTANT
+	LOWER_CUT_POS : REAL := 2653;
+END_VAR
+VAR
+	iFb_AxisSlave : MpAxisBasic;
+	iFb_AxisMater : MpAxisBasic;
+	iParamMaster : MpAxisBasicParType;
+	iParaSlave : MpAxisBasicParType;
+	iFb_CamSequ : MpAxisCamSequencer;
+	iFb_RegCap : MC_BR_RegMarkCapture002;
+	iRegCapAdvPar : ACP10APNWCPA_typ;
+	iRegCapConfig : MC_BR_CFG_RM2_REF;
+END_VAR

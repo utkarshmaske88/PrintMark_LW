@@ -16,7 +16,7 @@
 ACTION MultCutter: 
 	//linking the motor with axis
 	iFb_SlaveAx.Enable := 1;
-	iFb_SlaveAx.MpLink := ADR(gAxisSlave);
+	iFb_SlaveAx.MpLink := ADR(gmlSlave);
 	iFb_SlaveAx.Axis := ADR(gAxSlave);
 
 	iFb_SlaveAx.Parameters := ADR(iBasicParameters);
@@ -52,7 +52,7 @@ ACTION MultCutter:
 	
 	//Limit for the torque
 	iBasicParameters.Torque.Limit:=0.8;
-	
+	iBasicParameters.Position:=1900;
 	//stopping the axis command
 	IF icmdStop=TRUE THEN
 		iFb_SlaveAx.Stop:=TRUE;
@@ -84,54 +84,93 @@ ACTION MultCutter:
 		enPOWER_ONA:
 			icmdPower := TRUE;
 			IF iFb_SlaveAx.PowerOn = TRUE THEN
-				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < LOWER_CUT_POS THEN
+				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < 2653 AND iFb_SlaveAx.Position >1933  THEN
+					
+					iBasicParameters.Home.Mode:=4;
+					iBasicParameters.Direction:=mpAXIS_DIR_NEGATIVE ; 
+					iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_NEGATIVE;
+					iBasicParameters.Home.StartDirection:=1;
+					iBasicParameters.Home.SensorOffset := HOFFSET_NEGDUAL;
+					iBasicParameters.Home.HomingVelocity := HOMING_VEL;
+					iBasicParameters.Home.StartVelocity := START_VEL;
+					icmdUpdate:=TRUE;
+					iAxStep_enum := enNEGHOMING;
+					
+				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < 1933 AND iFb_SlaveAx.Position>1213 THEN 
+					
+					iBasicParameters.Home.Mode:=4;
+					iBasicParameters.Direction:=mpAXIS_DIR_POSITIVE ; 
+					iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;
+					iBasicParameters.Home.StartDirection:=1;
+					iBasicParameters.Home.SensorOffset := HOFFSET_NEGDUAL;
+					iBasicParameters.Home.HomingVelocity := HOMING_VEL;
+					iBasicParameters.Home.StartVelocity := START_VEL;
+					icmdUpdate:=TRUE;
+					iAxStep_enum := enNEGHOMING;
+					
+				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position > 3013 AND iFb_SlaveAx.Position <3599 THEN
+					
+					iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
+					iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;
+					iBasicParameters.Home.SensorOffset := HOFFSET_DUAL;
+					iBasicParameters.Home.HomingVelocity := 150;
+					iBasicParameters.Home.StartVelocity := 50;
 					icmdUpdate:=TRUE; 
 					IF iFb_SlaveAx.UpdateDone=TRUE THEN
-						iAxStep_enum := enNEGHOMING;
-						icmdUpdate:=FALSE;
-					END_IF;
-				END_IF
-				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position > UPPER_CUT_POS THEN
-					icmdUpdate:=TRUE; 
-					IF iFb_SlaveAx.UpdateDone=TRUE THEN
+						icmdHome := TRUE;
 						iAxStep_enum := enPOSHOMING;
 						icmdUpdate:=FALSE;
+					END_IF;			
+				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position <853 AND iFb_SlaveAx.Position>133 THEN
+					icmdUpdate:=TRUE; 
+					IF iFb_SlaveAx.UpdateDone=TRUE THEN
+							
+						iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
+						iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_NEGATIVE;
+						iBasicParameters.Home.SensorOffset := HOFFSET_DUAL;
+						iBasicParameters.Home.HomingVelocity := HOMING_VEL;
+						iBasicParameters.Home.StartVelocity := START_VEL;
+						icmdUpdate:=TRUE; 
+						IF iFb_SlaveAx.UpdateDone=TRUE THEN
+							icmdHome := TRUE;
+							iAxStep_enum := enPOSHOMINGSEC;
+							icmdUpdate:=FALSE;
+						END_IF;
 					END_IF;
 				END_IF
 			END_IF
 
 			//homing the motor
 		enNEGHOMING:
-			iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
-			iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_NEGATIVE;
-			iBasicParameters.Home.SensorOffset := HOFFSET_DUAL;
-			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
-			iBasicParameters.Home.StartVelocity := START_VEL;
-			icmdHome := TRUE;
-			iAxStep_enum:=enOPERATIONA;
+			IF iFb_SlaveAx.UpdateDone=TRUE THEN
+				icmdMoveAbsoulte:=TRUE;
+				icmdUpdate:=FALSE;
+				iAxStep_enum :=	enNEEGHOMEMOVE;
+			END_IF;
 			
-		enPOSHOMING:	
-			iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
-			iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;;
-			iBasicParameters.Home.SensorOffset := HOFFSET_DUAL;
-			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
-			iBasicParameters.Home.StartVelocity := START_VEL;
-			icmdHome := TRUE;
-			iAxStep_enum:=enOPERATIONA;
+		enNEEGHOMEMOVE:
+			IF iFb_SlaveAx.InPosition=TRUE THEN
+				icmdMoveAbsoulte:=FALSE;
+				icmdHome:=TRUE;
+				iAxStep_enum := enOPERATIONA;
+			END_IF;
+			
+		enPOSHOMING:
+			IF iFb_AxisSlave.IsHomed=TRUE THEN
+				iAxStep_enum := enOPERATIONA;
+			END_IF;
+			//operation mode			
+		enPOSHOMINGSEC:
+		
+			IF iFb_AxisSlave.IsHomed=TRUE THEN
+				iAxStep_enum := enOPERATIONA;
+			END_IF;
 			//operation mode
 		enOPERATIONA:
-			IF iFb_SlaveAx.IsHomed=TRUE THEN
+					
+			IF iFb_AxisSlave.IsHomed=TRUE THEN
 				icmdHome:=FALSE;
 			END_IF;
-			IF iFb_SlaveAx.Error =TRUE THEN
-				iAxStep_enum := enERRORA;
-			END_IF
-			IF icmdMoveAdditive=TRUE THEN
-				iFb_SlaveAx.MoveAdditive:=TRUE;
-				icmdMoveAdditive := FALSE;
-				icmdHome := FALSE;
-			END_IF;
-			
 			//error mode
 		enERRORA:
 			icmdPower := FALSE;
@@ -146,4 +185,7 @@ ACTION MultCutter:
 	END_CASE
 	iFb_SlaveAx.Update:=icmdUpdate;
 	iFb_SlaveAx.Home:=icmdHome;
+	iFb_SlaveAx.MoveAdditive:= icmdMoveAdditive;
+	iFb_SlaveAx.MoveAbsolute:=	icmdMoveAbsoulte;
+	iFb_SlaveAx.Power		:=icmdPower;
 END_ACTION

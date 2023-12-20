@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1702978575_1_
-#define _BUR_1702978575_1_
+#ifndef _BUR_1703077334_1_
+#define _BUR_1703077334_1_
 
 #include <bur/plctypes.h>
 
@@ -10,7 +10,9 @@
 typedef enum AxStep_enum
 {	enINITA,
 	enSTARTA,
+	enNEEGHOMEMOVE,
 	enPOWER_ONA,
+	enPOSHOMINGSEC,
 	enPOSHOMING,
 	enNEGHOMING,
 	enHOMEA,
@@ -33,5 +35,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Cutter/Cutter/Types.typ\\\" scope \\\"loca
 __asm__(".previous");
 
 
-#endif /* _BUR_1702978575_1_ */
+#endif /* _BUR_1703077334_1_ */
 

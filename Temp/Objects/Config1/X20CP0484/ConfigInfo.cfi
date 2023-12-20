@@ -26,6 +26,36 @@
         Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\Cutter\MultCutter.st.var" />
       <InternalFile
         Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\Cutter\CamAutoSingle.st.var" />
+      <InternalFile
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\Cutter\CamAutoMulti.st.var" />
+      <InternalFile
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\Cutter\RegCap.st.var" />
+    </Task>
+    <Task
+      Name="ConvCtrl"
+      Disable="false"
+      Source="ConvCtrl.ConvCtrl"
+      Language="IEC">
+      <InternalFile
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\ConvCtrl\Main.st.var" />
+      <File
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\ConvCtrl\ConvCtrl\Types.typ" />
+      <File
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\ConvCtrl\ConvCtrl\Variables.var" />
+      <InternalFile
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\ConvCtrl\ConvAxis.st.var" />
+    </Task>
+    <Task
+      Name="AlarmsX"
+      Disable="false"
+      Source="Alarms.AlarmsX"
+      Language="IEC">
+      <InternalFile
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\AlarmsX\Main.st.var" />
+      <File
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Alarms\AlarmsX\Types.typ" />
+      <File
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Alarms\AlarmsX\Variables.var" />
     </Task>
   </TaskClass>
   <TaskClass

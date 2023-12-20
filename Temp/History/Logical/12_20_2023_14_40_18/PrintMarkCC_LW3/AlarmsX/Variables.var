@@ -1,0 +1,13 @@
+(*For HMI history of alarms*)
+VAR
+	iFb_AlarmHistory : MpAlarmXHistory; (*alarms histrory*)
+END_VAR
+(*HMI visu active and pending alarms*)
+VAR
+	iFb_AlarmX : MpAlarmXCore; (*alarm x core fucniton block*)
+	iFb_AlarmUI : MpAlarmXListUI; (*ui for fucniton block*)
+END_VAR
+(*Connection of Mplink with alarms UI*)
+VAR
+	UIConnectCore : MpAlarmXListUIConnectType; (*connection for alarmxcore*)
+END_VAR

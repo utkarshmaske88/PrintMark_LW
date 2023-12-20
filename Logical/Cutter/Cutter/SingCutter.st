@@ -16,7 +16,7 @@
 ACTION SingleCutter: 
 	//linking the motor with axis
 	iFb_SlaveAx.Enable := 1;
-	iFb_SlaveAx.MpLink := ADR(gAxisSlave);
+	iFb_SlaveAx.MpLink := ADR(gmlSlave);
 	iFb_SlaveAx.Axis := ADR(gAxSlave);
 
 	iFb_SlaveAx.Parameters := ADR(iBasicParameters);
@@ -108,27 +108,24 @@ ACTION SingleCutter:
 			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
 			iBasicParameters.Home.StartVelocity := START_VEL;
 
-				icmdHome := TRUE;
-				IF iFb_SlaveAx.IsHomed=TRUE THEN
-					iAxStep_enum:=enOPERATIONA;
-				END_IF;
-			
+			icmdHome := TRUE;
 		enPOSHOMING:	
 			iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
 			iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;;
-			iBasicParameters.Home.SensorOffset := HOMING_OFFSET;
+			iBasicParameters.Home.SensorOffset := HOFFSET_SINGLE;
 			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
 			iBasicParameters.Home.StartVelocity := START_VEL;
 			
 		
 			icmdHome := TRUE;
-			IF iFb_SlaveAx.IsHomed=TRUE THEN
-				iAxStep_enum:=enOPERATIONA;
-				//	icmdHome := FALSE;
-			END_IF
-			
 			//operation mode
 		enOPERATIONA:
+			
+			IF iFb_SlaveAx.IsHomed=TRUE THEN
+				icmdHome := FALSE;
+				iAxStep_enum:=enOPERATIONA;
+			END_IF;
+			
 			IF iFb_SlaveAx.Error =TRUE THEN
 				iAxStep_enum := enERRORA;
 			END_IF
@@ -152,4 +149,5 @@ ACTION SingleCutter:
 	END_CASE
 	iFb_SlaveAx.Update:=icmdUpdate;
 	iFb_SlaveAx.Home:=icmdHome;
+	iFb_SlaveAx.Power:= icmdPower;
 END_ACTION
