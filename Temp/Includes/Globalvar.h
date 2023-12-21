@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703053344_2_
-#define _BUR_1703053344_2_
+#ifndef _BUR_1703160187_2_
+#define _BUR_1703160187_2_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,9 @@
 
 
 /* Variables */
+_GLOBAL plcbit gIR_Trigger;
+_GLOBAL plcbit gManulMode;
+_GLOBAL plcbit gAutoMode;
 _GLOBAL struct ACP10AXIS_typ gAxSlave;
 _GLOBAL struct ACP10AXIS_typ gAxMaster;
 
@@ -30,5 +33,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1703053344_2_ */
+#endif /* _BUR_1703160187_2_ */
 

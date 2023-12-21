@@ -79,6 +79,11 @@ typedef enum AxStep_enum
 	enHOMEA = 7,
 	enOPERATIONA = 8,
 	enERRORA = 9,
+	enMANUAL = 10,
+	enAUTOMATIC = 11,
+	enJOGPOSITIVE = 12,
+	enJOGNEGATIVE = 13,
+	enCUTTINGZONE = 14,
 } AxStep_enum;
 #endif
 
@@ -1809,7 +1814,6 @@ struct MpAxisCamSequencer
 };
 _BUR_PUBLIC void MpAxisCamSequencer(struct MpAxisCamSequencer* inst);
 _BUR_LOCAL float HOMING_VEL;
-_BUR_LOCAL float HOFFSET_SINGLE;
 _BUR_LOCAL plcbit icmdUpdate;
 _BUR_LOCAL float START_VEL;
 _BUR_LOCAL MpAxisBasicParType iBasicParameters;
@@ -1821,19 +1825,28 @@ _BUR_LOCAL_RETAIN plcbit icmdStop;
 _BUR_LOCAL plcbit icmdErrorReset;
 _BUR_LOCAL AxStep_enum iAxStep_enum;
 _BUR_LOCAL struct MpAxisBasic iFb_SlaveAx;
-_BUR_LOCAL float UPPER_CUT_POS;
+_BUR_LOCAL float HOFFSET_DUAL;
 _BUR_LOCAL MpAxisCamSequencerParType iAx_CamSequence;
-_BUR_LOCAL float LOWER_CUT_POS;
-_BUR_LOCAL struct MpAxisBasic iFb_AxisMater;
-_BUR_LOCAL MpAxisBasicParType iParamMaster;
+_BUR_LOCAL struct MpAxisBasic iFb_AxisSlave;
 _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
+_BUR_LOCAL plcbit icmdMoveAbsoulte;
+_BUR_LOCAL double HOFFSET_NEGDUAL;
+_BUR_LOCAL double FIRST_CUT_UPPER;
+_BUR_LOCAL double HOME_POS;
+_BUR_LOCAL double SEC_CUT_UPPER;
+_BUR_LOCAL double FIRST_CUT_LOWER;
+_BUR_LOCAL double MAX_POS_AXIS;
+_BUR_LOCAL double SEC_CUT_LOWER;
+_BUR_LOCAL double HOME_OFFSET;
 _GLOBAL ACP10AXIS_typ gAxMaster;
 _GLOBAL ACP10AXIS_typ gAxSlave;
+_GLOBAL plcbit gIR_Trigger;
 _GLOBAL MpComIdentType gmlMaster;
 _GLOBAL MpComIdentType gmlSlave;
 _GLOBAL unsigned short ACP10PAR_PCTRL_S_ACT;
 _GLOBAL unsigned char ncAT_ONCE;
 _GLOBAL unsigned char ncONLYCOMP;
 _GLOBAL unsigned char ncST_END;
-static void __AS__Action__SingleCutter(void);
-static void __AS__Action__CamSingle(void);
+_GLOBAL unsigned char ncTRIGGER1;
+static void __AS__Action__MultCutter(void);
+static void __AS__Action__CamMulti(void);

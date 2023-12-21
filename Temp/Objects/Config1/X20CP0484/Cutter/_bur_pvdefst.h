@@ -11,7 +11,63 @@ typedef enum AxStep_enum
 	enHOMEA = 7,
 	enOPERATIONA = 8,
 	enERRORA = 9,
+	enMANUAL = 10,
+	enAUTOMATIC = 11,
+	enJOGPOSITIVE = 12,
+	enJOGNEGATIVE = 13,
+	enCUTTINGZONE = 14,
 } AxStep_enum;
+#endif
+
+#ifndef __AS__TYPE_Joglim_enum
+#define __AS__TYPE_Joglim_enum
+typedef enum Joglim_enum
+{	enCHECKVEL = 0,
+	enADDVEL = 1,
+	enUPPERPOS = 2,
+	enLOWERPOS = 3,
+	enUPDATE = 4,
+	enRESET = 5,
+} Joglim_enum;
+#endif
+
+#ifndef __AS__TYPE_AxisCmd_typ
+#define __AS__TYPE_AxisCmd_typ
+typedef struct AxisCmd_typ
+{	plcbit Start;
+	plcbit Stop;
+	plcbit PrintMark;
+	plcbit ErrorReset;
+	plcbit AutoMode;
+	plcbit JogFwd;
+	plcbit JogBack;
+	plcbit Home;
+	plcbit SingleCutter;
+} AxisCmd_typ;
+#endif
+
+#ifndef __AS__TYPE_AxisPara_typ
+#define __AS__TYPE_AxisPara_typ
+typedef struct AxisPara_typ
+{	unsigned short Speed;
+} AxisPara_typ;
+#endif
+
+#ifndef __AS__TYPE_AxisStatus_typ
+#define __AS__TYPE_AxisStatus_typ
+typedef struct AxisStatus_typ
+{	plcbit JogNegReady;
+	plcbit JogPosReady;
+} AxisStatus_typ;
+#endif
+
+#ifndef __AS__TYPE_AxisCtrl_typ
+#define __AS__TYPE_AxisCtrl_typ
+typedef struct AxisCtrl_typ
+{	AxisCmd_typ Cmd;
+	AxisPara_typ Para;
+	AxisStatus_typ Status;
+} AxisCtrl_typ;
 #endif
 
 #ifndef __AS__TYPE_ACP10APNWCPA_typ
@@ -1025,3 +1081,14 @@ _BUR_LOCAL MC_BR_CFG_RM2_REF iRegCapConfig;
 _BUR_LOCAL double iAbsVal;
 _BUR_LOCAL plcbit icmdMoveAbsoulte;
 _BUR_LOCAL double HOFFSET_NEGDUAL;
+_BUR_LOCAL double FIRST_CUT_UPPER;
+_BUR_LOCAL double HOME_POS;
+_BUR_LOCAL double SEC_CUT_UPPER;
+_BUR_LOCAL double FIRST_CUT_LOWER;
+_BUR_LOCAL double MAX_POS_AXIS;
+_BUR_LOCAL double SEC_CUT_LOWER;
+_BUR_LOCAL double HOME_OFFSET;
+_BUR_LOCAL AxisCtrl_typ iCutCtrl;
+_BUR_LOCAL Joglim_enum iJogLimState;
+_BUR_LOCAL double LOWER_BUFER;
+_BUR_LOCAL double ZERO;

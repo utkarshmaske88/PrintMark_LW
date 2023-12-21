@@ -47,8 +47,8 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\iomap.iom" LastWriteTime="2023-12-19 05:38:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\pvmap.vvm" LastWriteTime="2023-12-19 05:38:58" />
     <Prerequisite ID="c:\users\maskeu\desktop\all\projects\ecamp\printmarklabwork\physical\config1\hardware.hw" LastWriteTime="2023-12-18 06:18:06" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\cpu.sw" LastWriteTime="2023-12-20 09:10:18" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\channelconfiguration.xml" LastWriteTime="2023-12-20 06:22:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\cpu.sw" LastWriteTime="2023-12-21 07:01:56" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\channelconfiguration.xml" LastWriteTime="2023-12-21 12:03:12" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\X20CP0484\IoMap.iom&quot; &quot;$(AS_PROJECT_PATH)\Physical\Config1\X20CP0484\PvMap.vvm&quot;  -m &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConfigInfo.cfi&quot; -g &quot;$(AS_PROJECT_PATH)\Temp\Objects\Declarations.lst&quot; -x &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ChannelConfiguration.xml&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484&quot; -iomap -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\iomap.br&quot; -T SG4 -B G4.93 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Config1.X20CP0484&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata\tcdata.imx">
@@ -57,11 +57,11 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\Common_EventLog.tmx&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\TCData\TCData.imx&quot; -c &quot;C:\BRAutomation\AS412\AS\TechnologyPackages\TextSystem\n.d\ObjectCatalog\Elements\TextConfig\Template\TC.textconfig&quot; -I &quot;$(AS_PROJECT_PATH)\AS\System\G0493&quot; &quot;C:\BRAutomation\AS412\AS\TechnologyPackages\mapp\5.23.1&quot; &quot;C:\BRAutomation\AS412\AS\TechnologyPackages\Acp10Arnc0\5.23.1&quot; &quot;C:\BRAutomation\AS412\AS\TechnologyPackages\UnitSystem\n.d&quot; -P &quot;$(AS_PROJECT_PATH)&quot; -m Libraries.MpBase.Common_EventLog.tmx" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata\tcdata.s18d">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata\tcdata.imx" LastWriteTime="2023-12-20 09:00:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata\tcdata.imx" LastWriteTime="2023-12-21 12:03:10" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\TCData\TCData.imx&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\TCData\TCData.s18d&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata\tcdata.s18d" LastWriteTime="2023-12-20 09:00:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata\tcdata.s18d" LastWriteTime="2023-12-21 12:03:16" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\TCData\TCData.s18d&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\TCData.br&quot; -t TextModule" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\role.br">
@@ -90,65 +90,68 @@
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Config1\X20CP0484\Motion\slaveaxis.mpaxisbasic&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\slaveaxis.br&quot; -zip -B G4.93 -L &quot;Acp10_MC: V5.23.1, Acp10man: V5.23.1, Acp10par: V5.23.1, MC_RegMa: V5.23.1, MpAxis: V1.86.0, NcGlobal: V5.23.1&quot; -z 5.23.1 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;Config1&quot; " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\cutter.ox" LastWriteTime="2023-12-20 13:41:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\cutter.ox" LastWriteTime="2023-12-21 12:45:10" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\cpu.per" LastWriteTime="2023-12-19 05:38:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-20 12:26:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-21 06:58:20" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-20 13:01:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\ncglobal\ncglobal.var" LastWriteTime="2023-12-19 05:40:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-21 05:31:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10par\acp10par.var" LastWriteTime="2023-12-19 05:40:12" />
-    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\Cutter.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\X20CP0484\LT.ofs&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic4 -p 2 -s &quot;Cutter.Cutter&quot; -L &quot;Acp10_MC: V5.23.1, Acp10man: V5.23.1, Acp10par: V5.23.1, AsIecCon: V*, astime: V*, brsystem: V*, MC_RegMa: V5.23.1, MpAlarmX: V5.23.1, MpAxis: V1.86.0, MpBase: V5.23.0, MpCom: V5.23.1, NcGlobal: V5.23.1, operator: V*, runtime: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\Cutter.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\X20CP0484\LT.ofs&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic1 -p 2 -s &quot;Cutter.Cutter&quot; -L &quot;Acp10_MC: V5.23.1, Acp10man: V5.23.1, Acp10par: V5.23.1, AsIecCon: V*, astime: V*, brsystem: V*, MC_RegMa: V5.23.1, MpAlarmX: V5.23.1, MpAxis: V1.86.0, MpBase: V5.23.0, MpCom: V5.23.1, NcGlobal: V5.23.1, operator: V*, runtime: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
     <AdditionalBuildTrigger Key="PermanentAnalogMemory" Value="0" />
     <AdditionalBuildTrigger Key="PermanentDigitalMemory" Value="0" />
     <AdditionalBuildTrigger Key="RemanentMemory" Value="1000" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\cutter.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\a.out" LastWriteTime="2023-12-20 13:41:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\a.out" LastWriteTime="2023-12-21 12:45:10" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-20 12:26:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-21 06:58:20" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-20 13:01:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\ncglobal\ncglobal.var" LastWriteTime="2023-12-19 05:40:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-21 05:31:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10par\acp10par.var" LastWriteTime="2023-12-19 05:40:12" />
-    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\Cutter.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V4.1.2  -B G4.93 " />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\Cutter.ox&quot; -T SG4 -M ARM -r Cyclic1 -G V4.1.2  -B G4.93 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.o" LastWriteTime="2023-12-20 13:41:18" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\_bur_pvdef.st.o" LastWriteTime="2023-12-20 13:41:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.o" LastWriteTime="2023-12-21 12:45:08" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\_bur_pvdef.st.o" LastWriteTime="2023-12-21 12:45:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-20 12:26:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-21 06:58:20" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-20 13:01:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\ncglobal\ncglobal.var" LastWriteTime="2023-12-19 05:40:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-21 05:31:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
@@ -156,24 +159,25 @@
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Cutter\a.out&quot; -G V4.1.2  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\SG4\Arm\libMC_RegMa.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\SG4\Arm\libMpAlarmX.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\SG4\Arm\libAcp10_MC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libbrsystem.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\SG4\Arm\libMpCom.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\SG4\Arm\libNcGlobal.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libruntime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\liboperator.a&quot; -specs &quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\specs\ARMspecs_brelf&quot; -nostdlib &quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\lib\libm.a&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.c">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\main.st" LastWriteTime="2023-12-20 13:40:38" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\singcutter.st" LastWriteTime="2023-12-20 13:41:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\multcutter.st" LastWriteTime="2023-12-20 13:31:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\camautosingle.st" LastWriteTime="2023-12-20 04:54:00" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\camautomulti.st" LastWriteTime="2023-12-20 13:36:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\main.st" LastWriteTime="2023-12-21 12:44:08" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\singcutter.st" LastWriteTime="2023-12-21 12:11:50" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\multcutter.st" LastWriteTime="2023-12-21 10:37:30" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\camautosingle.st" LastWriteTime="2023-12-21 12:34:00" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\camautomulti.st" LastWriteTime="2023-12-21 11:25:34" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\regcap.st" LastWriteTime="2023-12-20 07:24:24" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-20 12:26:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-21 06:58:20" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-20 13:01:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\ncglobal\ncglobal.var" LastWriteTime="2023-12-19 05:40:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-21 05:31:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
@@ -182,19 +186,20 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.c" LastWriteTime="2023-12-20 13:41:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.c" LastWriteTime="2023-12-21 12:45:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-20 12:26:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-21 06:58:20" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-20 13:01:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\ncglobal\ncglobal.var" LastWriteTime="2023-12-19 05:40:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-21 05:31:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
@@ -204,19 +209,20 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as412\as\gnuinst\v4.1.2\4.9\arm-elf\include\bur\_bur_pvdef.st" LastWriteTime="2022-05-25 04:28:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.o" LastWriteTime="2023-12-20 13:41:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.o" LastWriteTime="2023-12-21 12:45:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-20 12:26:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-21 06:58:20" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-20 13:01:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\ncglobal\ncglobal.var" LastWriteTime="2023-12-19 05:40:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-21 05:31:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
@@ -225,20 +231,21 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\_bur_pvdef.st.c" LastWriteTime="2023-12-20 13:41:18" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.o" LastWriteTime="2023-12-20 13:41:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\_bur_pvdef.st.c" LastWriteTime="2023-12-21 12:45:08" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter\main.st.o" LastWriteTime="2023-12-21 12:45:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-20 12:26:40" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\variables.var" LastWriteTime="2023-12-21 06:58:20" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-20 13:01:54" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\ncglobal\ncglobal.var" LastWriteTime="2023-12-19 05:40:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\cutter\cutter\types.typ" LastWriteTime="2023-12-21 05:31:36" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
@@ -247,139 +254,145 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\convctrl.ox" LastWriteTime="2023-12-20 13:32:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\convctrl.ox" LastWriteTime="2023-12-21 12:03:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\cpu.per" LastWriteTime="2023-12-19 05:38:58" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-20 09:22:40" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-21 06:53:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-20 09:01:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\ConvCtrl.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\X20CP0484\LT.ofs&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic4 -p 3 -s &quot;ConvCtrl.ConvCtrl&quot; -L &quot;Acp10_MC: V5.23.1, Acp10man: V5.23.1, Acp10par: V5.23.1, AsIecCon: V*, astime: V*, brsystem: V*, MC_RegMa: V5.23.1, MpAlarmX: V5.23.1, MpAxis: V1.86.0, MpBase: V5.23.0, MpCom: V5.23.1, NcGlobal: V5.23.1, operator: V*, runtime: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-21 06:26:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\ConvCtrl.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\X20CP0484\LT.ofs&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic1 -p 3 -s &quot;ConvCtrl.ConvCtrl&quot; -L &quot;Acp10_MC: V5.23.1, Acp10man: V5.23.1, Acp10par: V5.23.1, AsIecCon: V*, astime: V*, brsystem: V*, MC_RegMa: V5.23.1, MpAlarmX: V5.23.1, MpAxis: V1.86.0, MpBase: V5.23.0, MpCom: V5.23.1, NcGlobal: V5.23.1, operator: V*, runtime: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
     <AdditionalBuildTrigger Key="PermanentAnalogMemory" Value="0" />
     <AdditionalBuildTrigger Key="PermanentDigitalMemory" Value="0" />
     <AdditionalBuildTrigger Key="RemanentMemory" Value="1000" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\convctrl.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\a.out" LastWriteTime="2023-12-20 13:32:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\a.out" LastWriteTime="2023-12-21 12:03:08" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-20 09:22:40" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-21 06:53:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-20 09:01:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\ConvCtrl.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V4.1.2  -B G4.93 " />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-21 06:26:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\ConvCtrl.ox&quot; -T SG4 -M ARM -r Cyclic1 -G V4.1.2  -B G4.93 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.o" LastWriteTime="2023-12-20 13:32:32" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\_bur_pvdef.st.o" LastWriteTime="2023-12-20 13:32:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.o" LastWriteTime="2023-12-21 12:03:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\_bur_pvdef.st.o" LastWriteTime="2023-12-21 12:03:08" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-20 09:22:40" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-21 06:53:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-20 09:01:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-21 06:26:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <CommandLine Parameter=" -link &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\Main.st.o&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\_bur_pvdef.st.o&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\a.out&quot; -G V4.1.2  -T SG4 -M ARM &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\SG4\Arm\libMC_RegMa.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\SG4\Arm\libMpAxis.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\SG4\Arm\libMpAlarmX.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\SG4\Arm\libAcp10_MC.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libAsIecCon.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libbrsystem.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libsys_lib.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\SG4\Arm\libMpCom.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libastime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\SG4\Arm\libMpBase.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\SG4\Arm\libNcGlobal.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\libruntime.a&quot; &quot;-Wl,$(AS_PROJECT_PATH)\AS\System\G0493\SG4\Arm\liboperator.a&quot; -specs &quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\specs\ARMspecs_brelf&quot; -nostdlib &quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\lib\libm.a&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.c">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\main.st" LastWriteTime="2023-12-20 09:28:00" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\convaxis.st" LastWriteTime="2023-12-20 13:32:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\main.st" LastWriteTime="2023-12-21 09:29:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-20 09:22:40" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-21 06:53:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-20 09:01:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Main.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\Main.st.c&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -s &quot;ConvCtrl.ConvCtrl&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -a &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\ConvAxis.st&quot; -l &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10man\Acp10man.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpComError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmXError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10par\Acp10par.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-21 06:26:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Main.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\Main.st.c&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -s &quot;ConvCtrl.ConvCtrl&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -l &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10man\Acp10man.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpComError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmXError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10par\Acp10par.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.c" LastWriteTime="2023-12-20 13:32:32" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.c" LastWriteTime="2023-12-21 12:03:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-20 09:22:40" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-21 06:53:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-20 09:01:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-21 06:26:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\Main.st.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\Main.st.o&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -s &quot;ConvCtrl.ConvCtrl&quot; -specs &quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\specs\ARMspecs_brelf&quot; -I &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\ConvCtrl\ConvCtrl&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\ConvCtrl&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -ansi -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -ggdb -Wall -w -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Libraries.h&quot; -ansic -x c -P &quot;$(AS_PROJECT_PATH)&quot;" />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as412\as\gnuinst\v4.1.2\4.9\arm-elf\include\bur\_bur_pvdef.st" LastWriteTime="2022-05-25 04:28:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.o" LastWriteTime="2023-12-20 13:32:32" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.o" LastWriteTime="2023-12-21 12:03:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-20 09:22:40" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-21 06:53:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-20 09:01:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <CommandLine Parameter="&quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\include\bur\_bur_pvdef.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\_bur_pvdef.st.c&quot; -S &quot;Main.st&quot;  -T SG4 -M ARM -B G4.93 -G V4.1.2  -s &quot;ConvCtrl.ConvCtrl&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -a &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\ConvAxis.st&quot; -l &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10man\Acp10man.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpComError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmXError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10par\Acp10par.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-21 06:26:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
+    <CommandLine Parameter="&quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\include\bur\_bur_pvdef.st&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\_bur_pvdef.st.c&quot; -S &quot;Main.st&quot;  -T SG4 -M ARM -B G4.93 -G V4.1.2  -s &quot;ConvCtrl.ConvCtrl&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -pointers -extComments -extBitAccess -extConstants -D _SG4 -l &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Types.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl\Variables.var&quot; -g &quot;$(AS_PROJECT_PATH)\Logical\Global.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10man\Acp10man.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxisAlarm.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpComError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmXError.typ&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAxis\MpAxis.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpAlarmX\MpAlarmX.fun&quot; &quot;$(AS_PROJECT_PATH)\Logical\Global.var&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\operator\operator.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\runtime\runtime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\astime\astime.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\AsIecCon\AsIecCon.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10par\Acp10par.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\NcGlobal\NcGlobal.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\Acp10_MC\acp10_mc.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpBase\MpBase.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MpCom\MpCom.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\sys_lib\sys_lib.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\brsystem\brsystem.var&quot; &quot;$(AS_PROJECT_PATH)\Logical\Libraries\MC_RegMa\MC_RegMa.var&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\_bur_pvdef.st.c" LastWriteTime="2023-12-20 13:32:32" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.o" LastWriteTime="2023-12-20 13:32:32" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\_bur_pvdef.st.c" LastWriteTime="2023-12-21 12:03:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl\main.st.o" LastWriteTime="2023-12-21 12:03:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.fun" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxis.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpaxis\mpaxiserror.typ" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-20 09:22:40" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.fun" LastWriteTime="2023-12-19 06:35:22" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-19 10:36:34" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\variables.var" LastWriteTime="2023-12-21 06:53:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.var" LastWriteTime="2023-12-21 06:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\masteraxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10man\acp10man.typ" LastWriteTime="2023-12-19 05:40:12" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-20 09:01:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.typ" LastWriteTime="2023-12-20 07:06:14" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mc_regma\mc_regma.fun" LastWriteTime="2023-12-20 07:06:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\motion\slaveaxis.mpaxisbasic" LastWriteTime="2023-12-20 13:31:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\acp10_mc\acp10_mc.typ" LastWriteTime="2023-12-19 06:35:22" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\convctrl\convctrl\types.typ" LastWriteTime="2023-12-21 06:26:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\logical\global.typ" LastWriteTime="2023-12-21 04:50:42" />
     <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\_bur_pvdef.st.c&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\ConvCtrl\_bur_pvdef.st.o&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -s &quot;ConvCtrl.ConvCtrl&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -specs &quot;C:\BRAutomation\AS412\AS\gnuinst\V4.1.2\4.9\arm-elf\specs\ARMspecs_brelf&quot; -I &quot;$(AS_PROJECT_PATH)\Logical\ConvCtrl\ConvCtrl&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\ConvCtrl\ConvCtrl&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes\ConvCtrl&quot; &quot;$(AS_PROJECT_PATH)\Temp\Includes&quot; -trigraphs -fno-asm -D _DEFAULT_INCLUDES -D _SG4 -fPIC -O0 -ggdb -Wall -include &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\Libraries.h&quot; -P &quot;$(AS_PROJECT_PATH)&quot;" />
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\alarmsx.ox" LastWriteTime="2023-12-20 09:11:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\alarmsx.ox" LastWriteTime="2023-12-21 12:03:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\cpu.per" LastWriteTime="2023-12-19 05:38:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.fun" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
@@ -387,25 +400,25 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.typ" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\alarms\alarmsx\variables.var" LastWriteTime="2023-12-20 09:10:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\mappservices\alarms.mpalarmxcore" LastWriteTime="2023-12-20 08:58:06" />
-    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX\AlarmsX.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\X20CP0484\LT.ofs&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic4 -p 4 -s &quot;Alarms.AlarmsX&quot; -L &quot;Acp10_MC: V5.23.1, Acp10man: V5.23.1, Acp10par: V5.23.1, AsIecCon: V*, astime: V*, brsystem: V*, MC_RegMa: V5.23.1, MpAlarmX: V5.23.1, MpAxis: V1.86.0, MpBase: V5.23.0, MpCom: V5.23.1, NcGlobal: V5.23.1, operator: V*, runtime: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX\AlarmsX.ox&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX.br&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\NT.ofs&quot; -offsetLT &quot;$(AS_PROJECT_PATH)\Binaries\Config1\X20CP0484\LT.ofs&quot; -T SG4 -M ARM -B G4.93 -G V4.1.2  -extConstants -d &quot;runtime: V* - V*,asieccon: V* - V*&quot; -r Cyclic8 -p 2 -s &quot;Alarms.AlarmsX&quot; -L &quot;Acp10_MC: V5.23.1, Acp10man: V5.23.1, Acp10par: V5.23.1, AsIecCon: V*, astime: V*, brsystem: V*, MC_RegMa: V5.23.1, MpAlarmX: V5.23.1, MpAxis: V1.86.0, MpBase: V5.23.0, MpCom: V5.23.1, NcGlobal: V5.23.1, operator: V*, runtime: V*, sys_lib: V*&quot; -P &quot;$(AS_PROJECT_PATH)&quot; " />
     <AdditionalBuildTrigger Key="VolatileMemory" Value="65535" />
     <AdditionalBuildTrigger Key="PermanentAnalogMemory" Value="0" />
     <AdditionalBuildTrigger Key="PermanentDigitalMemory" Value="0" />
     <AdditionalBuildTrigger Key="RemanentMemory" Value="1000" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\alarmsx.ox">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\a.out" LastWriteTime="2023-12-20 09:11:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\a.out" LastWriteTime="2023-12-21 12:03:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.fun" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmxerror.typ" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.typ" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\alarms\alarmsx\variables.var" LastWriteTime="2023-12-20 09:10:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\mappservices\alarms.mpalarmxcore" LastWriteTime="2023-12-20 08:58:06" />
-    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX\AlarmsX.ox&quot; -T SG4 -M ARM -r Cyclic4 -G V4.1.2  -B G4.93 " />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX\a.out&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\AlarmsX\AlarmsX.ox&quot; -T SG4 -M ARM -r Cyclic8 -G V4.1.2  -B G4.93 " />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\a.out">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.o" LastWriteTime="2023-12-20 09:11:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\_bur_pvdef.st.o" LastWriteTime="2023-12-20 09:11:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.o" LastWriteTime="2023-12-21 12:03:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\_bur_pvdef.st.o" LastWriteTime="2023-12-21 12:03:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.fun" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmxerror.typ" LastWriteTime="2023-12-20 08:58:12" />
@@ -426,7 +439,7 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.c" LastWriteTime="2023-12-20 09:11:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.c" LastWriteTime="2023-12-21 12:03:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.fun" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmxerror.typ" LastWriteTime="2023-12-20 08:58:12" />
@@ -438,7 +451,7 @@
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\_bur_pvdef.st.c">
     <Prerequisite ID="c:\brautomation\as412\as\gnuinst\v4.1.2\4.9\arm-elf\include\bur\_bur_pvdef.st" LastWriteTime="2022-05-25 04:28:44" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.o" LastWriteTime="2023-12-20 09:11:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.o" LastWriteTime="2023-12-21 12:03:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.fun" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmxerror.typ" LastWriteTime="2023-12-20 08:58:12" />
@@ -449,8 +462,8 @@
     <AdditionalBuildTrigger Key="IecDeclarationsInAnsiC" Value="False" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\_bur_pvdef.st.o">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\_bur_pvdef.st.c" LastWriteTime="2023-12-20 09:11:14" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.o" LastWriteTime="2023-12-20 09:11:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\_bur_pvdef.st.c" LastWriteTime="2023-12-21 12:03:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx\main.st.o" LastWriteTime="2023-12-21 12:03:06" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmx.fun" LastWriteTime="2023-12-20 08:58:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpbase\mpbase.typ" LastWriteTime="2023-12-19 06:35:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\logical\libraries\mpalarmx\mpalarmxerror.typ" LastWriteTime="2023-12-20 08:58:12" />
@@ -536,26 +549,26 @@
     <CommandLine Parameter=" -r -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP0484\#cpu_tp.mak&quot; -k" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\binaries\config1\x20cp0484\transfer.lst">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\ashwac.br" LastWriteTime="2023-12-20 06:22:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\sysconf.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\asfw.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\ashwd.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\arconfig.br" LastWriteTime="2023-12-20 06:22:28" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\ashwac.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\sysconf.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\asfw.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\ashwd.br" LastWriteTime="2023-12-21 12:03:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\arconfig.br" LastWriteTime="2023-12-21 12:03:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10sys.br" LastWriteTime="2023-12-19 05:40:58" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\udbdef.br" LastWriteTime="2023-06-02 09:31:52" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10cfg.br" LastWriteTime="2023-12-20 06:22:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10map.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\iomap.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata.br" LastWriteTime="2023-12-20 09:00:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\role.br" LastWriteTime="2023-12-20 06:22:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\user.br" LastWriteTime="2023-12-20 06:22:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\fwrules.br" LastWriteTime="2023-12-20 06:22:28" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarms.br" LastWriteTime="2023-12-20 09:00:20" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\masteraxis.br" LastWriteTime="2023-12-20 13:32:16" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\slaveaxis.br" LastWriteTime="2023-12-20 13:32:16" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter.br" LastWriteTime="2023-12-20 13:41:18" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl.br" LastWriteTime="2023-12-20 13:32:34" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx.br" LastWriteTime="2023-12-20 09:11:16" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10cfg.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10map.br" LastWriteTime="2023-12-21 12:03:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\iomap.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\tcdata.br" LastWriteTime="2023-12-21 12:03:16" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\role.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\user.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\fwrules.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarms.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\masteraxis.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\slaveaxis.br" LastWriteTime="2023-12-21 12:03:12" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\cutter.br" LastWriteTime="2023-12-21 12:45:10" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\convctrl.br" LastWriteTime="2023-12-21 12:03:08" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\alarmsx.br" LastWriteTime="2023-12-21 12:03:08" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10man.br" LastWriteTime="2023-06-26 07:50:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10par.br" LastWriteTime="2023-06-26 07:51:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\ncglobal.br" LastWriteTime="2023-06-26 07:49:04" />
@@ -569,12 +582,12 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\mc_regma.br" LastWriteTime="2023-06-22 08:50:42" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\mpalarmx.br" LastWriteTime="2023-07-13 09:19:56" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\astime.br" LastWriteTime="2023-06-23 08:55:08" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxmsa.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxmsi.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10etxen.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxslavea.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxslavei.br" LastWriteTime="2023-12-20 06:22:30" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\cpu.sw" LastWriteTime="2023-12-20 09:10:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxmsa.br" LastWriteTime="2023-12-21 12:03:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxmsi.br" LastWriteTime="2023-12-21 12:03:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\acp10etxen.br" LastWriteTime="2023-12-21 12:03:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxslavea.br" LastWriteTime="2023-12-21 12:03:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp0484\gaxslavei.br" LastWriteTime="2023-12-21 12:03:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\config1\x20cp0484\cpu.sw" LastWriteTime="2023-12-21 07:01:56" />
     <CommandLine Parameter=" &quot;$(AS_PROJECT_PATH)\PrintMarkCC_LW3.apj&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -o &quot;$(AS_PROJECT_PATH)\Binaries&quot; -c &quot;Config1&quot; -i &quot;C:\BRAutomation\AS412&quot; -S &quot;X20CP0484&quot; -A &quot;X20CP04xx&quot; -pil -swFiles &quot;$(AS_PROJECT_PATH)\Physical\Config1\X20CP0484\Cpu.sw&quot; -Z &quot;mapp: 5.23.1, Acp10Arnc0: 5.23.1, UnitSystem: n.d, Connectivity: n.d, FMUExport: n.d, TextSystem: n.d, ProgrammingSystem: n.d, RemanentData: n.d, AAS: n.d&quot; -C &quot;/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=10.91.10.129 /REPO=11159 /ANSL=1 /PT=11169&quot; -D &quot;/IF=tcpip /LOPO=11159 /SA=1&quot; -M ARM -T SG4" />
   </Rule>
 </RuleSetOptions>

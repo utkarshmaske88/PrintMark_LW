@@ -7,9 +7,10 @@ $(AS_PROJECT_PATH)/Logical/Cutter/Cutter/Variables.var
 $(AS_PROJECT_PATH)/Logical/Libraries/Acp10_MC/acp10_mc.fun
 $(AS_PROJECT_PATH)/Logical/Global.var
 $(AS_PROJECT_PATH)/Logical/Libraries/Acp10man/Acp10man.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/NcGlobal/NcGlobal.var
 $(AS_PROJECT_PATH)/Logical/Cutter/Cutter/Types.typ
 $(AS_PROJECT_PATH)/Physical/Config1/X20CP0484/Motion/masteraxis.mpaxisbasic
-$(AS_PROJECT_PATH)/Logical/Libraries/NcGlobal/NcGlobal.var
+$(AS_PROJECT_PATH)/Logical/Global.typ
 $(AS_PROJECT_PATH)/Logical/Libraries/MC_RegMa/MC_RegMa.typ
 $(AS_PROJECT_PATH)/Logical/Libraries/MC_RegMa/MC_RegMa.fun
 $(AS_PROJECT_PATH)/Physical/Config1/X20CP0484/Motion/slaveaxis.mpaxisbasic

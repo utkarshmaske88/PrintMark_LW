@@ -4,12 +4,53 @@ typedef enum AxStep_enum
 {	enINITA = 0,
 	enSTARTA = 1,
 	enPOWER_ONA = 2,
-	enPOSHOMING = 3,
-	enNEGHOMING = 4,
-	enHOMEA = 5,
-	enOPERATIONA = 6,
-	enERRORA = 7,
+	enAUTOMATIC = 3,
+	enJOGPOSITIVE = 4,
+	enJOGNEGATIVE = 5,
+	enMANUAL = 6,
+	enHOMEA = 7,
+	enOPERATIONA = 8,
+	enERRORA = 9,
 } AxStep_enum;
+#endif
+
+#ifndef __AS__TYPE_AxisCmd_typ
+#define __AS__TYPE_AxisCmd_typ
+typedef struct AxisCmd_typ
+{	plcbit Start;
+	plcbit Stop;
+	plcbit PrintMark;
+	plcbit ErrorReset;
+	plcbit AutoMode;
+	plcbit JogFwd;
+	plcbit JogBack;
+	plcbit Home;
+	plcbit SingleCutter;
+} AxisCmd_typ;
+#endif
+
+#ifndef __AS__TYPE_AxisPara_typ
+#define __AS__TYPE_AxisPara_typ
+typedef struct AxisPara_typ
+{	unsigned short Speed;
+} AxisPara_typ;
+#endif
+
+#ifndef __AS__TYPE_AxisStatus_typ
+#define __AS__TYPE_AxisStatus_typ
+typedef struct AxisStatus_typ
+{	plcbit JogNegReady;
+	plcbit JogPosReady;
+} AxisStatus_typ;
+#endif
+
+#ifndef __AS__TYPE_AxisCtrl_typ
+#define __AS__TYPE_AxisCtrl_typ
+typedef struct AxisCtrl_typ
+{	AxisCmd_typ Cmd;
+	AxisPara_typ Para;
+	AxisStatus_typ Status;
+} AxisCtrl_typ;
 #endif
 
 #ifndef __AS__TYPE_ACP10APNWCPA_typ
@@ -683,6 +724,27 @@ typedef struct MpAxisCamSequencerInfoType
 } MpAxisCamSequencerInfoType;
 #endif
 
+#ifndef __AS__TYPE_MC_0108_IS_TYP
+#define __AS__TYPE_MC_0108_IS_TYP
+typedef struct MC_0108_IS_TYP
+{	plcbit Enable;
+	plcbit Active;
+	plcbit Error;
+	plcbit Busy;
+	unsigned short ErrorID;
+	plcbit InputsSet;
+	unsigned char cmdDigInForce;
+	unsigned char state;
+	unsigned char LockIDPar;
+	plcbit oldHomeSwitch;
+	plcbit oldPosHWSwitch;
+	plcbit oldNegHWSwitch;
+	plcbit oldTrigger1;
+	plcbit oldTrigger2;
+	unsigned char Reserve1;
+} MC_0108_IS_TYP;
+#endif
+
 #ifndef __AS__TYPE_MpComIdentType
 #define __AS__TYPE_MpComIdentType
 typedef struct MpComIdentType
@@ -931,6 +993,23 @@ struct MpAxisCamSequencer
 	plcbit PhasingDone;
 };
 _BUR_PUBLIC void MpAxisCamSequencer(struct MpAxisCamSequencer* inst);
+struct MC_BR_SetHardwareInputs
+{	unsigned long Axis;
+	unsigned short ErrorID;
+	unsigned long C_Axis;
+	MC_0108_IS_TYP IS;
+	plcbit Enable;
+	plcbit HomeSwitch;
+	plcbit PosHWSwitch;
+	plcbit NegHWSwitch;
+	plcbit Trigger1;
+	plcbit Trigger2;
+	plcbit Active;
+	plcbit Busy;
+	plcbit Error;
+	plcbit InputsSet;
+};
+_BUR_PUBLIC void MC_BR_SetHardwareInputs(struct MC_BR_SetHardwareInputs* inst);
 struct MC_MoveVelocity
 {	unsigned long Axis;
 	float Velocity;
@@ -996,7 +1075,7 @@ _BUR_LOCAL float INIT_THOUSAND;
 _BUR_LOCAL plcbit iMi_LogoNegDir;
 _BUR_LOCAL plcbit icmdUpdate;
 _BUR_LOCAL float START_VEL;
-_BUR_LOCAL MpAxisBasicParType iBasicParameters;
+_BUR_LOCAL MpAxisBasicParType iBasicParamMaster;
 _BUR_LOCAL plcbit icmdPower;
 _BUR_LOCAL plcbit icmdHome;
 _BUR_LOCAL_RETAIN plcbit icmdMoveVelocity;
@@ -1005,13 +1084,13 @@ _BUR_LOCAL_RETAIN plcbit icmdStop;
 _BUR_LOCAL float iVl_OldAccNeg;
 _BUR_LOCAL plcbit icmdErrorReset;
 _BUR_LOCAL struct MC_MoveVelocity iFb_MC_MoveVelocity_0;
-_BUR_LOCAL AxStep_enum iAxStep_enum;
-_BUR_LOCAL float iVl_OldVelocity;
+_BUR_LOCAL AxStep_enum iAxStepMaster;
+_BUR_LOCAL double iVl_OldVelocity;
 _BUR_LOCAL struct MpAxisBasic iFb_MasterAx;
-_BUR_LOCAL float UPPER_CUT_POS;
-_BUR_LOCAL float HOFFSET_DUAL;
+_BUR_LOCAL double UPPER_CUT_POS;
+_BUR_LOCAL double HOFFSET_DUAL;
 _BUR_LOCAL MpAxisCamSequencerParType iAx_CamSequence;
-_BUR_LOCAL float LOWER_CUT_POS;
+_BUR_LOCAL double LOWER_CUT_POS;
 _BUR_LOCAL struct MpAxisBasic iFb_AxisSlave;
 _BUR_LOCAL struct MpAxisBasic iFb_AxisMater;
 _BUR_LOCAL MpAxisBasicParType iParamMaster;
@@ -1020,3 +1099,9 @@ _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
 _BUR_LOCAL struct MC_BR_RegMarkCapture002 iFb_RegCap;
 _BUR_LOCAL ACP10APNWCPA_typ iRegCapAdvPar;
 _BUR_LOCAL MC_BR_CFG_RM2_REF iRegCapConfig;
+_BUR_LOCAL MpAxisBasicInfoType iFb_BasicInfo;
+_BUR_LOCAL AxisCtrl_typ iConCtrl;
+_BUR_LOCAL double K_ZERO;
+_BUR_LOCAL double iVa_OldRecPosition;
+_BUR_LOCAL double PRINT_MARK_LIMIT;
+_BUR_LOCAL struct MC_BR_SetHardwareInputs iVa_MasterInputs;

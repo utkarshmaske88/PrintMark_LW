@@ -15,6 +15,7 @@
 
 ACTION MultCutter: 
 	//linking the motor with axis
+	gIR_Trigger:=iFb_SlaveAx.Info.DigitalInputsStatus.Trigger1;
 	iFb_SlaveAx.Enable := 1;
 	iFb_SlaveAx.MpLink := ADR(gmlSlave);
 	iFb_SlaveAx.Axis := ADR(gAxSlave);
@@ -52,7 +53,10 @@ ACTION MultCutter:
 	
 	//Limit for the torque
 	iBasicParameters.Torque.Limit:=0.8;
+	
+	//position for the axis for homing
 	iBasicParameters.Position:=1900;
+	
 	//stopping the axis command
 	IF icmdStop=TRUE THEN
 		iFb_SlaveAx.Stop:=TRUE;
@@ -84,7 +88,8 @@ ACTION MultCutter:
 		enPOWER_ONA:
 			icmdPower := TRUE;
 			IF iFb_SlaveAx.PowerOn = TRUE THEN
-				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < 2653 AND iFb_SlaveAx.Position >1933  THEN
+				//if axis is between first blade cutting upper and homing position
+				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < FIRST_CUT_LOWER AND iFb_SlaveAx.Position > HOME_POS   THEN
 					
 					iBasicParameters.Home.Mode:=4;
 					iBasicParameters.Direction:=mpAXIS_DIR_NEGATIVE ; 
@@ -96,7 +101,8 @@ ACTION MultCutter:
 					icmdUpdate:=TRUE;
 					iAxStep_enum := enNEGHOMING;
 					
-				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < 1933 AND iFb_SlaveAx.Position>1213 THEN 
+					//if axis is between first blade cutting upper and homing position
+				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < HOME_POS AND iFb_SlaveAx.Position> SEC_CUT_UPPER THEN 
 					
 					iBasicParameters.Home.Mode:=4;
 					iBasicParameters.Direction:=mpAXIS_DIR_POSITIVE ; 
@@ -108,7 +114,8 @@ ACTION MultCutter:
 					icmdUpdate:=TRUE;
 					iAxStep_enum := enNEGHOMING;
 					
-				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position > 3013 AND iFb_SlaveAx.Position <3599 THEN
+					//if axis is between first blade cutting upper and homing position
+				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position > FIRST_CUT_UPPER AND iFb_SlaveAx.Position < MAX_POS_AXIS THEN
 					
 					iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
 					iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;
@@ -121,7 +128,7 @@ ACTION MultCutter:
 						iAxStep_enum := enPOSHOMING;
 						icmdUpdate:=FALSE;
 					END_IF;			
-				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position <853 AND iFb_SlaveAx.Position>133 THEN
+				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < SEC_CUT_LOWER AND iFb_SlaveAx.Position> HOME_OFFSET THEN
 					icmdUpdate:=TRUE; 
 					IF iFb_SlaveAx.UpdateDone=TRUE THEN
 							
@@ -176,16 +183,18 @@ ACTION MultCutter:
 			icmdPower := FALSE;
 			icmdMoveVelocity := FALSE;
 			icmdStop := FALSE;
-			
-			icmdErrorReset:=TRUE;
 			IF iFb_SlaveAx.Error = FALSE THEN;
 				iAxStep_enum := enSTARTA;
 				icmdErrorReset := FALSE;
 			END_IF
 	END_CASE
-	iFb_SlaveAx.Update:=icmdUpdate;
-	iFb_SlaveAx.Home:=icmdHome;
-	iFb_SlaveAx.MoveAdditive:= icmdMoveAdditive;
-	iFb_SlaveAx.MoveAbsolute:=	icmdMoveAbsoulte;
-	iFb_SlaveAx.Power		:=icmdPower;
+	
+	
+	//assigning the cmds to real parameters
+	iFb_SlaveAx.Update			:=icmdUpdate;
+	iFb_SlaveAx.Home			:=icmdHome;
+	iFb_SlaveAx.MoveAdditive	:=icmdMoveAdditive;
+	iFb_SlaveAx.MoveAbsolute	:=icmdMoveAbsoulte;
+	iFb_SlaveAx.Power			:=icmdPower;
+	iFb_SlaveAx.ErrorReset		:=icmdErrorReset;
 END_ACTION

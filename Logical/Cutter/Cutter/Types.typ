@@ -11,6 +11,20 @@ TYPE
 		enNEGHOMING,
 		enHOMEA,
 		enOPERATIONA,
-		enERRORA
+		enERRORA,
+		enMANUAL,
+		enAUTOMATIC,
+		enJOGPOSITIVE,
+		enJOGNEGATIVE,
+		enCUTTINGZONE
+		);
+	Joglim_enum : 
+		(
+		enCHECKVEL,
+		enADDVEL,
+		enUPPERPOS,
+		enLOWERPOS,
+		enUPDATE,
+		enRESET
 		);
 END_TYPE

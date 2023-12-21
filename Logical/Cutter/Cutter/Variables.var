@@ -64,4 +64,18 @@ VAR
 END_VAR
 VAR CONSTANT
 	HOFFSET_NEGDUAL : LREAL := 33;
+	FIRST_CUT_UPPER : LREAL := 3013;
+	HOME_POS : LREAL := 1933;
+	SEC_CUT_UPPER : LREAL := 1213;
+	FIRST_CUT_LOWER : LREAL := 2653;
+	MAX_POS_AXIS : LREAL := 3599;
+	SEC_CUT_LOWER : LREAL := 853;
+	HOME_OFFSET : LREAL := 133;
+END_VAR
+VAR
+	iCutCtrl : AxisCtrl_typ;
+	iJogLimState : Joglim_enum;
+	LOWER_BUFER : LREAL := 0;
+	ZERO : LREAL := 0;
+	iVa_RegCaptureAdvPara : MC_BR_ADV_RM2_REF; (*Adv para for reg capture*)
 END_VAR

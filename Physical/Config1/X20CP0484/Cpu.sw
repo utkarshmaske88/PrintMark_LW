@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
-  <TaskClass Name="Cyclic#1" />
-  <TaskClass Name="Cyclic#2" />
-  <TaskClass Name="Cyclic#3" />
-  <TaskClass Name="Cyclic#4">
+  <TaskClass Name="Cyclic#1">
     <Task Name="Cutter" Source="Cutter.Cutter.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="ConvCtrl" Source="ConvCtrl.ConvCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="AlarmsX" Source="Alarms.AlarmsX.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <TaskClass Name="Cyclic#2" />
+  <TaskClass Name="Cyclic#3" />
+  <TaskClass Name="Cyclic#4" />
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
-  <TaskClass Name="Cyclic#8" />
+  <TaskClass Name="Cyclic#8">
+    <Task Name="AlarmsX" Source="Alarms.AlarmsX.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <DataObjects>
     <DataObject Name="Acp10sys" Source="" Memory="UserROM" Language="Binary" />
   </DataObjects>
@@ -40,6 +41,7 @@
     <BinaryObject Name="masteraxis" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="iomap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Role" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Alarms" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="Acp10man" Source="Libraries.Acp10man.lby" Memory="UserROM" Language="Binary" Debugging="true" />

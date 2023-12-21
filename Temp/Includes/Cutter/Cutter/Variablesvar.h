@@ -1,13 +1,20 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703075234_1_
-#define _BUR_1703075234_1_
+#ifndef _BUR_1703160187_5_
+#define _BUR_1703160187_5_
 
 #include <bur/plctypes.h>
 
 /* Constants */
 #ifdef _REPLACE_CONST
+ #define HOME_OFFSET 133.0
+ #define SEC_CUT_LOWER 853.0
+ #define MAX_POS_AXIS 3599.0
+ #define FIRST_CUT_LOWER 2653.0
+ #define SEC_CUT_UPPER 1213.0
+ #define HOME_POS 1933.0
+ #define FIRST_CUT_UPPER 3013.0
  #define HOFFSET_NEGDUAL 33.0
  #define LOWER_CUT_POS 2653.0f
  #define UPPER_CUT_POS 3013.0f
@@ -21,6 +28,13 @@
  #define HOFFSET_SINGLE 1033.0f
  #define HOMING_VEL 500.0f
 #else
+ _LOCAL_CONST double HOME_OFFSET;
+ _LOCAL_CONST double SEC_CUT_LOWER;
+ _LOCAL_CONST double MAX_POS_AXIS;
+ _LOCAL_CONST double FIRST_CUT_LOWER;
+ _LOCAL_CONST double SEC_CUT_UPPER;
+ _LOCAL_CONST double HOME_POS;
+ _LOCAL_CONST double FIRST_CUT_UPPER;
  _LOCAL_CONST double HOFFSET_NEGDUAL;
  _LOCAL_CONST float LOWER_CUT_POS;
  _LOCAL_CONST float UPPER_CUT_POS;
@@ -37,6 +51,10 @@
 
 
 /* Variables */
+_BUR_LOCAL double ZERO;
+_BUR_LOCAL double LOWER_BUFER;
+_BUR_LOCAL enum Joglim_enum iJogLimState;
+_BUR_LOCAL struct AxisCtrl_typ iCutCtrl;
 _BUR_LOCAL plcbit icmdMoveAbsoulte;
 _BUR_LOCAL double iAbsVal;
 _BUR_LOCAL struct MC_BR_CFG_RM2_REF iRegCapConfig;
@@ -82,5 +100,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/Acp10_MC/acp10_mc.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1703075234_1_ */
+#endif /* _BUR_1703160187_5_ */
 

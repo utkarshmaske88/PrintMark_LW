@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tracepoints>
+  <Tracepoint>
+    <Enabled>true</Enabled>
+    <File>Logical/Cutter/Cutter/CamAutoMulti.st</File>
+    <Line>117</Line>
+    <Condition></Condition>
+    <Task>Cutter</Task>
+  </Tracepoint>
+</Tracepoints>

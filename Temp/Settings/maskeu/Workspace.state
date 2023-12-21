@@ -1,10 +1,3 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
-<State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TextEdit ID="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\CamAutoMulti.st" CaretLine="114" CaretColumn="66" FirstVisibleLine="80">
-    <Bookmarks />
-  </TextEdit>
-  <TextEdit ID="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\CamAutoSingle.st" CaretLine="29" CaretColumn="77" FirstVisibleLine="93">
-    <Bookmarks />
-  </TextEdit>
-</State>
+<State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State" />

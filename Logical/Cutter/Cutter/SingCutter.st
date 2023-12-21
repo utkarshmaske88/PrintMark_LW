@@ -15,6 +15,7 @@
 
 ACTION SingleCutter: 
 	//linking the motor with axis
+	gIR_Trigger:=iFb_SlaveAx.Info.DigitalInputsStatus.Trigger1;
 	iFb_SlaveAx.Enable := 1;
 	iFb_SlaveAx.MpLink := ADR(gmlSlave);
 	iFb_SlaveAx.Axis := ADR(gAxSlave);
@@ -72,8 +73,9 @@ ACTION SingleCutter:
 		
 		//initializtion
 		enINITA:
-			iAxStep_enum := 	enSTARTA;
-			
+			IF iCutCtrl.Cmd.Start=TRUE THEN
+				iAxStep_enum := 	enSTARTA;
+			END_IF;
 			//starting
 		enSTARTA:
 			IF iFb_SlaveAx.Info.ReadyToPowerOn = TRUE THEN
@@ -84,6 +86,8 @@ ACTION SingleCutter:
 		enPOWER_ONA:
 			icmdPower := TRUE;
 			IF iFb_SlaveAx.PowerOn = TRUE THEN
+				
+				//when axis has passed lower cut positon
 				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < LOWER_CUT_POS THEN
 					icmdUpdate:=TRUE; 
 					IF iFb_SlaveAx.UpdateDone=TRUE THEN
@@ -91,6 +95,8 @@ ACTION SingleCutter:
 						icmdUpdate:=FALSE;
 					END_IF;
 				END_IF
+				
+				//when axis has not passed upper cut positon
 				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position > UPPER_CUT_POS THEN
 					icmdUpdate:=TRUE; 
 					IF iFb_SlaveAx.UpdateDone=TRUE THEN
@@ -100,41 +106,81 @@ ACTION SingleCutter:
 				END_IF
 			END_IF
 
-			//homing the motor
+			//homing in positive direction
 		enNEGHOMING:
 			iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
 			iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_NEGATIVE;
 			iBasicParameters.Home.SensorOffset := HOFFSET_SINGLE;
 			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
 			iBasicParameters.Home.StartVelocity := START_VEL;
-
 			icmdHome := TRUE;
+			iAxStep_enum:=	enOPERATIONA;
+			
+			//homing in negative direction
 		enPOSHOMING:	
 			iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
 			iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;;
 			iBasicParameters.Home.SensorOffset := HOFFSET_SINGLE;
 			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
 			iBasicParameters.Home.StartVelocity := START_VEL;
-			
-		
 			icmdHome := TRUE;
+			iAxStep_enum:=	enOPERATIONA;
 			//operation mode
 		enOPERATIONA:
 			
 			IF iFb_SlaveAx.IsHomed=TRUE THEN
 				icmdHome := FALSE;
 				iAxStep_enum:=enOPERATIONA;
+				IF gAutoMode=TRUE THEN
+					
+				ELSIF gManulMode THEN
+					iAxStep_enum:=	enMANUAL;
+				END_IF;
 			END_IF;
 			
-			IF iFb_SlaveAx.Error =TRUE THEN
-				iAxStep_enum := enERRORA;
+		enMANUAL:
+			IF iCutCtrl.Cmd.JogFwd THEN
+				iAxStep_enum:=	enJOGPOSITIVE;
+			END_IF;
+			IF iCutCtrl.Cmd.JogBack THEN
+				iAxStep_enum:=	enJOGNEGATIVE;
+			END_IF;
+			
+			IF iFb_SlaveAx.Position = FIRST_CUT_LOWER THEN
+				iCutCtrl.Cmd.JogFwd := FALSE;
 			END_IF
-			IF icmdMoveAdditive=TRUE THEN
-				iFb_SlaveAx.MoveAdditive:=TRUE;
-				icmdMoveAdditive := FALSE;
-				icmdHome := FALSE;
+		enJOGPOSITIVE:
+			IF NOT iCutCtrl.Cmd.JogFwd=TRUE OR iFb_SlaveAx.Position=FIRST_CUT_LOWER THEN
+				iFb_SlaveAx.JogPositive:=FALSE;
+				iAxStep_enum:=enOPERATIONA;
+			ELSE
+				iFb_SlaveAx.JogPositive:=TRUE;
+			END_IF;
+				
+			IF iFb_SlaveAx.Position= FIRST_CUT_LOWER THEN
+				iCutCtrl.Cmd.JogFwd:=FALSE;
 			END_IF;
 			
+		enJOGNEGATIVE:
+			IF NOT iCutCtrl.Cmd.JogBack=TRUE OR iFb_SlaveAx.Position=FIRST_CUT_UPPER THEN
+				iFb_SlaveAx.JogNegative:=FALSE;
+				iAxStep_enum:=enOPERATIONA;
+			ELSE
+				iFb_SlaveAx.JogNegative:=TRUE;
+			END_IF;
+				
+			IF iFb_SlaveAx.Position= FIRST_CUT_UPPER THEN
+				iCutCtrl.Cmd.JogBack:=FALSE;
+			END_IF;
+			
+		enCUTTINGZONE:
+			iFb_SlaveAx.Power:=FALSE;
+			IF (iFb_SlaveAx.Position < FIRST_CUT_LOWER OR iFb_SlaveAx.Position  >FIRST_CUT_UPPER) AND iFb_SlaveAx.IsHomed THEN
+				iFb_SlaveAx.Power:=TRUE;
+				iAxStep_enum := enOPERATIONA;
+			ELSIF  (iFb_SlaveAx.Position  < FIRST_CUT_LOWER OR iFb_SlaveAx.Position  >FIRST_CUT_UPPER) AND NOT  iFb_SlaveAx.IsHomed THEN
+				iAxStep_enum := enPOWER_ONA;
+			END_IF
 			//error mode
 		enERRORA:
 			icmdPower := FALSE;
@@ -150,4 +196,79 @@ ACTION SingleCutter:
 	iFb_SlaveAx.Update:=icmdUpdate;
 	iFb_SlaveAx.Home:=icmdHome;
 	iFb_SlaveAx.Power:= icmdPower;
+	
+	
+	
+	CASE iJogLimState OF
+		
+		enCHECKVEL:
+			IF iFb_SlaveAx.JogNegative = TRUE THEN
+				iJogLimState							:= enUPPERPOS;
+			END_IF;
+			IF (iFb_SlaveAx.JogPositive = TRUE) THEN
+				iJogLimState							:= enLOWERPOS;
+			END_IF;
+		enADDVEL:
+			iFb_SlaveAx.JogPositive						:= TRUE;
+			iFb_SlaveAx.JogNegative						:= TRUE;
+			iJogLimState								:= enCHECKVEL;
+				
+		enUPPERPOS:
+			IF (iFb_SlaveAx.CommandAborted = TRUE) THEN
+				iJogLimState							:= enADDVEL;
+				iFb_SlaveAx.JogNegative	:= FALSE;
+			END_IF;
+				
+			IF (iFb_SlaveAx.Position > UPPER_CUT_POS)THEN
+				iBasicParameters.Jog.LowerLimit			:= FIRST_CUT_UPPER;
+				iBasicParameters.Jog.UpperLimit			:= MAX_POS_AXIS;
+				iFb_SlaveAx.Update						:= TRUE;
+				iJogLimState							:= enUPDATE;
+			END_IF;
+		enLOWERPOS:
+			IF (iFb_SlaveAx.CommandAborted = TRUE) THEN
+				iJogLimState							:= enADDVEL;
+				iFb_SlaveAx.JogPositive	:= FALSE;
+			END_IF;
+				
+			IF (iFb_SlaveAx.Position < LOWER_CUT_POS)THEN
+				iBasicParameters.Jog.LowerLimit	:=ZERO;
+				iBasicParameters.Jog.UpperLimit	:= FIRST_CUT_LOWER;
+				iFb_SlaveAx.Update						:= TRUE;
+				iJogLimState							:= enUPDATE;
+			END_IF;
+		enUPDATE:
+			IF iFb_SlaveAx.UpdateDone = TRUE THEN
+				iFb_SlaveAx.Update						:= FALSE;
+			END_IF;
+			IF iFb_SlaveAx.JogNegative = TRUE AND iFb_SlaveAx.Position <ZERO AND iFb_SlaveAx.Position > UPPER_CUT_POS THEN
+				iJogLimState							:= enUPPERPOS;
+			END_IF;
+			IF (iFb_SlaveAx.JogPositive = TRUE) AND iFb_SlaveAx.Position > ZERO AND iFb_SlaveAx.Position < LOWER_CUT_POS  THEN
+				iJogLimState							:= enLOWERPOS;
+			END_IF;
+			IF ((iFb_SlaveAx.Position = FIRST_CUT_UPPER) OR (iFb_SlaveAx.Position =FIRST_CUT_LOWER )) THEN
+				iFb_SlaveAx.JogNegative					:= FALSE;
+				iFb_SlaveAx.JogPositive					:= FALSE;
+				iJogLimState							:= enRESET;
+			END_IF;
+		enRESET:
+	
+			iBasicParameters.Jog.LowerLimit		:= ZERO;
+			iBasicParameters.Jog.UpperLimit		:= ZERO;
+			iFb_SlaveAx.Update							:= TRUE;
+			IF iFb_SlaveAx.UpdateDone = TRUE THEN
+				iFb_SlaveAx.Update						:= FALSE;
+				iJogLimState							:= enCHECKVEL;
+			END_IF;
+	END_CASE;
+	
+	
+	
+	//Reset Condition
+	IF iCutCtrl.Cmd.Start= FALSE THEN
+		iAxStep_enum 			:= enINITA;
+		iJogLimState 			:= enCHECKVEL;
+	END_IF
+	
 END_ACTION

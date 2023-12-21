@@ -19,7 +19,7 @@ VAR CONSTANT
 	START_VEL : REAL := 145;
 END_VAR
 VAR
-	iBasicParameters : MpAxisBasicParType; (*basic parameters for axis*)
+	iBasicParamMaster : MpAxisBasicParType; (*basic parameters for axis*)
 	icmdPower : BOOL; (*powering on the axis*)
 	icmdHome : BOOL; (*hooming the axis*)
 END_VAR
@@ -36,19 +36,19 @@ VAR
 	iVl_OldAccNeg : REAL; (*old accelation for axis*)
 	icmdErrorReset : BOOL; (*error reseting the axis*)
 	iFb_MC_MoveVelocity_0 : MC_MoveVelocity; (*funciton bloack for velocity*)
-	iAxStep_enum : AxStep_enum; (*steps for logo conveyor*)
-	iVl_OldVelocity : REAL; (*old velocity for logo  conveyor*)
+	iAxStepMaster : AxStep_enum; (*steps for logo conveyor*)
+	iVl_OldVelocity : LREAL; (*old velocity for logo  conveyor*)
 	iFb_MasterAx : MpAxisBasic; (*basic function for axis*)
 END_VAR
 VAR CONSTANT
-	UPPER_CUT_POS : REAL := 3013;
+	UPPER_CUT_POS : LREAL := 3013;
 END_VAR
 VAR
-	HOFFSET_DUAL : REAL := 133;
+	HOFFSET_DUAL : LREAL := 133;
 	iAx_CamSequence : MpAxisCamSequencerParType; (*Cam Seq Structure*)
 END_VAR
 VAR CONSTANT
-	LOWER_CUT_POS : REAL := 2653;
+	LOWER_CUT_POS : LREAL := 2653;
 END_VAR
 VAR
 	iFb_AxisSlave : MpAxisBasic;
@@ -59,4 +59,18 @@ VAR
 	iFb_RegCap : MC_BR_RegMarkCapture002;
 	iRegCapAdvPar : ACP10APNWCPA_typ;
 	iRegCapConfig : MC_BR_CFG_RM2_REF;
+	iFb_BasicInfo : MpAxisBasicInfoType;
+	iConCtrl : AxisCtrl_typ;
+END_VAR
+VAR CONSTANT
+	K_ZERO : LREAL := 0.0;
+END_VAR
+VAR
+	iVa_OldRecPosition : LREAL;
+END_VAR
+VAR CONSTANT
+	PRINT_MARK_LIMIT : LREAL := 300;
+END_VAR
+VAR
+	iVa_MasterInputs : MC_BR_SetHardwareInputs;
 END_VAR

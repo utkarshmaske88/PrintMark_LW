@@ -2,4 +2,7 @@
 VAR
 	gAxMaster : ACP10AXIS_typ; (*Master Axis*)
 	gAxSlave : ACP10AXIS_typ; (*Slave Axis*) (*	gAx_Slave : AxisBasic_type; (*Slave Axis Structure*) (*gAx_Master : AxisBasic_type; MAster axis Structure*)
+	gAutoMode : BOOL;
+	gManulMode : BOOL;
+	gIR_Trigger : BOOL;
 END_VAR

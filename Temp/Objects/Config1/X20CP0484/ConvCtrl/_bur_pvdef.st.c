@@ -73,4 +73,6 @@ __asm__(".ascii \"plcdata_const 'INIT_THOUSAND'\\n\"");
 __asm__(".ascii \"plcdata_const 'START_VEL'\\n\"");
 __asm__(".ascii \"plcdata_const 'UPPER_CUT_POS'\\n\"");
 __asm__(".ascii \"plcdata_const 'LOWER_CUT_POS'\\n\"");
+__asm__(".ascii \"plcdata_const 'K_ZERO'\\n\"");
+__asm__(".ascii \"plcdata_const 'PRINT_MARK_LIMIT'\\n\"");
 __asm__(".previous");

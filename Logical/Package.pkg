@@ -12,5 +12,6 @@
     <Object Type="Package">Alarms</Object>
     <Object Type="Package">Datarec</Object>
     <Object Type="Package">Visu</Object>
+    <Object Type="Package">mappView</Object>
   </Objects>
 </Package>

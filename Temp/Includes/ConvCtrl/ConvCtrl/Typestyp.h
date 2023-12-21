@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703063435_1_
-#define _BUR_1703063435_1_
+#ifndef _BUR_1703160187_6_
+#define _BUR_1703160187_6_
 
 #include <bur/plctypes.h>
 
@@ -11,8 +11,10 @@ typedef enum AxStep_enum
 {	enINITA,
 	enSTARTA,
 	enPOWER_ONA,
-	enPOSHOMING,
-	enNEGHOMING,
+	enAUTOMATIC,
+	enJOGPOSITIVE,
+	enJOGNEGATIVE,
+	enMANUAL,
 	enHOMEA,
 	enOPERATIONA,
 	enERRORA
@@ -33,5 +35,5 @@ __asm__(".ascii \"iecfile \\\"Logical/ConvCtrl/ConvCtrl/Types.typ\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1703063435_1_ */
+#endif /* _BUR_1703160187_6_ */
 
