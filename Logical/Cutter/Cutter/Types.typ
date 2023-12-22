@@ -1,5 +1,14 @@
 
 TYPE
+	Joglim_enum : 
+		(
+		enCHECKVEL,
+		enADDVEL,
+		enUPPERPOS,
+		enLOWERPOS,
+		enUPDATE,
+		enRESET
+		);
 	AxStep_enum : 
 		(
 		enINITA,
@@ -17,14 +26,5 @@ TYPE
 		enJOGPOSITIVE,
 		enJOGNEGATIVE,
 		enCUTTINGZONE
-		);
-	Joglim_enum : 
-		(
-		enCHECKVEL,
-		enADDVEL,
-		enUPPERPOS,
-		enLOWERPOS,
-		enUPDATE,
-		enRESET
 		);
 END_TYPE

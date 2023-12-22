@@ -1,12 +1,21 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703160187_4_
-#define _BUR_1703160187_4_
+#ifndef _BUR_1703245902_5_
+#define _BUR_1703245902_5_
 
 #include <bur/plctypes.h>
 
 /* Datatypes and datatypes of function blocks */
+typedef enum Joglim_enum
+{	enCHECKVEL,
+	enADDVEL,
+	enUPPERPOS,
+	enLOWERPOS,
+	enUPDATE,
+	enRESET
+} Joglim_enum;
+
 typedef enum AxStep_enum
 {	enINITA,
 	enSTARTA,
@@ -25,15 +34,6 @@ typedef enum AxStep_enum
 	enCUTTINGZONE
 } AxStep_enum;
 
-typedef enum Joglim_enum
-{	enCHECKVEL,
-	enADDVEL,
-	enUPPERPOS,
-	enLOWERPOS,
-	enUPDATE,
-	enRESET
-} Joglim_enum;
-
 
 
 
@@ -49,5 +49,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Cutter/Cutter/Types.typ\\\" scope \\\"loca
 __asm__(".previous");
 
 
-#endif /* _BUR_1703160187_4_ */
+#endif /* _BUR_1703245902_5_ */
 

@@ -85,10 +85,10 @@ if((((unsigned long)(unsigned char)iFb_MasterAx.Info.ReadyToPowerOn==(unsigned l
 
 
 }break;case 2:{
-(icmdPower=1);
+(iFb_MasterAx.Power=1);
 if(iFb_MasterAx.PowerOn){
 
-(icmdHome=1);
+(iFb_MasterAx.Home=1);
 if((((unsigned long)(unsigned char)gAutoMode==(unsigned long)(unsigned char)1))){
 (iAxStepMaster=3);
 }else if((((unsigned long)(unsigned char)gManulMode==(unsigned long)(unsigned char)1))){
@@ -108,7 +108,7 @@ if(iConCtrl.Cmd.JogBack){
 (iVa_OldRecPosition=K_ZERO);
 if((((unsigned long)(unsigned char)iConCtrl.Cmd.Start==(unsigned long)(unsigned char)0))){
 (iAxStepMaster=0);
-(icmdPower=0);
+(iFb_MasterAx.Power=0);
 }
 
 
@@ -139,7 +139,7 @@ if(((((iVa_OldRecPosition-iFb_MasterAx.Position)>PRINT_MARK_LIMIT))&((iVa_OldRec
 
 
 }break;case 9:{
-(icmdPower=0);
+(iFb_MasterAx.Power=0);
 (icmdMoveVelocity=0);
 (icmdStop=0);
 
@@ -150,9 +150,6 @@ if((((unsigned long)(unsigned char)iFb_MasterAx.Error==(unsigned long)(unsigned 
 }
 }break;}
 
-(iFb_MasterAx.Update=icmdUpdate);
-(iFb_MasterAx.Home=icmdHome);
-(iFb_MasterAx.Power=icmdPower);
 
 (iConCtrl.Cmd.PrintMark=gIR_Trigger);
 (iVa_MasterInputs.Enable=1);
@@ -163,9 +160,11 @@ MC_BR_SetHardwareInputs(&iVa_MasterInputs);
 if((((unsigned long)(unsigned char)iConCtrl.Cmd.Start==(unsigned long)(unsigned char)0))){
 (iAxStepMaster=0);
 }
-}imp1_else14_0:imp1_end14_0:;}
-#line 175 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/ConvCtrl/ConvCtrl/Main.nodebug"
-#line 177 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/ConvCtrl/ConvCtrl/Main.st"
+
+(iBasicParamMaster.CyclicRead.TorqueMode=1);
+}}
+#line 174 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/ConvCtrl/ConvCtrl/Main.nodebug"
+#line 176 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/ConvCtrl/ConvCtrl/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 (iFb_MasterAx.Enable=0);
@@ -173,12 +172,13 @@ MpAxisBasic(&iFb_MasterAx);
 (iVa_MasterInputs.Enable=0);
 MC_BR_SetHardwareInputs(&iVa_MasterInputs);
 }}
-#line 183 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/ConvCtrl/ConvCtrl/Main.nodebug"
+#line 182 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/ConvCtrl/ConvCtrl/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
 __asm__(".section \".plc\"");
 __asm__(".ascii \"iecfile \\\"Logical/Global.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Cutter/CutCtrl.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/runtime/runtime.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.typ\\\" scope \\\"global\\\"\\n\"");
@@ -197,6 +197,9 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/brsystem/brsystem.typ\\\" scope 
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmX.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmXError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserX.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserXError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserXAlarm.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/runtime/runtime.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"global\\\"\\n\"");
@@ -210,6 +213,7 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/sys_lib/sys_lib.fun\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/brsystem/brsystem.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmX.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserX.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Temp/Includes/AS_TempDecl/Config1/GlobalComponents/MpComponents.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.var\\\" scope \\\"global\\\"\\n\"");
@@ -232,6 +236,6 @@ __asm__(".ascii \"iecfile \\\"Temp/Objects/Config1/X20CP0484/ConvCtrl/Main.st.va
 __asm__(".previous");
 
 __asm__(".section \".plciec\"");
-__asm__(".ascii \"plcdata_const 'K_ZERO'\\n\"");
 __asm__(".ascii \"plcdata_const 'PRINT_MARK_LIMIT'\\n\"");
+__asm__(".ascii \"plcdata_const 'K_ZERO'\\n\"");
 __asm__(".previous");

@@ -37,6 +37,20 @@
       <File
         Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\ConvCtrl\ConvCtrl\Variables.var" />
     </Task>
+    <Task
+      Name="AutoCtrl"
+      Disable="false"
+      Source="AutoCtrl.AutoCtrl"
+      Language="IEC">
+      <InternalFile
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\AutoCtrl\Main.st.var" />
+      <File
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\AutoCtrl\AutoCtrl\Types.typ" />
+      <File
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\AutoCtrl\AutoCtrl\Variables.var" />
+      <InternalFile
+        Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Objects\Config1\X20CP0484\AutoCtrl\Alarms_Reset.st.var" />
+    </Task>
   </TaskClass>
   <TaskClass
     Name="Cyclic#2" />

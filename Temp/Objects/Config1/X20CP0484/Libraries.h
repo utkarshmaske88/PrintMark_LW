@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _LIBRARIES_20231221181508_
-#define _LIBRARIES_20231221181508_
+#ifndef _LIBRARIES_20231222173112_
+#define _LIBRARIES_20231222173112_
 
 __asm__(".section \".plc\"");
 
@@ -50,6 +50,10 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.var\\\" scope 
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmX.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmXError.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmX.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserX.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserXError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserXAlarm.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserX.fun\\\" scope \\\"global\\\"\\n\"");
 
 /* Exported library functions and function blocks */
 #ifdef _OPERATOR_EXPORT
@@ -787,9 +791,24 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmX.fun\\\" scope 
 	__asm__(".ascii \"plcexport \\\"MpAlarmXAcknowledgeAll\\\" FUB\\n\"");
 	__asm__(".ascii \"plcexport \\\"MpAlarmXAlarmControl\\\" FUB\\n\"");
 #endif
+#ifdef _MPUSERX_EXPORT
+	__asm__(".ascii \"plcexport \\\"MpUserXLogin\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXManagerUI\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXLoginUI\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXLevel\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXAccessRight\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXHasRole\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXGetData\\\" FUN\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXConfig\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXLoginConfig\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXSignatureUI\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXSignature\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXServerConfig\\\" FUB\\n\"");
+	__asm__(".ascii \"plcexport \\\"MpUserXMappingConfig\\\" FUB\\n\"");
+#endif
 
 __asm__(".previous");
 
 
-#endif /* _LIBRARIES_20231221181508_ */
+#endif /* _LIBRARIES_20231222173112_ */
 

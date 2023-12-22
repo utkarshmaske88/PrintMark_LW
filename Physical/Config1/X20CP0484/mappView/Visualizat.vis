@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <vdef:Visualization id="vis_1" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
-  <StartPage pageRefId="" />
+  <StartPage pageRefId="MainPage" />
   <Pages />
   <Navigations />
   <BindingsSets />
@@ -10,6 +10,12 @@
     <Content refId="HomeContent" />
     <Content refId="NavBarContent" />
     <Content refId="HeaderContent" />
+    <Content refId="UsersContent" />
+    <Content refId="AlarmsContent" />
+    <Content refId="DiagnosContent" />
+    <Content refId="AxCtrlContent" />
+    <Content refId="AxisSetContent" />
+    <Content refId="ManualContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

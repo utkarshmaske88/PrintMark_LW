@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703160187_5_
-#define _BUR_1703160187_5_
+#ifndef _BUR_1703245902_6_
+#define _BUR_1703245902_6_
 
 #include <bur/plctypes.h>
 
@@ -58,7 +58,7 @@ _BUR_LOCAL struct AxisCtrl_typ iCutCtrl;
 _BUR_LOCAL plcbit icmdMoveAbsoulte;
 _BUR_LOCAL double iAbsVal;
 _BUR_LOCAL struct MC_BR_CFG_RM2_REF iRegCapConfig;
-_BUR_LOCAL struct ACP10APNWCPA_typ iRegCapAdvPar;
+_BUR_LOCAL struct MC_BR_ADV_RM2_REF iRegCapAdvPar;
 _BUR_LOCAL struct MC_BR_RegMarkCapture002 iFb_RegCap;
 _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
 _BUR_LOCAL struct MpAxisBasicParType iParaSlave;
@@ -78,7 +78,7 @@ _BUR_LOCAL plcbit icmdMoveAdditive;
 _BUR_LOCAL_RETAIN plcbit icmdMoveVelocity;
 _BUR_LOCAL plcbit icmdHome;
 _BUR_LOCAL plcbit icmdPower;
-_BUR_LOCAL struct MpAxisBasicParType iBasicParameters;
+_BUR_LOCAL struct MpAxisBasicParType iBasicParSlave;
 _BUR_LOCAL plcbit icmdUpdate;
 _BUR_LOCAL plcbit iMi_LogoNegDir;
 _BUR_LOCAL float iVl_OldAcc;
@@ -100,5 +100,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/Acp10_MC/acp10_mc.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1703160187_5_ */
+#endif /* _BUR_1703245902_6_ */
 

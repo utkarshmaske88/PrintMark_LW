@@ -16,5 +16,10 @@
         <seg>Hello world!</seg>
       </tuv>
     </tu>
+    <tu tuid="1">
+      <tuv xml:lang="en">
+        <seg>Print Mark</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

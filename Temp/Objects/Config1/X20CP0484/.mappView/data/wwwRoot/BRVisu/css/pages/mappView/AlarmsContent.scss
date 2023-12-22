@@ -1,0 +1,211 @@
+@import "mixins.scss";
+#AlarmsContent_AlarmList1 {	@include elemTop(0);
+}
+#AlarmsContent_AlarmList1 {	@include elemLeft(0);
+}
+#AlarmsContent_AlarmList1 {	@include elemWidth(1124);
+}
+#AlarmsContent_AlarmList1 {	@include elemHeight(437);
+}
+#AlarmsContent_AlarmList1 {	z-index: 0;
+}
+#AlarmsContent_AlarmListItem1 {	@include elemWidth(200);
+}
+#AlarmsContent_AlarmListItem1 {	z-index: 0;
+}
+#AlarmsContent_AlarmListItem2 {	@include elemWidth(200);
+}
+#AlarmsContent_AlarmListItem2 {	z-index: 1;
+}
+#AlarmsContent_AlarmListItem3 {	@include elemWidth(200);
+}
+#AlarmsContent_AlarmListItem3 {	z-index: 2;
+}
+#AlarmsContent_cmdAcknowledge {	@include elemTop(614);
+}
+#AlarmsContent_cmdAcknowledge {	@include elemLeft(48);
+}
+#AlarmsContent_cmdAcknowledge {	@include elemAutoWidth(240);
+}
+#AlarmsContent_cmdAcknowledge {	@include elemAutoHeight(62);
+}
+#AlarmsContent_cmdAcknowledge {	z-index: 1;
+}
+#AlarmsContent_cmdAcknowledge {	img {
+		@include imageHeight(50);
+	}
+}
+#AlarmsContent_cmdAcknowledge {	svg {
+		@include imageHeight(50);
+	}
+}
+#AlarmsContent_cmdAcknowledge {	img {
+		@include imageWidth(50);
+	}
+}
+#AlarmsContent_cmdAcknowledge {	svg {
+		@include imageWidth(50);
+	}
+}
+#AlarmsContent_cmdAcknowledge {	&:not(.active):not(.checked) {
+		border-width: 2px;
+	}
+}
+#AlarmsContent_cmdAcknowledge {	&.disabled {
+		border-width: 2px;
+	}
+}
+#AlarmsContent_cmdAcknowledge {	@include border-radius(5px);
+}
+#AlarmsContent_cmdAcknowledge {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(249, 248, 248, 1);
+	}
+}
+#AlarmsContent_cmdAcknowledge {	&:not(.disabled):not(.active):not(.checked) {
+		border-color: rgba(170, 109, 163, 1);
+	}
+}
+#AlarmsContent_cmdAcknowledge {	span {
+		font-size: 18px;
+	}
+}
+#AlarmsContent_cmdAcknowledge {	span {
+		@include font-weight-bold(true);
+	}
+}
+#AlarmsContent_cmdAckAll {	@include elemTop(614);
+}
+#AlarmsContent_cmdAckAll {	@include elemLeft(475);
+}
+#AlarmsContent_cmdAckAll {	@include elemAutoWidth(240);
+}
+#AlarmsContent_cmdAckAll {	@include elemAutoHeight(62);
+}
+#AlarmsContent_cmdAckAll {	z-index: 2;
+}
+#AlarmsContent_cmdAckAll {	img {
+		@include imageHeight(50);
+	}
+}
+#AlarmsContent_cmdAckAll {	svg {
+		@include imageHeight(50);
+	}
+}
+#AlarmsContent_cmdAckAll {	img {
+		@include imageWidth(50);
+	}
+}
+#AlarmsContent_cmdAckAll {	svg {
+		@include imageWidth(50);
+	}
+}
+#AlarmsContent_cmdAckAll {	@include border-radius(5px);
+}
+#AlarmsContent_cmdAckAll {	&:not(.disabled):not(.active):not(.checked) {
+		border-color: rgba(170, 109, 163, 1);
+	}
+}
+#AlarmsContent_cmdAckAll {	span {
+		font-size: 16px;
+	}
+}
+#AlarmsContent_cmdAckAll {	span {
+		@include font-weight-bold(true);
+	}
+}
+#AlarmsContent_cmdAckAll1 {	@include elemTop(614);
+}
+#AlarmsContent_cmdAckAll1 {	@include elemLeft(961);
+}
+#AlarmsContent_cmdAckAll1 {	@include elemAutoWidth(139);
+}
+#AlarmsContent_cmdAckAll1 {	@include elemAutoHeight(62);
+}
+#AlarmsContent_cmdAckAll1 {	z-index: 3;
+}
+#AlarmsContent_cmdAckAll1 {	img {
+		@include imageHeight(50);
+	}
+}
+#AlarmsContent_cmdAckAll1 {	svg {
+		@include imageHeight(50);
+	}
+}
+#AlarmsContent_cmdAckAll1 {	img {
+		@include imageWidth(50);
+	}
+}
+#AlarmsContent_cmdAckAll1 {	svg {
+		@include imageWidth(50);
+	}
+}
+#AlarmsContent_cmdAckAll1 {	@include border-radius(5px);
+}
+#AlarmsContent_cmdAckAll1 {	&:not(.disabled):not(.active):not(.checked) {
+		border-color: rgba(170, 109, 163, 1);
+	}
+}
+#AlarmsContent_cmdAckAll1 {	span {
+		font-size: 16px;
+	}
+}
+#AlarmsContent_cmdAckAll1 {	span {
+		@include font-weight-bold(true);
+	}
+}
+#AlarmsContent_actAlarms {	@include elemAutoHeight(30);
+}
+#AlarmsContent_actAlarms {	@include elemTop(465);
+}
+#AlarmsContent_actAlarms {	@include elemLeft(17);
+}
+#AlarmsContent_actAlarms {	@include elemAutoWidth(139);
+}
+#AlarmsContent_actAlarms {	z-index: 4;
+}
+#AlarmsContent_actAlarms {	@include text-alignment-all('left');
+}
+#AlarmsContent_Label2 {	@include elemAutoHeight(30);
+}
+#AlarmsContent_Label2 {	@include elemTop(465);
+}
+#AlarmsContent_Label2 {	@include elemLeft(380);
+}
+#AlarmsContent_Label2 {	@include elemAutoWidth(139);
+}
+#AlarmsContent_Label2 {	z-index: 5;
+}
+#AlarmsContent_Label2 {	@include text-alignment-all('left');
+}
+#AlarmsContent_actalrmsNO {	@include elemAutoHeight(30);
+}
+#AlarmsContent_actalrmsNO {	@include elemTop(465);
+}
+#AlarmsContent_actalrmsNO {	@include elemLeft(206);
+}
+#AlarmsContent_actalrmsNO {	@include elemAutoWidth(60);
+}
+#AlarmsContent_actalrmsNO {	z-index: 6;
+}
+#AlarmsContent_actalrmsNO {	@include border-radius(4px);
+}
+#AlarmsContent_actalrmsNO {	input {
+		@include text-alignment(center);
+	}
+}
+#AlarmsContent_PndAlarmsNO {	@include elemAutoHeight(30);
+}
+#AlarmsContent_PndAlarmsNO {	@include elemTop(465);
+}
+#AlarmsContent_PndAlarmsNO {	@include elemLeft(570);
+}
+#AlarmsContent_PndAlarmsNO {	@include elemAutoWidth(60);
+}
+#AlarmsContent_PndAlarmsNO {	z-index: 7;
+}
+#AlarmsContent_PndAlarmsNO {	@include border-radius(4px);
+}
+#AlarmsContent_PndAlarmsNO {	input {
+		@include text-alignment(center);
+	}
+}

@@ -19,7 +19,7 @@ VAR CONSTANT
 	START_VEL : REAL := 145;
 END_VAR
 VAR
-	iBasicParameters : MpAxisBasicParType; (*basic parameters for axis*)
+	iBasicParSlave : MpAxisBasicParType; (*basic parameters for axis*)
 	icmdPower : BOOL; (*powering on the axis*)
 	icmdHome : BOOL; (*hooming the axis*)
 END_VAR
@@ -57,7 +57,7 @@ VAR
 	iParaSlave : MpAxisBasicParType;
 	iFb_CamSequ : MpAxisCamSequencer;
 	iFb_RegCap : MC_BR_RegMarkCapture002;
-	iRegCapAdvPar : ACP10APNWCPA_typ;
+	iRegCapAdvPar : MC_BR_ADV_RM2_REF;
 	iRegCapConfig : MC_BR_CFG_RM2_REF;
 	iAbsVal : LREAL;
 	icmdMoveAbsoulte : BOOL;
@@ -77,5 +77,4 @@ VAR
 	iJogLimState : Joglim_enum;
 	LOWER_BUFER : LREAL := 0;
 	ZERO : LREAL := 0;
-	iVa_RegCaptureAdvPara : MC_BR_ADV_RM2_REF; (*Adv para for reg capture*)
 END_VAR

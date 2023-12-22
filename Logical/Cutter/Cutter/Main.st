@@ -1,28 +1,28 @@
 
 PROGRAM _INIT
 	(* Insert code here *)
-	iBasicParameters.Acceleration:=10800;
-	iBasicParameters.Deceleration:=108000;
-	iBasicParameters.Jog.Deceleration:=108000;
-	iBasicParameters.Jog.Acceleration:=108000;
-	iBasicParameters.Jog.Velocity:=360;
+	iBasicParSlave.Acceleration:=10800;
+	iBasicParSlave.Deceleration:=108000;
+	iBasicParSlave.Jog.Deceleration:=108000;
+	iBasicParSlave.Jog.Acceleration:=108000;
+	iBasicParSlave.Jog.Velocity:=360;
 	
 		
-	iVa_reg.EventSourceParID := ACP10PAR_STAT_TRIGGER1;
-	iVa_RegCaptureAdvPara.Edge := ncP_EDGE;
-	iVa_RegCaptureAdvPara.MinWidth := 50;
-	iVa_RegCaptureAdvPara.MaxWidth := 200;
-	iVa_RegCaptureAdvPara.WindowNeg := 200;
-	iVa_RegCaptureAdvPara.WindowPos := 200;
-	iVa_RegCaptureAdvPara.SensorDelay := 200;
-	iVa_RegCaptureAdvPara.CorrectCurrentCycle := TRUE;
-	iVa_RegCaptureAdvPara.CorrectionValueLimitNeg := 70;
-	iVa_RegCaptureAdvPara.CorrectionValueLimitPos := 70;
+	iRegCapAdvPar.EventSourceParID := ACP10PAR_STAT_TRIGGER1;
+	iRegCapAdvPar.Edge := ncP_EDGE;
+	iRegCapAdvPar.MinWidth := 50;
+	iRegCapAdvPar.MaxWidth := 200;
+	iRegCapAdvPar.WindowNeg := 200;
+	iRegCapAdvPar.WindowPos := 200;
+	iRegCapAdvPar.SensorDelay := 200;
+	iRegCapAdvPar.CorrectCurrentCycle := TRUE;
+	iRegCapAdvPar.CorrectionValueLimitNeg := 70;
+	iRegCapAdvPar.CorrectionValueLimitPos := 70;
 	
-	iVa_RegCaptureConfig.DistanceToSensor := 1050;
-	iVa_RegCaptureConfig.ProductLength := 700;
-	iVa_RegCaptureConfig.RegMarkPosition := 700;
-	iVa_RegCaptureConfig.RegMarkOffset := 10;
+	iRegCapConfig.DistanceToSensor := 1050;
+	iRegCapConfig.ProductLength := 700;
+	iRegCapConfig.RegMarkPosition := 700;
+	iRegCapConfig.RegMarkOffset := 10;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -40,7 +40,7 @@ PROGRAM _CYCLIC
 	END_IF
 	
 	IF iFb_SlaveAx.Info.PLCopenState = mpAXIS_SYNCHRONIZED_MOTION THEN
-		iFb_RegCapture();
+		iFb_RegCap();
 	END_IF
 	
 	//reg capturing action

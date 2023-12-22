@@ -94,10 +94,10 @@ PROGRAM _CYCLIC
 			
 			//poweron the axis
 		enPOWER_ONA:
-			icmdPower 	:= TRUE;
+			iFb_MasterAx.Power 	:= TRUE;
 			IF iFb_MasterAx.PowerOn THEN
 
-				icmdHome 	:= TRUE;
+				iFb_MasterAx.Home 	:= TRUE;
 				IF gAutoMode =TRUE THEN
 					iAxStepMaster:=enAUTOMATIC;
 				ELSIF gManulMode=TRUE THEN
@@ -117,7 +117,7 @@ PROGRAM _CYCLIC
 			iVa_OldRecPosition 		:= K_ZERO;
 			IF iConCtrl.Cmd.Start = FALSE THEN
 				iAxStepMaster 		:= enINITA;
-				icmdPower := FALSE;
+				iFb_MasterAx.Power := FALSE;
 			END_IF
 			
 		
@@ -148,7 +148,7 @@ PROGRAM _CYCLIC
 		
 			//error mode
 		enERRORA:
-			icmdPower := FALSE;
+			iFb_MasterAx.Power := FALSE;
 			icmdMoveVelocity := FALSE;
 			icmdStop := FALSE;
 			
@@ -159,9 +159,6 @@ PROGRAM _CYCLIC
 			END_IF
 	END_CASE
 	
-	iFb_MasterAx.Update:=icmdUpdate;
-	iFb_MasterAx.Home:=icmdHome;
-	iFb_MasterAx.Power:=icmdPower;
 	
 	iConCtrl.Cmd.PrintMark:=gIR_Trigger;
 	iVa_MasterInputs.Enable:=TRUE;
@@ -172,6 +169,8 @@ PROGRAM _CYCLIC
 	IF iConCtrl.Cmd.Start = FALSE THEN
 		iAxStepMaster := enINITA;
 	END_IF
+	
+	iBasicParamMaster.CyclicRead.TorqueMode:=mpAXIS_READ_CYCLIC;
 END_PROGRAM
 
 PROGRAM _EXIT

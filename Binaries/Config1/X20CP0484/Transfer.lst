@@ -4,21 +4,31 @@
   <OperatingSystem Version="G4.93"/>
   <Hardware Target="SG4"/>
   <Operation Delete="AlarmsX.br"/>
+  <Operation Delete="AutoCtrl.br"/>
   <Operation Delete="ConvCtrl.br"/>
   <Operation Delete="Cutter.br"/>
+  <Operation Delete="mvLoader.br"/>
   <Operation Delete="MpAlarmX.br"/>
   <Operation Delete="MpAxis.br"/>
-  <Operation Delete="asieccon.br"/>
-  <Operation Delete="dataobj.br"/>
   <Operation Delete="MpCom.br"/>
-  <Operation Delete="MpBase.br"/>
+  <Operation Delete="arssl.br"/>
+  <Operation Delete="MpUserX.br"/>
   <Operation Delete="MC_RegMa.br"/>
+  <Operation Delete="asieccon.br"/>
+  <Operation Delete="arcert.br"/>
+  <Operation Delete="aseth.br"/>
+  <Operation Delete="MpBase.br"/>
+  <Operation Delete="aruser.br"/>
+  <Operation Delete="dataobj.br"/>
+  <Operation Delete="ashw.br"/>
   <Operation Delete="Acp10_MC.br"/>
   <Operation Delete="sys_lib.br"/>
   <Operation Delete="brsystem.br"/>
   <Operation Delete="Acp10man.br"/>
   <Operation Delete="fileio.br"/>
   <Operation Delete="astime.br"/>
+  <Operation Delete="arflatprv.br"/>
+  <Operation Delete="arcoal.br"/>
   <Operation Download="asfw.br" Memory="SystemROM"/>
   <Operation Download="ashwd.br" Memory="SystemROM"/>
   <Operation Download="arconfig.br" Memory="SystemROM"/>
@@ -29,6 +39,9 @@
   <Operation Download="NcGlobal.br" Memory="UserROM"/>
   <Operation Download="powerlnk.br" Memory="UserROM"/>
   <Operation Download="Acp10par.br" Memory="UserROM"/>
+  <Operation Download="arsvcreg.br" Memory="UserROM"/>
+  <Operation Download="arcoal.br" Memory="UserROM"/>
+  <Operation Download="arflatprv.br" Memory="UserROM"/>
   <Operation Download="runtime.br" Memory="UserROM"/>
   <Operation Download="astime.br" Memory="UserROM"/>
   <Operation Download="fileio.br" Memory="UserROM"/>
@@ -36,7 +49,15 @@
   <Operation Download="brsystem.br" Memory="UserROM"/>
   <Operation Download="sys_lib.br" Memory="UserROM"/>
   <Operation Download="Acp10_MC.br" Memory="UserROM"/>
+  <Operation Download="ashw.br" Memory="UserROM"/>
+  <Operation Download="dataobj.br" Memory="UserROM"/>
+  <Operation Download="aruser.br" Memory="UserROM"/>
+  <Operation Download="MpBase.br" Memory="UserROM"/>
+  <Operation Download="aseth.br" Memory="UserROM"/>
+  <Operation Download="arcert.br" Memory="UserROM"/>
+  <Operation Download="asieccon.br" Memory="UserROM"/>
   <Operation Download="MC_RegMa.br" Memory="UserROM"/>
+  <Operation Download="MpUserX.br" Memory="UserROM"/>
   <Operation Download="Acp10sys.br" Memory="UserROM"/>
   <Operation Download="gAxMsa.br" Memory="UserROM"/>
   <Operation Download="gAxMsi.br" Memory="UserROM"/>
@@ -45,16 +66,15 @@
   <Operation Download="gAxSlavei.br" Memory="UserROM"/>
   <Operation Restart="warm"/>
   <Operation Download="asbrstr.br" Memory="UserROM"/>
-  <Operation Download="arsvcreg.br" Memory="UserROM"/>
-  <Operation Download="MpBase.br" Memory="UserROM"/>
+  <Operation Download="arssl.br" Memory="UserROM"/>
   <Operation Download="MpCom.br" Memory="UserROM"/>
-  <Operation Download="dataobj.br" Memory="UserROM"/>
-  <Operation Download="asieccon.br" Memory="UserROM"/>
   <Operation Download="MpAxis.br" Memory="UserROM"/>
   <Operation Download="MpAlarmX.br" Memory="UserROM"/>
   <Operation Download="udbdef.br" Memory="UserROM"/>
   <Operation Download="TCData.br" Memory="SystemROM"/>
   <Operation Download="FWRules.br" Memory="UserROM"/>
+  <Operation Download="mvLoader.br" Memory="UserROM"/>
+  <Operation Download="TCLang.br" Memory="UserROM"/>
   <Operation Download="slaveaxis.br" Memory="UserROM"/>
   <Operation Download="ashwac.br" Memory="UserROM"/>
   <Operation Download="User.br" Memory="UserROM"/>
@@ -62,7 +82,10 @@
   <Operation Download="iomap.br" Memory="UserROM"/>
   <Operation Download="Role.br" Memory="UserROM"/>
   <Operation Download="Alarms.br" Memory="UserROM"/>
+  <Operation Download="UserX.br" Memory="UserROM"/>
+  <Operation Download="TC.br" Memory="UserROM"/>
   <Operation Download="Cutter.br" Memory="UserROM"/>
   <Operation Download="ConvCtrl.br" Memory="UserROM"/>
+  <Operation Download="AutoCtrl.br" Memory="UserROM"/>
   <Operation Download="AlarmsX.br" Memory="UserROM"/>
 </Transfer>

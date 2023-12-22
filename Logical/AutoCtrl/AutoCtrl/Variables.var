@@ -1,0 +1,52 @@
+VAR
+	RegAdd : UDINT; (*Address*)
+	Status_RegCapture : UINT; (*Status*)
+	RegSize : UDINT; (*Size*)
+	ConvAdd : UDINT; (*Address*)
+	SizeConv : UDINT; (*Address*)
+END_VAR
+(*Pointer Variables*)
+VAR
+	pCutterCtrl : REFERENCE TO AxisCtrl_typ; (*Pointer to conv ctrl*)
+	pRegCapture : REFERENCE TO MC_BR_RegMarkCapture002; (*Pointer to reg capture*)
+	pConvCtrl : REFERENCE TO AxisCtrl_typ; (*Pointer to Conv Ctrl*)
+	pMasterAx : REFERENCE TO MpAxisBasic;
+	pAx_CamSeq : REFERENCE TO MpAxisCamSequencer; (*Pointer cam seq*)
+	pSlaveAx : REFERENCE TO MpAxisBasic;
+END_VAR
+(*Process Variables*)
+VAR
+	iAutoCtrlState : AutoCtrl_enum; (*Auto control state*)
+	iAutoCtrl : AutoCtrl_typ; (*Auto ctrl struture*)
+	iStatus_CutCtrl : UINT;
+	CutterAdd : UDINT;
+	SizeCutter : UDINT;
+	iStatus_ConvCtrl : UINT;
+	iStatus_CamSeq : UINT;
+	iStatus_RegCapt : UINT;
+	CamAdd : UDINT;
+	SizeCam : UDINT;
+	iCutCtrl : UDINT;
+	iConCtrl : UDINT;
+	iAx_CamSequence : UDINT;
+	iFb_RegCap : UDINT;
+	iStatus_SlaveAx : UDINT;
+	iMi_StatusTxt : WSTRING[80];
+	iStatus_MasterAx : UINT;
+	SlaveAx : UDINT;
+	SlaveSize : UDINT;
+	MasterAx : UDINT;
+	MasterSize : UDINT;
+	iMi_CutModeSelected : BOOL;
+	gMi_ModeConfirm : BOOL;
+	iMi_SelectedMode : WSTRING[80];
+	iMI_LastBagLen : REAL;
+END_VAR
+VAR CONSTANT
+	TEN : REAL := 10;
+END_VAR
+VAR
+	iMI_AvgBagLen : REAL;
+	iResetState : Reset_enum;
+	gMI_MODE : BOOL;
+END_VAR

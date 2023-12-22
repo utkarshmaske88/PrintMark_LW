@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="AxisSetContent" height="688" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="55" left="151" width="132" zIndex="0" text="$IAT/Main/9" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="338" left="163" width="156" zIndex="1" text="$IAT/Main/10" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label15" top="123" left="428" width="116" zIndex="2" text="$IAT/Main/37" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label16" top="46" left="428" width="116" zIndex="3" text="$IAT/Main/20" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label18" top="351" left="428" width="116" zIndex="4" text="$IAT/Main/20" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label19" top="201" left="428" width="116" zIndex="5" text="$IAT/Main/38" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label17" top="428" left="428" width="116" zIndex="6" text="$IAT/Main/37" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label20" top="506" left="428" width="116" zIndex="7" text="$IAT/Main/38" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="inCutSetSpeed" top="35" left="576" height="52" zIndex="8" maxValue="50" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU1','imperial-us':'http://www.br-automation.com/units|EU1'}" unitAlign="right" cornerRadius="10px" backColor="rgba(192, 192, 255, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="inCutDeacc" top="190" left="576" height="52" zIndex="9" maxValue="300" cornerRadius="10px" backColor="rgba(192, 192, 255, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="inCutAcc" top="112" left="576" height="52" zIndex="10" maxValue="300" cornerRadius="10px" backColor="rgba(192, 192, 255, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="inConvAcc" top="417" left="576" height="52" zIndex="11" maxValue="300" cornerRadius="10px" backColor="rgba(192, 192, 255, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="inConvSpeed" top="340" left="576" height="52" zIndex="12" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU1','imperial-us':'http://www.br-automation.com/units|EU1'}" unitAlign="right" cornerRadius="10px" backColor="rgba(192, 192, 255, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="inConvDeacc" top="495" left="576" height="52" zIndex="13" maxValue="300" cornerRadius="10px" backColor="rgba(192, 192, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="201" left="676" width="64" zIndex="14" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="425" left="676" width="64" zIndex="15" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="123" left="676" width="64" zIndex="16" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="503" left="676" width="64" zIndex="17" text="PPM/s^2" textAlign="center" fontSize="10px" bold="true" />
+  </Widgets>
+</Content>

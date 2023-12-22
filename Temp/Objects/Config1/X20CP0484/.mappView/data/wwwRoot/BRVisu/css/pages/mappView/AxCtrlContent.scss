@@ -1,0 +1,261 @@
+@import "mixins.scss";
+#AxCtrlContent_Label1 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label1 {	@include elemTop(114);
+}
+#AxCtrlContent_Label1 {	@include elemLeft(190);
+}
+#AxCtrlContent_Label1 {	@include elemAutoWidth(132);
+}
+#AxCtrlContent_Label1 {	z-index: 0;
+}
+#AxCtrlContent_Label1 {	@include text-alignment-all('center');
+}
+#AxCtrlContent_Label1 {	font-size: 18px;
+}
+#AxCtrlContent_Label1 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_Label2 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label2 {	@include elemTop(408);
+}
+#AxCtrlContent_Label2 {	@include elemLeft(191);
+}
+#AxCtrlContent_Label2 {	@include elemAutoWidth(156);
+}
+#AxCtrlContent_Label2 {	z-index: 1;
+}
+#AxCtrlContent_Label2 {	@include text-alignment-all('center');
+}
+#AxCtrlContent_Label2 {	font-size: 18px;
+}
+#AxCtrlContent_Label2 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_Label3 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label3 {	@include elemTop(68);
+}
+#AxCtrlContent_Label3 {	@include elemLeft(433);
+}
+#AxCtrlContent_Label3 {	@include elemAutoWidth(148);
+}
+#AxCtrlContent_Label3 {	z-index: 2;
+}
+#AxCtrlContent_Label3 {	font-size: 15px;
+}
+#AxCtrlContent_Label3 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_Label4 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label4 {	@include elemTop(188);
+}
+#AxCtrlContent_Label4 {	@include elemLeft(433);
+}
+#AxCtrlContent_Label4 {	@include elemAutoWidth(148);
+}
+#AxCtrlContent_Label4 {	z-index: 3;
+}
+#AxCtrlContent_Label4 {	font-size: 15px;
+}
+#AxCtrlContent_Label4 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_Label5 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label5 {	@include elemTop(128);
+}
+#AxCtrlContent_Label5 {	@include elemLeft(433);
+}
+#AxCtrlContent_Label5 {	@include elemAutoWidth(148);
+}
+#AxCtrlContent_Label5 {	z-index: 4;
+}
+#AxCtrlContent_Label5 {	font-size: 15px;
+}
+#AxCtrlContent_Label5 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_Label6 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label6 {	@include elemTop(378);
+}
+#AxCtrlContent_Label6 {	@include elemLeft(433);
+}
+#AxCtrlContent_Label6 {	@include elemAutoWidth(148);
+}
+#AxCtrlContent_Label6 {	z-index: 5;
+}
+#AxCtrlContent_Label6 {	font-size: 15px;
+}
+#AxCtrlContent_Label6 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_Label7 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label7 {	@include elemTop(498);
+}
+#AxCtrlContent_Label7 {	@include elemLeft(433);
+}
+#AxCtrlContent_Label7 {	@include elemAutoWidth(148);
+}
+#AxCtrlContent_Label7 {	z-index: 6;
+}
+#AxCtrlContent_Label7 {	font-size: 15px;
+}
+#AxCtrlContent_Label7 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_Label8 {	@include elemAutoHeight(30);
+}
+#AxCtrlContent_Label8 {	@include elemTop(438);
+}
+#AxCtrlContent_Label8 {	@include elemLeft(433);
+}
+#AxCtrlContent_Label8 {	@include elemAutoWidth(148);
+}
+#AxCtrlContent_Label8 {	z-index: 7;
+}
+#AxCtrlContent_Label8 {	font-size: 15px;
+}
+#AxCtrlContent_Label8 {	@include font-weight-bold(true);
+}
+#AxCtrlContent_ToggleButton1 {	@include elemTop(56);
+}
+#AxCtrlContent_ToggleButton1 {	@include elemLeft(650);
+}
+#AxCtrlContent_ToggleButton1 {	@include elemAutoWidth(72);
+}
+#AxCtrlContent_ToggleButton1 {	@include elemAutoHeight(52);
+}
+#AxCtrlContent_ToggleButton1 {	z-index: 8;
+}
+#AxCtrlContent_ToggleButton1 {	@include border-radius(10px);
+}
+#AxCtrlContent_ToggleButton1 {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 128, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton1 {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton1 {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+#AxCtrlContent_ToggleButton2 {	@include elemTop(116);
+}
+#AxCtrlContent_ToggleButton2 {	@include elemLeft(650);
+}
+#AxCtrlContent_ToggleButton2 {	@include elemAutoWidth(72);
+}
+#AxCtrlContent_ToggleButton2 {	@include elemAutoHeight(52);
+}
+#AxCtrlContent_ToggleButton2 {	z-index: 9;
+}
+#AxCtrlContent_ToggleButton2 {	@include border-radius(10px);
+}
+#AxCtrlContent_ToggleButton2 {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 128, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton2 {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton2 {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+#AxCtrlContent_ToggleButton3 {	@include elemTop(176);
+}
+#AxCtrlContent_ToggleButton3 {	@include elemLeft(650);
+}
+#AxCtrlContent_ToggleButton3 {	@include elemAutoWidth(72);
+}
+#AxCtrlContent_ToggleButton3 {	@include elemAutoHeight(52);
+}
+#AxCtrlContent_ToggleButton3 {	z-index: 10;
+}
+#AxCtrlContent_ToggleButton3 {	@include border-radius(10px);
+}
+#AxCtrlContent_ToggleButton3 {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 128, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton3 {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton3 {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+#AxCtrlContent_ToggleButton4 {	@include elemTop(372);
+}
+#AxCtrlContent_ToggleButton4 {	@include elemLeft(642);
+}
+#AxCtrlContent_ToggleButton4 {	@include elemAutoWidth(72);
+}
+#AxCtrlContent_ToggleButton4 {	@include elemAutoHeight(52);
+}
+#AxCtrlContent_ToggleButton4 {	z-index: 11;
+}
+#AxCtrlContent_ToggleButton4 {	@include border-radius(10px);
+}
+#AxCtrlContent_ToggleButton4 {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 128, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton4 {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton4 {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+#AxCtrlContent_ToggleButton5 {	@include elemTop(432);
+}
+#AxCtrlContent_ToggleButton5 {	@include elemLeft(642);
+}
+#AxCtrlContent_ToggleButton5 {	@include elemAutoWidth(72);
+}
+#AxCtrlContent_ToggleButton5 {	@include elemAutoHeight(52);
+}
+#AxCtrlContent_ToggleButton5 {	z-index: 12;
+}
+#AxCtrlContent_ToggleButton5 {	@include border-radius(10px);
+}
+#AxCtrlContent_ToggleButton5 {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 128, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton5 {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton5 {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+#AxCtrlContent_ToggleButton6 {	@include elemTop(492);
+}
+#AxCtrlContent_ToggleButton6 {	@include elemLeft(642);
+}
+#AxCtrlContent_ToggleButton6 {	@include elemAutoWidth(72);
+}
+#AxCtrlContent_ToggleButton6 {	@include elemAutoHeight(52);
+}
+#AxCtrlContent_ToggleButton6 {	z-index: 13;
+}
+#AxCtrlContent_ToggleButton6 {	@include border-radius(10px);
+}
+#AxCtrlContent_ToggleButton6 {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 128, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton6 {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#AxCtrlContent_ToggleButton6 {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}

@@ -20,39 +20,39 @@ ACTION SingleCutter:
 	iFb_SlaveAx.MpLink := ADR(gmlSlave);
 	iFb_SlaveAx.Axis := ADR(gAxSlave);
 
-	iFb_SlaveAx.Parameters := ADR(iBasicParameters);
+	iFb_SlaveAx.Parameters := ADR(iBasicParSlave);
 	iFb_SlaveAx();
 	
 	//	if new velocity by user input is different then will update
-	//	IF iVl_OldVelocity <> iBasicParameters.Acceleration THEN
+	//	IF iVl_OldVelocity <> iBasicParSlave.Acceleration THEN
 	//		iFb_SlaveAx.Update:=TRUE ;
 	//		IF	iFb_SlaveAx.UpdateDone=TRUE THEN
-	//			iVl_OldVelocity:= iBasicParameters.Velocity;
+	//			iVl_OldVelocity:= iBasicParSlave.Velocity;
 	//			iFb_SlaveAx.Update:=FALSE ;
 	//		END_IF;
 	//	END_IF;
 	//	
 	//	//	if new accelaration by user input is different then will update
-	//	IF iVl_OldAcc<> iBasicParameters.Acceleration THEN
+	//	IF iVl_OldAcc<> iBasicParSlave.Acceleration THEN
 	//		iFb_SlaveAx.Update:=TRUE ;
 	//		IF	iFb_SlaveAx.UpdateDone=TRUE THEN
-	//			iVl_OldAcc:= iBasicParameters.Acceleration;
+	//			iVl_OldAcc:= iBasicParSlave.Acceleration;
 	//			iFb_SlaveAx.Update:=FALSE ;
 	//		END_IF;
 	//	END_IF;
 	//	
 	//	//	if new deccelaration by user input is different then will update
-	//	IF iVl_OldAccNeg<> iBasicParameters.Deceleration THEN
+	//	IF iVl_OldAccNeg<> iBasicParSlave.Deceleration THEN
 	//		iFb_SlaveAx.Update:=TRUE ;
 	//		IF	iFb_SlaveAx.UpdateDone=TRUE THEN
-	//			iVl_OldAccNeg:= iBasicParameters.Deceleration;
+	//			iVl_OldAccNeg:= iBasicParSlave.Deceleration;
 	//			iFb_SlaveAx.Update:=FALSE ;
 	//		END_IF;
 	//	END_IF;
 	
 	
 	//Limit for the torque
-	iBasicParameters.Torque.Limit:=0.8;
+	iBasicParSlave.Torque.Limit:=0.8;
 	
 	//stopping the axis command
 	IF icmdStop=TRUE THEN
@@ -84,52 +84,52 @@ ACTION SingleCutter:
 			
 			//poweron the axis
 		enPOWER_ONA:
-			icmdPower := TRUE;
+			iFb_SlaveAx.Power := TRUE;
 			IF iFb_SlaveAx.PowerOn = TRUE THEN
 				
 				//when axis has passed lower cut positon
 				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < LOWER_CUT_POS THEN
-					icmdUpdate:=TRUE; 
+					iFb_SlaveAx.Update:=TRUE; 
 					IF iFb_SlaveAx.UpdateDone=TRUE THEN
 						iAxStep_enum := enNEGHOMING;
-						icmdUpdate:=FALSE;
+						iFb_SlaveAx.Update:=FALSE;
 					END_IF;
 				END_IF
 				
 				//when axis has not passed upper cut positon
 				IF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position > UPPER_CUT_POS THEN
-					icmdUpdate:=TRUE; 
+					iFb_SlaveAx.Update:=TRUE; 
 					IF iFb_SlaveAx.UpdateDone=TRUE THEN
 						iAxStep_enum := enPOSHOMING;
-						icmdUpdate:=FALSE;
+						iFb_SlaveAx.Update:=FALSE;
 					END_IF;
 				END_IF
 			END_IF
 
 			//homing in positive direction
 		enNEGHOMING:
-			iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
-			iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_NEGATIVE;
-			iBasicParameters.Home.SensorOffset := HOFFSET_SINGLE;
-			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
-			iBasicParameters.Home.StartVelocity := START_VEL;
-			icmdHome := TRUE;
+			iBasicParSlave.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
+			iBasicParSlave.Home.HomingDirection:=mpAXIS_HOME_DIR_NEGATIVE;
+			iBasicParSlave.Home.SensorOffset := HOFFSET_SINGLE;
+			iBasicParSlave.Home.HomingVelocity := HOMING_VEL;
+			iBasicParSlave.Home.StartVelocity := START_VEL;
+			iFb_SlaveAx.Home := TRUE;
 			iAxStep_enum:=	enOPERATIONA;
 			
 			//homing in negative direction
 		enPOSHOMING:	
-			iBasicParameters.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
-			iBasicParameters.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;;
-			iBasicParameters.Home.SensorOffset := HOFFSET_SINGLE;
-			iBasicParameters.Home.HomingVelocity := HOMING_VEL;
-			iBasicParameters.Home.StartVelocity := START_VEL;
-			icmdHome := TRUE;
+			iBasicParSlave.Home.Mode:=mpAXIS_HOME_MODE_REF_PULSE;
+			iBasicParSlave.Home.HomingDirection:=mpAXIS_HOME_DIR_POSITIVE;;
+			iBasicParSlave.Home.SensorOffset := HOFFSET_SINGLE;
+			iBasicParSlave.Home.HomingVelocity := HOMING_VEL;
+			iBasicParSlave.Home.StartVelocity := START_VEL;
+			iFb_SlaveAx.Home := TRUE;
 			iAxStep_enum:=	enOPERATIONA;
 			//operation mode
 		enOPERATIONA:
 			
 			IF iFb_SlaveAx.IsHomed=TRUE THEN
-				icmdHome := FALSE;
+				iFb_SlaveAx.Home := FALSE;
 				iAxStep_enum:=enOPERATIONA;
 				IF gAutoMode=TRUE THEN
 					
@@ -183,7 +183,7 @@ ACTION SingleCutter:
 			END_IF
 			//error mode
 		enERRORA:
-			icmdPower := FALSE;
+			iFb_SlaveAx.Power := FALSE;
 			icmdMoveVelocity := FALSE;
 			icmdStop := FALSE;
 			
@@ -193,10 +193,6 @@ ACTION SingleCutter:
 				icmdErrorReset := FALSE;
 			END_IF
 	END_CASE
-	iFb_SlaveAx.Update:=icmdUpdate;
-	iFb_SlaveAx.Home:=icmdHome;
-	iFb_SlaveAx.Power:= icmdPower;
-	
 	
 	
 	CASE iJogLimState OF
@@ -220,8 +216,8 @@ ACTION SingleCutter:
 			END_IF;
 				
 			IF (iFb_SlaveAx.Position > UPPER_CUT_POS)THEN
-				iBasicParameters.Jog.LowerLimit			:= FIRST_CUT_UPPER;
-				iBasicParameters.Jog.UpperLimit			:= MAX_POS_AXIS;
+				iBasicParSlave.Jog.LowerLimit			:= FIRST_CUT_UPPER;
+				iBasicParSlave.Jog.UpperLimit			:= MAX_POS_AXIS;
 				iFb_SlaveAx.Update						:= TRUE;
 				iJogLimState							:= enUPDATE;
 			END_IF;
@@ -232,8 +228,8 @@ ACTION SingleCutter:
 			END_IF;
 				
 			IF (iFb_SlaveAx.Position < LOWER_CUT_POS)THEN
-				iBasicParameters.Jog.LowerLimit	:=ZERO;
-				iBasicParameters.Jog.UpperLimit	:= FIRST_CUT_LOWER;
+				iBasicParSlave.Jog.LowerLimit	:=ZERO;
+				iBasicParSlave.Jog.UpperLimit	:= FIRST_CUT_LOWER;
 				iFb_SlaveAx.Update						:= TRUE;
 				iJogLimState							:= enUPDATE;
 			END_IF;
@@ -254,8 +250,8 @@ ACTION SingleCutter:
 			END_IF;
 		enRESET:
 	
-			iBasicParameters.Jog.LowerLimit		:= ZERO;
-			iBasicParameters.Jog.UpperLimit		:= ZERO;
+			iBasicParSlave.Jog.LowerLimit		:= ZERO;
+			iBasicParSlave.Jog.UpperLimit		:= ZERO;
 			iFb_SlaveAx.Update							:= TRUE;
 			IF iFb_SlaveAx.UpdateDone = TRUE THEN
 				iFb_SlaveAx.Update						:= FALSE;
@@ -264,7 +260,7 @@ ACTION SingleCutter:
 	END_CASE;
 	
 	
-	
+	iBasicParSlave.CyclicRead.TorqueMode			:=mpAXIS_READ_CYCLIC;
 	//Reset Condition
 	IF iCutCtrl.Cmd.Start= FALSE THEN
 		iAxStep_enum 			:= enINITA;

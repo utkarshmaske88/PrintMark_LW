@@ -1,3 +1,15 @@
+#ifndef __AS__TYPE_Joglim_enum
+#define __AS__TYPE_Joglim_enum
+typedef enum Joglim_enum
+{	enCHECKVEL = 0,
+	enADDVEL = 1,
+	enUPPERPOS = 2,
+	enLOWERPOS = 3,
+	enUPDATE = 4,
+	enRESET = 5,
+} Joglim_enum;
+#endif
+
 #ifndef __AS__TYPE_AxStep_enum
 #define __AS__TYPE_AxStep_enum
 typedef enum AxStep_enum
@@ -17,18 +29,6 @@ typedef enum AxStep_enum
 	enJOGNEGATIVE = 13,
 	enCUTTINGZONE = 14,
 } AxStep_enum;
-#endif
-
-#ifndef __AS__TYPE_Joglim_enum
-#define __AS__TYPE_Joglim_enum
-typedef enum Joglim_enum
-{	enCHECKVEL = 0,
-	enADDVEL = 1,
-	enUPPERPOS = 2,
-	enLOWERPOS = 3,
-	enUPDATE = 4,
-	enRESET = 5,
-} Joglim_enum;
 #endif
 
 #ifndef __AS__TYPE_AxisCmd_typ
@@ -68,19 +68,6 @@ typedef struct AxisCtrl_typ
 	AxisPara_typ Para;
 	AxisStatus_typ Status;
 } AxisCtrl_typ;
-#endif
-
-#ifndef __AS__TYPE_ACP10APNWCPA_typ
-#define __AS__TYPE_ACP10APNWCPA_typ
-typedef struct ACP10APNWCPA_typ
-{	unsigned long tx_nc_object;
-	unsigned short tx_par_id;
-	unsigned char tx_nr;
-	unsigned char rx_nr;
-	unsigned char rx_ipl_mode;
-	unsigned char reserve1;
-	unsigned short reserve2;
-} ACP10APNWCPA_typ;
 #endif
 
 #ifndef __AS__TYPE_MpAxisMoveDirectionEnum
@@ -1054,7 +1041,7 @@ _BUR_LOCAL float INIT_THOUSAND;
 _BUR_LOCAL plcbit iMi_LogoNegDir;
 _BUR_LOCAL plcbit icmdUpdate;
 _BUR_LOCAL float START_VEL;
-_BUR_LOCAL MpAxisBasicParType iBasicParameters;
+_BUR_LOCAL MpAxisBasicParType iBasicParSlave;
 _BUR_LOCAL plcbit icmdPower;
 _BUR_LOCAL plcbit icmdHome;
 _BUR_LOCAL_RETAIN plcbit icmdMoveVelocity;
@@ -1076,7 +1063,7 @@ _BUR_LOCAL MpAxisBasicParType iParamMaster;
 _BUR_LOCAL MpAxisBasicParType iParaSlave;
 _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
 _BUR_LOCAL struct MC_BR_RegMarkCapture002 iFb_RegCap;
-_BUR_LOCAL ACP10APNWCPA_typ iRegCapAdvPar;
+_BUR_LOCAL MC_BR_ADV_RM2_REF iRegCapAdvPar;
 _BUR_LOCAL MC_BR_CFG_RM2_REF iRegCapConfig;
 _BUR_LOCAL double iAbsVal;
 _BUR_LOCAL plcbit icmdMoveAbsoulte;

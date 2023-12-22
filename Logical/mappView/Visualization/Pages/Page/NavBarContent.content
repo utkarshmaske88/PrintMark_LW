@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="NavBarContent" height="688" width="150" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar" top="131" left="22" width="111" height="514" zIndex="0" selectedIndex="4" tabIndex="0">
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar" top="136" left="2" width="147" height="550" zIndex="0" selectedIndex="4" tabIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdAlarm" top="164" left="3" width="104" height="58" zIndex="0" image="Media/alarm.png" text="Alarm" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdParams" top="260" left="2" width="107" height="58" zIndex="1" image="Media/adjust.png" text="Params" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" permissionOperate="['Administrators', 'Operator', 'Service']" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdHome" top="68" left="3" width="104" height="58" zIndex="2" image="Media/home.png" text="Home" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdUsers" top="355" left="3" width="104" height="58" zIndex="3" image="Media/login.png" text="Users" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdDiagn" top="451" left="3" width="104" height="58" zIndex="4" image="Media/SymbolLib/Diagnostic/Diagnostics.svg" text="Diagnos" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdAlarm" top="157" left="18" width="114" height="58" zIndex="0" image="Media/alarm.png" text="Alarm" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdParams" top="258" left="18" width="114" height="58" zIndex="1" image="Media/adjust.png" text="Params" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" permissionOperate="['Administrators', 'Operator', 'Service']" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdHome" top="56" left="18" width="114" height="58" zIndex="2" image="Media/home.png" text="Home" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdUsers" top="359" left="18" width="114" height="58" zIndex="3" image="Media/login.png" text="Users" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="cmdDiagn" top="460" left="18" width="114" height="58" zIndex="4" image="Media/SymbolLib/Diagnostic/Diagnostics.svg" text="Diagnos" imageHeight="40" imageWidth="40" borderWidth="0px" cornerRadius="5px" backColor="rgba(169, 206, 244, 1)" fontSize="11px" bold="false" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Image" id="Image1" top="44" left="18" width="112" height="86" zIndex="1" image="Media/Logo.png" borderWidth="0px" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="1" left="-3" width="152" height="135" zIndex="1" image="Media/Logo.png" borderWidth="0px" />
   </Widgets>
 </Content>

@@ -68,6 +68,12 @@
     UseAsStatic="false"
     Version="5.23.1" />
   <Library
+    Name="MpUserX"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="5.23.1" />
+  <Library
     Name="NcGlobal"
     IsDeployed="true"
     IsStatic="false"

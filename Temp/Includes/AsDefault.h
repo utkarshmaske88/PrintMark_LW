@@ -17,6 +17,7 @@ extern "C"
 	#include <MpCom.h>
 	#include <sys_lib.h>
 	#include <brsystem.h>
+	#include <MpUserX.h>
 	#include <AsIecCon.h>
 	#include <Acp10_MC.h>
 	#include <MpAlarmX.h>
@@ -29,4 +30,5 @@ extern "C"
 #include <mpcomponentsVAR.h>
 #include <globalTYP.h>
 #include <globalVAR.h>
+#include <cutter/cutctrlTYP.h>
 #endif

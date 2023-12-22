@@ -17,5 +17,6 @@
     <Object Type="Library" Language="binary" Description="The BRSystem library provides the user with a number of system functions for e.g. handling permanent memory, accessing exception information, etc.">brsystem</Object>
     <Object Type="Library" Language="binary" Description="Add-on library to ACP10_MC for registration mark handling">MC_RegMa</Object>
     <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
+    <Object Type="Library" Language="Binary" Description="User management based on user role system">MpUserX</Object>
   </Objects>
 </Package>

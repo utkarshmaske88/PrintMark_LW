@@ -1,0 +1,11 @@
+@import "mixins.scss";
+#DiagnosContent_SDMviewer {	@include elemTop(0);
+}
+#DiagnosContent_SDMviewer {	@include elemLeft(0);
+}
+#DiagnosContent_SDMviewer {	@include elemWidth(1128);
+}
+#DiagnosContent_SDMviewer {	@include elemHeight(693);
+}
+#DiagnosContent_SDMviewer {	z-index: 0;
+}

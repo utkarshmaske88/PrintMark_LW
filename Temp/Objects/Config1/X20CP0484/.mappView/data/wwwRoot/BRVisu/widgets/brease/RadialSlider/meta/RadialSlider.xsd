@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:iat="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" elementFormDefault="qualified">
+<xs:complexType name="widgets.brease.RadialSliderRestrict" abstract="true">
+	<xs:complexContent>
+		<xs:restriction base="iat:brease.core.BaseContentWidget">
+			<xs:attribute name="tabIndex" use="optional" type="types:Integer" default="-1" />
+			<xs:attribute name="height" use="optional" type="types:Size" default="250" />
+			<xs:attribute name="width" use="optional" type="types:Size" default="250" />
+		</xs:restriction>
+	</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="widgets.brease.RadialSlider">
+	<xs:complexContent>
+		<xs:extension base="iat:widgets.brease.RadialSliderRestrict">
+			<xs:attribute name="changeOnMove" use="optional" type="types:Boolean" default="true" />
+			<xs:attribute name="format" use="optional" type="types:brease.config.MeasurementSystemFormat" default="{ &apos;metric&apos;: { &apos;decimalPlaces&apos;: 1, &apos;minimumIntegerDigits&apos;: 1 }, &apos;imperial&apos;: { &apos;decimalPlaces&apos;: 1, &apos;minimumIntegerDigits&apos;: 1 }, &apos;imperial-us&apos;: { &apos;decimalPlaces&apos;: 1, &apos;minimumIntegerDigits&apos;: 1 } }" />
+			<xs:attribute name="maxValue" use="optional" type="types:Number" default="100" />
+			<xs:attribute name="minValue" use="optional" type="types:Number" default="0" />
+			<xs:attribute name="node" use="optional" type="types:brease.datatype.Node" default="" />
+			<xs:attribute name="radius" use="optional" type="types:PixelVal" default="100px" />
+			<xs:attribute name="range" use="optional" type="types:UNumber" default="270" />
+			<xs:attribute name="showUnit" use="optional" type="types:Boolean" default="false" />
+			<xs:attribute name="showValueDisplay" use="optional" type="types:Boolean" default="true" />
+			<xs:attribute name="startAngle" use="optional" type="types:UNumber" default="225" />
+			<xs:attribute name="thumbSize" use="optional" type="types:PixelVal" default="50px" />
+			<xs:attribute name="trackSize" use="optional" type="types:PixelVal" default="7px" />
+			<xs:attribute name="unit" use="optional" type="types:brease.config.MeasurementSystemUnit" default="" />
+			<xs:attribute name="value" use="optional" type="types:Number" default="50" />
+			<xs:attribute name="borderWidth" use="optional" type="types:PixelValCollection" default="2px" />
+			<xs:attribute name="borderColor" use="optional" type="types:ColorCollection" default="#000000" />
+			<xs:attribute name="borderStyle" use="optional" type="types:BorderStyle" default="solid" />
+			<xs:attribute name="backColor" use="optional" type="types:Color" default="transparent" />
+			<xs:attribute name="textColor" use="optional" type="types:Color" default="#000000" />
+			<xs:attribute name="fontSize" use="optional" type="types:PixelVal" default="35px" />
+			<xs:attribute name="fontName" use="optional" type="types:FontName" default="Arial" />
+			<xs:attribute name="bold" use="optional" type="types:Boolean" default="false" />
+			<xs:attribute name="italic" use="optional" type="types:Boolean" default="false" />
+			<xs:attribute name="opacity" use="optional" type="types:Opacity" default="1" />
+			<xs:attribute name="thumbColor" use="optional" type="types:Color" default="#FF8800" />
+			<xs:attribute name="trackColor" use="optional" type="types:Color" default="#C8C8C8" />
+			<xs:attribute name="fillColor" use="optional" type="types:Color" default="transparent" />
+			<xs:attribute name="disabledBorderWidth" use="optional" type="types:PixelValCollection" default="2px" />
+			<xs:attribute name="disabledBorderColor" use="optional" type="types:ColorCollection" default="#C8C8C8" />
+			<xs:attribute name="disabledThumbColor" use="optional" type="types:Color" default="#F1F1F1" />
+			<xs:attribute name="disabledTrackColor" use="optional" type="types:Color" default="#EAEAEA" />
+			<xs:attribute name="disabledFillColor" use="optional" type="types:Color" default="#C8C8C8" />
+			<xs:attribute name="disabledBackColor" use="optional" type="types:Color" default="transparent" />
+		</xs:extension>
+	</xs:complexContent>
+</xs:complexType>
+</xs:schema>

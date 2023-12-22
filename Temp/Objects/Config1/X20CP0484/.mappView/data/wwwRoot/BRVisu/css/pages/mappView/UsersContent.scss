@@ -1,0 +1,141 @@
+@import "mixins.scss";
+#UsersContent_AddUser {	@include elemTop(480);
+}
+#UsersContent_AddUser {	@include elemLeft(961);
+}
+#UsersContent_AddUser {	@include elemAutoWidth(142);
+}
+#UsersContent_AddUser {	@include elemAutoHeight(73);
+}
+#UsersContent_AddUser {	z-index: 0;
+}
+#UsersContent_AddUser {	@include border-radius(5px);
+}
+#UsersContent_AddUser {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_AddUser {	&.disabled {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_AddUser {	&.disabled.active {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_AddUser {	&.disabled.checked {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_AddUser {	&:not(.disabled):not(.active):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#UsersContent_AddUser {	&.disabled span {
+		color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_AddUser {	&.disabled.active span {
+		color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_AddUser {	&.disabled:checked span {
+		color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_AddUser {	span {
+		font-size: 15px;
+	}
+}
+#UsersContent_AddUser {	span {
+		font-family: Arial Unicode;
+	}
+}
+#UsersContent_AddUser {	span {
+		@include font-style-italic(false);
+	}
+}
+#UsersContent_Login {	@include elemTop(475);
+}
+#UsersContent_Login {	@include elemLeft(-4);
+}
+#UsersContent_Login {	@include elemWidth(411);
+}
+#UsersContent_Login {	@include elemHeight(205);
+}
+#UsersContent_Login {	z-index: 1;
+}
+#UsersContent_Logout {	@include elemTop(597);
+}
+#UsersContent_Logout {	@include elemLeft(958);
+}
+#UsersContent_Logout {	@include elemAutoWidth(142);
+}
+#UsersContent_Logout {	@include elemAutoHeight(73);
+}
+#UsersContent_Logout {	z-index: 2;
+}
+#UsersContent_Logout {	@include border-radius(5px);
+}
+#UsersContent_Logout {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_Logout {	&.disabled {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_Logout {	&.disabled.active {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_Logout {	&.disabled.checked {
+		background-color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_Logout {	&:not(.disabled):not(.active):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#UsersContent_Logout {	&.disabled span {
+		color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_Logout {	&.disabled.active span {
+		color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_Logout {	&.disabled:checked span {
+		color: rgba(255, 224, 192, 1);
+	}
+}
+#UsersContent_Logout {	span {
+		font-size: 15px;
+	}
+}
+#UsersContent_Logout {	span {
+		font-family: Arial Unicode;
+	}
+}
+#UsersContent_UserList {	@include elemTop(6);
+}
+#UsersContent_UserList {	@include elemLeft(9);
+}
+#UsersContent_UserList {	@include elemWidth(1124);
+}
+#UsersContent_UserList {	@include elemHeight(460);
+}
+#UsersContent_UserList {	z-index: 3;
+}
+#UsersContent_UserListItem {	@include elemWidth(200);
+}
+#UsersContent_UserListItem {	z-index: 0;
+}
+#UsersContent_UserListItem1 {	@include elemWidth(200);
+}
+#UsersContent_UserListItem1 {	z-index: 1;
+}
+#UsersContent_UserListItem2 {	@include elemWidth(200);
+}
+#UsersContent_UserListItem2 {	z-index: 2;
+}

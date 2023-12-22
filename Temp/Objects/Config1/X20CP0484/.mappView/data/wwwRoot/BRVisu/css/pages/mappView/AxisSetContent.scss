@@ -1,0 +1,265 @@
+@import "mixins.scss";
+#AxisSetContent_Label1 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label1 {	@include elemTop(55);
+}
+#AxisSetContent_Label1 {	@include elemLeft(151);
+}
+#AxisSetContent_Label1 {	@include elemAutoWidth(132);
+}
+#AxisSetContent_Label1 {	z-index: 0;
+}
+#AxisSetContent_Label1 {	@include text-alignment-all('center');
+}
+#AxisSetContent_Label1 {	font-size: 18px;
+}
+#AxisSetContent_Label1 {	@include font-weight-bold(true);
+}
+#AxisSetContent_Label2 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label2 {	@include elemTop(338);
+}
+#AxisSetContent_Label2 {	@include elemLeft(163);
+}
+#AxisSetContent_Label2 {	@include elemAutoWidth(156);
+}
+#AxisSetContent_Label2 {	z-index: 1;
+}
+#AxisSetContent_Label2 {	@include text-alignment-all('center');
+}
+#AxisSetContent_Label2 {	font-size: 18px;
+}
+#AxisSetContent_Label2 {	@include font-weight-bold(true);
+}
+#AxisSetContent_Label15 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label15 {	@include elemTop(123);
+}
+#AxisSetContent_Label15 {	@include elemLeft(428);
+}
+#AxisSetContent_Label15 {	@include elemAutoWidth(116);
+}
+#AxisSetContent_Label15 {	z-index: 2;
+}
+#AxisSetContent_Label15 {	font-size: 17px;
+}
+#AxisSetContent_Label16 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label16 {	@include elemTop(46);
+}
+#AxisSetContent_Label16 {	@include elemLeft(428);
+}
+#AxisSetContent_Label16 {	@include elemAutoWidth(116);
+}
+#AxisSetContent_Label16 {	z-index: 3;
+}
+#AxisSetContent_Label16 {	font-size: 17px;
+}
+#AxisSetContent_Label18 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label18 {	@include elemTop(351);
+}
+#AxisSetContent_Label18 {	@include elemLeft(428);
+}
+#AxisSetContent_Label18 {	@include elemAutoWidth(116);
+}
+#AxisSetContent_Label18 {	z-index: 4;
+}
+#AxisSetContent_Label18 {	font-size: 17px;
+}
+#AxisSetContent_Label19 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label19 {	@include elemTop(201);
+}
+#AxisSetContent_Label19 {	@include elemLeft(428);
+}
+#AxisSetContent_Label19 {	@include elemAutoWidth(116);
+}
+#AxisSetContent_Label19 {	z-index: 5;
+}
+#AxisSetContent_Label19 {	font-size: 17px;
+}
+#AxisSetContent_Label17 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label17 {	@include elemTop(428);
+}
+#AxisSetContent_Label17 {	@include elemLeft(428);
+}
+#AxisSetContent_Label17 {	@include elemAutoWidth(116);
+}
+#AxisSetContent_Label17 {	z-index: 6;
+}
+#AxisSetContent_Label17 {	font-size: 17px;
+}
+#AxisSetContent_Label20 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label20 {	@include elemTop(506);
+}
+#AxisSetContent_Label20 {	@include elemLeft(428);
+}
+#AxisSetContent_Label20 {	@include elemAutoWidth(116);
+}
+#AxisSetContent_Label20 {	z-index: 7;
+}
+#AxisSetContent_Label20 {	font-size: 17px;
+}
+#AxisSetContent_inCutSetSpeed {	@include elemAutoWidth(100);
+}
+#AxisSetContent_inCutSetSpeed {	@include elemTop(35);
+}
+#AxisSetContent_inCutSetSpeed {	@include elemLeft(576);
+}
+#AxisSetContent_inCutSetSpeed {	@include elemAutoHeight(52);
+}
+#AxisSetContent_inCutSetSpeed {	z-index: 8;
+}
+#AxisSetContent_inCutSetSpeed {	@include border-radius(10px);
+}
+#AxisSetContent_inCutSetSpeed {	&:not(.disabled):not(.active) {
+		background-color: rgba(192, 192, 255, 1);
+	}
+}
+#AxisSetContent_inCutDeacc {	@include elemAutoWidth(100);
+}
+#AxisSetContent_inCutDeacc {	@include elemTop(190);
+}
+#AxisSetContent_inCutDeacc {	@include elemLeft(576);
+}
+#AxisSetContent_inCutDeacc {	@include elemAutoHeight(52);
+}
+#AxisSetContent_inCutDeacc {	z-index: 9;
+}
+#AxisSetContent_inCutDeacc {	@include border-radius(10px);
+}
+#AxisSetContent_inCutDeacc {	&:not(.disabled):not(.active) {
+		background-color: rgba(192, 192, 255, 1);
+	}
+}
+#AxisSetContent_inCutAcc {	@include elemAutoWidth(100);
+}
+#AxisSetContent_inCutAcc {	@include elemTop(112);
+}
+#AxisSetContent_inCutAcc {	@include elemLeft(576);
+}
+#AxisSetContent_inCutAcc {	@include elemAutoHeight(52);
+}
+#AxisSetContent_inCutAcc {	z-index: 10;
+}
+#AxisSetContent_inCutAcc {	@include border-radius(10px);
+}
+#AxisSetContent_inCutAcc {	&:not(.disabled):not(.active) {
+		background-color: rgba(192, 192, 255, 1);
+	}
+}
+#AxisSetContent_inConvAcc {	@include elemAutoWidth(100);
+}
+#AxisSetContent_inConvAcc {	@include elemTop(417);
+}
+#AxisSetContent_inConvAcc {	@include elemLeft(576);
+}
+#AxisSetContent_inConvAcc {	@include elemAutoHeight(52);
+}
+#AxisSetContent_inConvAcc {	z-index: 11;
+}
+#AxisSetContent_inConvAcc {	@include border-radius(10px);
+}
+#AxisSetContent_inConvAcc {	&:not(.disabled):not(.active) {
+		background-color: rgba(192, 192, 255, 1);
+	}
+}
+#AxisSetContent_inConvSpeed {	@include elemAutoWidth(100);
+}
+#AxisSetContent_inConvSpeed {	@include elemTop(340);
+}
+#AxisSetContent_inConvSpeed {	@include elemLeft(576);
+}
+#AxisSetContent_inConvSpeed {	@include elemAutoHeight(52);
+}
+#AxisSetContent_inConvSpeed {	z-index: 12;
+}
+#AxisSetContent_inConvSpeed {	@include border-radius(10px);
+}
+#AxisSetContent_inConvSpeed {	&:not(.disabled):not(.active) {
+		background-color: rgba(192, 192, 255, 1);
+	}
+}
+#AxisSetContent_inConvDeacc {	@include elemAutoWidth(100);
+}
+#AxisSetContent_inConvDeacc {	@include elemTop(495);
+}
+#AxisSetContent_inConvDeacc {	@include elemLeft(576);
+}
+#AxisSetContent_inConvDeacc {	@include elemAutoHeight(52);
+}
+#AxisSetContent_inConvDeacc {	z-index: 13;
+}
+#AxisSetContent_inConvDeacc {	@include border-radius(10px);
+}
+#AxisSetContent_inConvDeacc {	&:not(.disabled):not(.active) {
+		background-color: rgba(192, 192, 255, 1);
+	}
+}
+#AxisSetContent_Label7 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label7 {	@include elemTop(201);
+}
+#AxisSetContent_Label7 {	@include elemLeft(676);
+}
+#AxisSetContent_Label7 {	@include elemAutoWidth(64);
+}
+#AxisSetContent_Label7 {	z-index: 14;
+}
+#AxisSetContent_Label7 {	@include text-alignment-all('center');
+}
+#AxisSetContent_Label7 {	font-size: 10px;
+}
+#AxisSetContent_Label7 {	@include font-weight-bold(true);
+}
+#AxisSetContent_Label8 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label8 {	@include elemTop(425);
+}
+#AxisSetContent_Label8 {	@include elemLeft(676);
+}
+#AxisSetContent_Label8 {	@include elemAutoWidth(64);
+}
+#AxisSetContent_Label8 {	z-index: 15;
+}
+#AxisSetContent_Label8 {	@include text-alignment-all('center');
+}
+#AxisSetContent_Label8 {	font-size: 10px;
+}
+#AxisSetContent_Label8 {	@include font-weight-bold(true);
+}
+#AxisSetContent_Label9 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label9 {	@include elemTop(123);
+}
+#AxisSetContent_Label9 {	@include elemLeft(676);
+}
+#AxisSetContent_Label9 {	@include elemAutoWidth(64);
+}
+#AxisSetContent_Label9 {	z-index: 16;
+}
+#AxisSetContent_Label9 {	@include text-alignment-all('center');
+}
+#AxisSetContent_Label9 {	font-size: 10px;
+}
+#AxisSetContent_Label9 {	@include font-weight-bold(true);
+}
+#AxisSetContent_Label10 {	@include elemAutoHeight(30);
+}
+#AxisSetContent_Label10 {	@include elemTop(503);
+}
+#AxisSetContent_Label10 {	@include elemLeft(676);
+}
+#AxisSetContent_Label10 {	@include elemAutoWidth(64);
+}
+#AxisSetContent_Label10 {	z-index: 17;
+}
+#AxisSetContent_Label10 {	@include text-alignment-all('center');
+}
+#AxisSetContent_Label10 {	font-size: 10px;
+}
+#AxisSetContent_Label10 {	@include font-weight-bold(true);
+}

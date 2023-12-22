@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StyleInformation name="widgets.brease.RadialSlider" xmlns="http://www.br-automation.com/iat2014/widgetStyles"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>
+  <StyleProperties>
+    
+    <StyleProperty name="width" type="Size" not_styleable="true" default="250">
+      <StyleElement attribute="@include elemWidth($value)"></StyleElement>
+      <Description>outer width of widget</Description>
+    </StyleProperty>
+    <StyleProperty name="height" type="Size" not_styleable="true" default="250">
+      <StyleElement attribute="@include elemHeight($value)"></StyleElement>
+      <Description>outer height of widget</Description>
+    </StyleProperty>
+    <StyleProperty name="borderWidth" category="Appearance" type="PixelValCollection" default="2px">
+      <StyleElement selector="&amp;:not(.disabled)" attribute="border-width"></StyleElement>
+      <Description>border width of the widget</Description>
+    </StyleProperty>
+    <StyleProperty name="borderColor" category="Appearance" type="ColorCollection" default="#000000" >
+      <StyleElement selector="&amp;:not(.disabled)" attribute="border-color"></StyleElement>
+      <Description>border color of the widget</Description>
+    </StyleProperty>
+    <StyleProperty name="borderStyle" type="BorderStyle"  category="Appearance" default="solid">
+      <StyleElement attribute="border-style"></StyleElement>
+      <Description>Sets the border style</Description>
+    </StyleProperty>
+    <StyleProperty name="backColor" category="Appearance" type="Color" default="transparent">
+      <StyleElement selector="&amp;:not(.disabled)" attribute="background-color"></StyleElement>
+      <Description>background color of the widget</Description>
+    </StyleProperty>
+    <StyleProperty name="textColor" category="Appearance" type="Color"  default="#000000" >
+      <StyleElement selector="text" attribute="fill"></StyleElement>
+      <Description> Sets the Color of the displayed value </Description>
+    </StyleProperty>
+    <!--<StyleProperty name="textShadow" type="Shadow" category="Appearance" default="none">
+      <StyleElement selector="text" attribute="text-shadow"></StyleElement>
+      <Description>Sets the shadow of the text. For further information, please check its type</Description>
+    </StyleProperty>-->
+    <StyleProperty name="fontSize" category="Font" type="PixelVal"  default="35px" >
+      <StyleElement selector="text" attribute="font-size"></StyleElement>
+      <Description> Sets the fontSize of the displayed value </Description>
+    </StyleProperty>
+    <StyleProperty name="fontName" category="Font" type="FontName"  default="Arial">
+      <StyleElement selector="text" attribute="font-family"></StyleElement>
+      <Description> Sets the font name of the displayed value </Description>
+    </StyleProperty>
+    <StyleProperty name="bold" category="Font" type="Boolean"  default="false">
+      <StyleElement selector="text" attribute="@include font-weight-bold($value)"></StyleElement>
+      <Description> Sets the bold property of the displayed value </Description>
+    </StyleProperty>
+    <StyleProperty name="italic" category="Font" type="Boolean"  default="false">
+      <StyleElement selector="text" attribute="@include font-style-italic($value)"></StyleElement>
+      <Description> Sets the italic property of the displayed value </Description>
+    </StyleProperty>
+    <StyleProperty name="opacity" category="Appearance" type="Opacity" default="1">
+      <StyleElement attribute="opacity"></StyleElement>
+      <Description>opacity of the widget</Description>
+    </StyleProperty>    
+    <StyleProperty name="thumbColor" category="Appearance" type="Color" default="#FF8800" >
+      <StyleElement selector=".RadialSliderGroup .thumb .sliderThumb:not(.disabled)" attribute="fill"></StyleElement>
+      <Description>background color of the slider thumb</Description>
+    </StyleProperty>
+    <StyleProperty name="trackColor" category="Appearance" type="Color" default="#C8C8C8">
+      <StyleElement selector=".RadialSliderGroup .arc .arcPath:not(.disabled)" attribute="fill"></StyleElement>
+      <Description>background color of the slider line</Description>
+    </StyleProperty>
+    <StyleProperty name="fillColor" category="Appearance" type="Color" default="transparent">
+      <StyleElement selector=".RadialSliderGroup .arcFill .arcFillPath:not(.disabled)" attribute="fill"></StyleElement>
+      <Description>background color of the slider line</Description>
+    </StyleProperty>
+    <StyleProperty name="disabledBorderWidth" category="Appearance" type="PixelValCollection" default="2px">
+      <StyleElement selector="&amp;.disabled" attribute="border-width"></StyleElement>
+      <Description>Sets the border width of the widget when disbaled.</Description>
+    </StyleProperty>
+    <StyleProperty name="disabledBorderColor" category="Appearance" type="ColorCollection" default="#C8C8C8" >
+      <StyleElement selector="&amp;.disabled" attribute="border-color"></StyleElement>
+      <Description>border color of the widget</Description>
+    </StyleProperty>
+     <StyleProperty name="disabledThumbColor" category="Appearance" type="Color" default="#F1F1F1" >
+      <StyleElement selector=".RadialSliderGroup .thumb .sliderThumb.disabled" attribute="fill"></StyleElement>
+      <Description>
+        Sets the color of the thumbColor when the widget is disabled
+      </Description>
+    </StyleProperty>
+    <StyleProperty name="disabledTrackColor" category="Appearance" type="Color" default="#EAEAEA" >
+      <StyleElement selector=".RadialSliderGroup .arc .arcPath.disabled" attribute="fill" ></StyleElement>
+      <Description>
+        Sets the color of the trackColor when the widget is disabled
+      </Description>
+    </StyleProperty>
+    <StyleProperty name="disabledFillColor" category="Appearance" type="Color" default="#C8C8C8" >
+      <StyleElement selector=".RadialSliderGroup .arcFill .arcFillPath.disabled" attribute="fill" ></StyleElement>
+      <Description>
+        Sets the color of the trackColor when the widget is disabled
+      </Description>
+    </StyleProperty>
+    <StyleProperty name="disabledBackColor" category="Appearance" type="Color" default="transparent" >
+      <StyleElement selector="&amp;.disabled" attribute="background-color"></StyleElement>
+      <Description>
+        Sets the background color of the widget when disabled
+      </Description>
+    </StyleProperty>
+    
+  </StyleProperties>
+</StyleInformation>

@@ -6,5 +6,11 @@
     <Object Type="File">HomeContent.content</Object>
     <Object Type="File">NavBarContent.content</Object>
     <Object Type="File">HeaderContent.content</Object>
+    <Object Type="File">UserContent.content</Object>
+    <Object Type="File">AlarmsContetn.content</Object>
+    <Object Type="File">DiagnosContent.content</Object>
+    <Object Type="File">AxCtrlContent.content</Object>
+    <Object Type="File">AxSetContent.content</Object>
+    <Object Type="File">ManualContent.content</Object>
   </Objects>
 </Package>

@@ -1,3 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
-<State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State" />
+<State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
+  <TextEdit ID="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\AutoCtrl\AutoCtrl\Main.st" CaretLine="170" CaretColumn="34" FirstVisibleLine="162">
+    <Bookmarks>
+      <Bookmark Line="89" />
+      <Bookmark Line="143" />
+      <Bookmark Line="144" />
+      <Bookmark Line="152" />
+      <Bookmark Line="154" />
+      <Bookmark Line="166" />
+      <Bookmark Line="167" />
+      <Bookmark Line="177" />
+      <Bookmark Line="178" />
+    </Bookmarks>
+  </TextEdit>
+  <TextEdit ID="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\ConvCtrl\ConvCtrl\Main.st" CaretLine="94" CaretColumn="4" FirstVisibleLine="83">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\MultCutter.st" CaretLine="94" CaretColumn="54" FirstVisibleLine="61">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\AutoCtrl\AutoCtrl\Alarms_Reset.st" CaretLine="8" CaretColumn="10" FirstVisibleLine="1">
+    <Bookmarks />
+  </TextEdit>
+</State>

@@ -1,0 +1,45 @@
+@import "mixins.scss";
+#HeaderContent_Heading {	@include elemTop(31);
+}
+#HeaderContent_Heading {	@include elemLeft(377);
+}
+#HeaderContent_Heading {	@include elemAutoWidth(381);
+}
+#HeaderContent_Heading {	@include elemAutoHeight(51);
+}
+#HeaderContent_Heading {	z-index: 0;
+}
+#HeaderContent_Heading {	& span {
+		color: rgba(0, 64, 64, 1);
+	}
+}
+#HeaderContent_Heading {	@include text-alignment-all('center');
+}
+#HeaderContent_Heading {	span {
+		font-family: Arial Unicode;
+	}
+}
+#HeaderContent_Heading {	font-size: 35px;
+}
+#HeaderContent_Heading {	@include font-weight-bold(true);
+}
+#HeaderContent_DateTime {	@include elemAutoHeight(30);
+}
+#HeaderContent_DateTime {	@include elemTop(11);
+}
+#HeaderContent_DateTime {	@include elemLeft(983);
+}
+#HeaderContent_DateTime {	@include elemAutoWidth(275);
+}
+#HeaderContent_DateTime {	z-index: 1;
+}
+#HeaderContent_LoginInfo1 {	@include elemAutoWidth(120);
+}
+#HeaderContent_LoginInfo1 {	@include elemAutoHeight(30);
+}
+#HeaderContent_LoginInfo1 {	@include elemTop(63);
+}
+#HeaderContent_LoginInfo1 {	@include elemLeft(1067);
+}
+#HeaderContent_LoginInfo1 {	z-index: 2;
+}
