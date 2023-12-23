@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="SingleCutterAni" height="620" width="400" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.RadialSlider" id="SliderSlavePos" top="378" left="202" width="184" height="184" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="3600" radius="80px" range="360" showValueDisplay="false" startAngle="347" thumbSize="22px" value="1023" borderStyle="hidden" />
+    <Widget xsi:type="widgets.brease.Label" id="Label18" top="24" left="66" width="96" height="540" zIndex="1" text="" cornerRadius="20px" backColor="rgba(255, 224, 192, 1)" />
+    <Widget xsi:type="widgets.brease.ImageList" id="ImageList9" top="85" left="198" width="24" height="20" zIndex="2" imageList="['red.svg', 'green.svg']" imagePrefix="Media/" />
+    <Widget xsi:type="widgets.brease.ImageList" id="ImageList10" top="461" left="134" width="24" height="20" zIndex="3" imageList="['red.svg', 'green.svg']" imagePrefix="Media/" />
+    <Widget xsi:type="widgets.brease.Label" id="Label19" top="60" left="230" width="124" height="70" zIndex="4" multiLine="true" text="$IAT/Main/39" wordWrap="true" backColor="rgba(211, 211, 211, 1)" textAlign="center" fontSize="17px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label20" top="436" left="14" width="108" height="70" zIndex="5" multiLine="true" text="$IAT/Main/40" wordWrap="true" backColor="rgba(211, 211, 211, 1)" textAlign="center" fontSize="17px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label21" top="200" left="54" width="120" height="40" zIndex="6" multiLine="true" text="$IAT/Main/41" wordWrap="true" backColor="rgba(211, 211, 211, 1)" textAlign="center" fontSize="17px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label22" top="556" left="256" width="76" height="40" zIndex="7" multiLine="true" text="$IAT/Main/42" wordWrap="true" backColor="rgba(211, 211, 211, 1)" textAlign="center" fontSize="17px" bold="true" />
+  </Widgets>
+</Content>

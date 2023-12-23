@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="eventbinding_0" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="EventBinding_10">
+      <Source xsi:type="opcUa.Event" refId="::AutoCtrl:pConvCtrl.Cmd.JogFwd" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogBack1">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogBack1">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_3">
+      <Source xsi:type="opcUa.Event" refId="::AutoCtrl:pConvCtrl.Cmd.JogBack" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogFwd1">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogFwd1">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="opcUa.Event" refId="::AutoCtrl:pCutterCtrl.Cmd.JogFwd" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogBack">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogBack">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_5">
+      <Source xsi:type="opcUa.Event" refId="::AutoCtrl:pCutterCtrl.Cmd.JogBack" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogFwd">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnCutJogFwd">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="opcUa.Event" refId="::AutoCtrl:iAutoCtrl.Cmd.Stop" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnModeChangeBit">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualContent" widgetRefId="btnModeChangeBit">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_8">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ManualContent" widgetRefId="btnModeChangeBit" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.LoadContentInArea" contentId="HomeContent" pageId="MainPage" areaId="MainArea" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

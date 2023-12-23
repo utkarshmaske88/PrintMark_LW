@@ -1,10 +1,10 @@
 
 TYPE
 	Reset_enum : 
-		(
-		enRESETONE,
-		enRESETTWO,
-		enEXIT
+		( (*restting value enumaration*)
+		enRESETONE, (*resting first block*)
+		enRESETTWO, (*resting second block*)
+		enEXIT (*exiting state*)
 		);
 	AutoCmd_typ : 	STRUCT  (*Auto Ctrl Command Type*)
 		Start : BOOL; (*Start cmd*)

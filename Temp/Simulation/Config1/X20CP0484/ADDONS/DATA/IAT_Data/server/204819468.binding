@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingDefinition xmlns="http://www.br-automation.com/iat2014/binding/runtime/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:br="http://www.br-automation.com/iat2015/bindingList/runtime/v2">
+  
+<Content id="AxisSetContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Cutter:iMI_CutSetJogDeacc" attribute="value" />
+<Target xsi:type="brease" refId="AxisSetContent_inCutDeacc" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iMI_CutSetJogDeacc" attribute="editable" />
+<Target xsi:type="brease" refId="AxisSetContent_inCutDeacc" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="AxisSetContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Cutter:iMI_CutSetJogAcc" attribute="value" />
+<Target xsi:type="brease" refId="AxisSetContent_inCutAcc" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iMI_CutSetJogAcc" attribute="editable" />
+<Target xsi:type="brease" refId="AxisSetContent_inCutAcc" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="AxisSetContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Cutter:iMI_CutSetJogVel" attribute="value" />
+<Target xsi:type="brease" refId="AxisSetContent_inCutSetSpeed" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iMI_CutSetJogVel" attribute="editable" />
+<Target xsi:type="brease" refId="AxisSetContent_inCutSetSpeed" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="AxisSetContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConSetJogVel" attribute="value" />
+<Target xsi:type="brease" refId="AxisSetContent_inConvSpeed" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConSetJogVel" attribute="editable" />
+<Target xsi:type="brease" refId="AxisSetContent_inConvSpeed" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="AxisSetContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConSetJogAcc" attribute="value" />
+<Target xsi:type="brease" refId="AxisSetContent_inConvAcc" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConSetJogAcc" attribute="editable" />
+<Target xsi:type="brease" refId="AxisSetContent_inConvAcc" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="AxisSetContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConSetJogDeacc" attribute="value" />
+<Target xsi:type="brease" refId="AxisSetContent_inConvDeacc" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConSetJogDeacc" attribute="editable" />
+<Target xsi:type="brease" refId="AxisSetContent_inConvDeacc" attribute="editable::value" />
+</Binding></Content>
+
+
+
+
+</BindingDefinition>

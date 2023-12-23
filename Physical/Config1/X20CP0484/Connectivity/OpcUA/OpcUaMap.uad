@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="G4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gMi_ModeConfirm" />
+      </GlobalVariables>
+      <Task Name="AutoCtrl">
+        <Variable Name="iAutoCtrl">
+          <Variable Name="Cmd">
+            <Variable Name="Start" />
+            <Variable Name="Stop" />
+            <Variable Name="DisableCutter" />
+            <Variable Name="ChangeMode" />
+            <Variable Name="Reset" />
+            <Variable Name="SingleCutter" />
+          </Variable>
+          <Variable Name="ManualCmd">
+            <Variable Name="CutterPowerON" />
+            <Variable Name="ConvPowerON" />
+          </Variable>
+        </Variable>
+        <Variable Name="iMI_AvgBagLen" />
+        <Variable Name="iMi_CutModeSelected" />
+        <Variable Name="iMI_LastBagLen" />
+        <Variable Name="iMi_SelectedMode" />
+        <Variable Name="iMi_StatusTxt" />
+        <Variable Name="pCutterCtrl">
+          <Variable Name="Cmd">
+            <Variable Name="JogFwd" />
+            <Variable Name="JogBack" />
+          </Variable>
+        </Variable>
+        <Variable Name="pConvCtrl">
+          <Variable Name="Cmd">
+            <Variable Name="JogFwd" />
+            <Variable Name="JogBack" />
+          </Variable>
+        </Variable>
+        <Variable Name="iAutoCtrlState" />
+      </Task>
+      <Task Name="ConvCtrl">
+        <Variable Name="iFb_MasterAx">
+          <Variable Name="PowerOn" />
+          <Variable Name="IsHomed" />
+          <Variable Name="Error" />
+          <Variable Name="MoveActive" />
+          <Variable Name="Info">
+            <Variable Name="CyclicRead">
+              <Variable Name="Torque">
+                <Variable Name="Value" />
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="Enable" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="Home" />
+        </Variable>
+        <Variable Name="iFb_CamSequ">
+          <Variable Name="InSync" />
+        </Variable>
+        <Variable Name="iMI_ConSetSpeed" />
+        <Variable Name="iMI_ConSetJogVel" />
+        <Variable Name="iMI_ConSetJogAcc" />
+        <Variable Name="iMI_ConActSpeed" />
+        <Variable Name="iMI_ConSetJogDeacc" />
+        <Variable Name="iMi_LogoNegDir" />
+        <Variable Name="iBasicParamMaster">
+          <Variable Name="CyclicRead">
+            <Variable Name="TorqueMode" />
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="Cutter">
+        <Variable Name="iFb_AxisSlave">
+          <Variable Name="PowerOn" />
+          <Variable Name="IsHomed" />
+          <Variable Name="Error" />
+          <Variable Name="Info">
+            <Variable Name="CyclicRead">
+              <Variable Name="Torque">
+                <Variable Name="Value" />
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="Position" />
+          <Variable Name="Enable" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="Home" />
+        </Variable>
+        <Variable Name="iMi_LogoNegDir" />
+        <Variable Name="iMI_CutActSpeed" />
+        <Variable Name="iMI_CutSetJogAcc" />
+        <Variable Name="iMI_CutSetJogDeacc" />
+        <Variable Name="iMI_CutSetJogVel" />
+        <Variable Name="iFb_RegCap">
+          <Variable Name="ValidRMs" />
+          <Variable Name="ProductsWithoutRM" />
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

@@ -1,3 +1,21 @@
+(*|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|*)
+(*| Copyright      :-  B&R Industrial Automation GmbH															 |*)
+(*| Contact Person :-  maskeu																					 |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| System       :-  auto control                                                                    	 		 |*)
+(*| Task Name    :-  auto control																		  		 |*)
+(*| Auther Name  :-  maskeu																						 |*)
+(*| Created Date :-  December 19, 2023 																		   	 |*)
+(*| Task Class   :-  Task Class# 1                                                                 				 |*)
+(*| Task Time    :-  Task Timing 2mSec                                                                           |*)
+(*| OS Version   :-  G4.93                                                                                       |*)
+(*| AS Version   :-  AS 4.12.4.107 SP                                                                            |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| Description  :-  auto control- all fucniton for main control											     |*)
+(*| V1.00.0   19/12/2023	 Maskeu        added pointers with homing state						Complete		 |*)
+(*| V2.00.0   20/12/2023	 Maskeu        added automatic state							    Complete		 |*)
+(*| V3.00.0   21/12/2023	 Maskeu        added manual state									Complete		 |*)
+(*| V4.00.0   23/12/2023	 Maskeu        added cutting zone state								Complete	     |*)
 
 PROGRAM _INIT
 	//Accessing Various Variables for Pointer references
@@ -52,6 +70,7 @@ PROGRAM _CYCLIC
 				END_IF;
 			END_IF;
 		
+			//homing for both the axis
 		enHOMING:
 			iMi_StatusTxt:="Homing the axis wait...";
 			pAx_CamSeq.ErrorReset					:=TRUE;
@@ -60,6 +79,7 @@ PROGRAM _CYCLIC
 				iAutoCtrlState						:=enAUTO;
 			END_IF
 		
+			//autoamtic mode
 		enAUTO:
 			IF pAx_CamSeq.Info.MasterReady=TRUE AND  pAx_CamSeq.Info.SlaveReady=TRUE AND pAx_CamSeq.StatusID=0 THEN
 				pAx_CamSeq.StartSequence			:=TRUE;
@@ -146,6 +166,7 @@ PROGRAM _CYCLIC
 				iAutoCtrlState 						:= enSTOP;
 			END_IF;
 			
+			//stopping all the fucniton
 		enSTOP:
 			iMi_StatusTxt							:="Machine has been stopped";
 			iAutoCtrl.Cmd.Start						:=FALSE;
@@ -167,7 +188,7 @@ PROGRAM _CYCLIC
 			iAutoCtrl.ManualCmd.ConvPowerON			:=FALSE;
 			iAutoCtrl.ManualCmd.CutterPowerON		:=FALSE;
 			
-			IF pSlaveAx.Position > 3013 OR pSlaveAx.Position < 2653 THEN
+			IF pSlaveAx.Position > UPPER_CUT_POS OR pSlaveAx.Position < LOWER_CUT_POS THEN
 				iAutoCtrl.Cmd.Start					:=FALSE;
 				iAutoCtrlState						:=enWAIT;
 			END_IF;
@@ -189,7 +210,7 @@ PROGRAM _CYCLIC
 	
 	
 	//Cutting zone Logic
-	IF pSlaveAx.Position < 3013 AND pSlaveAx.Position > 2653 AND NOT iAutoCtrl.Cmd.AutoMode THEN
+	IF pSlaveAx.Position < UPPER_CUT_POS AND pSlaveAx.Position > LOWER_CUT_POS AND NOT iAutoCtrl.Cmd.AutoMode THEN
 		iAutoCtrlState := enCUT_ZONE;
 	END_IF
 	

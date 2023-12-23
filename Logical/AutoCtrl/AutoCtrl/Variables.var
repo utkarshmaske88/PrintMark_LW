@@ -1,52 +1,57 @@
-VAR
-	RegAdd : UDINT; (*Address*)
-	Status_RegCapture : UINT; (*Status*)
-	RegSize : UDINT; (*Size*)
-	ConvAdd : UDINT; (*Address*)
-	SizeConv : UDINT; (*Address*)
-END_VAR
-(*Pointer Variables*)
+(*referecing the strcutre for pointers*)
 VAR
 	pCutterCtrl : REFERENCE TO AxisCtrl_typ; (*Pointer to conv ctrl*)
 	pRegCapture : REFERENCE TO MC_BR_RegMarkCapture002; (*Pointer to reg capture*)
 	pConvCtrl : REFERENCE TO AxisCtrl_typ; (*Pointer to Conv Ctrl*)
-	pMasterAx : REFERENCE TO MpAxisBasic;
+	pMasterAx : REFERENCE TO MpAxisBasic; (*pointer for master axis*)
 	pAx_CamSeq : REFERENCE TO MpAxisCamSequencer; (*Pointer cam seq*)
-	pSlaveAx : REFERENCE TO MpAxisBasic;
+	pSlaveAx : REFERENCE TO MpAxisBasic; (*pointer for slave axis*)
 END_VAR
-(*Process Variables*)
+(*for pointer using size address status varibles*)
+VAR
+	iStatus_CutCtrl : UINT; (*status for pointer of cutter control*)
+	CutterAdd : UDINT; (*cutter additon*)
+	RegAdd : UDINT; (*Address*)
+	RegSize : UDINT; (*Size*)
+	ConvAdd : UDINT; (*Address*)
+	SizeConv : UDINT; (*Address*)
+	SizeCutter : UDINT; (*size of cutter*)
+	iStatus_ConvCtrl : UINT; (*status of cinveyor control pointer*)
+	iStatus_CamSeq : UINT; (*status of cam sequnce *)
+	iStatus_RegCapt : UINT; (*status of reg capture*)
+	CamAdd : UDINT; (*cam add variable*)
+	SizeCam : UDINT; (*size of cam varible*)
+	iStatus_SlaveAx : UDINT; (*status for slave axis pointer*)
+	iStatus_MasterAx : UINT; (*status for master axis*)
+	SlaveAx : UDINT; (*slave axis address*)
+	MasterSize : UDINT; (*master axis size*)
+	SlaveSize : UDINT; (*slave axis size*)
+	MasterAx : UDINT; (*master axis address*)
+END_VAR
+(*enumeration  for main control state*)
 VAR
 	iAutoCtrlState : AutoCtrl_enum; (*Auto control state*)
-	iAutoCtrl : AutoCtrl_typ; (*Auto ctrl struture*)
-	iStatus_CutCtrl : UINT;
-	CutterAdd : UDINT;
-	SizeCutter : UDINT;
-	iStatus_ConvCtrl : UINT;
-	iStatus_CamSeq : UINT;
-	iStatus_RegCapt : UINT;
-	CamAdd : UDINT;
-	SizeCam : UDINT;
-	iCutCtrl : UDINT;
-	iConCtrl : UDINT;
-	iAx_CamSequence : UDINT;
-	iFb_RegCap : UDINT;
-	iStatus_SlaveAx : UDINT;
-	iMi_StatusTxt : WSTRING[80];
-	iStatus_MasterAx : UINT;
-	SlaveAx : UDINT;
-	SlaveSize : UDINT;
-	MasterAx : UDINT;
-	MasterSize : UDINT;
-	iMi_CutModeSelected : BOOL;
-	gMi_ModeConfirm : BOOL;
-	iMi_SelectedMode : WSTRING[80];
-	iMI_LastBagLen : REAL;
 END_VAR
-VAR CONSTANT
-	TEN : REAL := 10;
-END_VAR
+(*resetiing the state*)
 VAR
-	iMI_AvgBagLen : REAL;
-	iResetState : Reset_enum;
-	gMI_MODE : BOOL;
+	iResetState : Reset_enum; (*restiing value enumeration -state*)
+END_VAR
+(*main auto control structure*)
+VAR
+	iAutoCtrl : AutoCtrl_typ; (*Auto ctrl struture*)
+END_VAR
+(*variables for hmi*)
+VAR
+	iMi_CutModeSelected : BOOL; (*cutter mode selected*)
+	iMi_StatusTxt : WSTRING[80]; (*text on hmi for current state*)
+	iMi_SelectedMode : WSTRING[80]; (*selected mode *)
+	iMI_LastBagLen : REAL; (*last bag length*)
+	iMI_AvgBagLen : REAL; (*average bag length*)
+END_VAR
+(*constants*)
+VAR CONSTANT
+	TEN : REAL := 10; (*ten value*)
+	LIMIT_ERROR_PRODUCT : INT := 5; (*limit for error in product*)
+	UPPER_CUT_POS : REAL := 3013; (*upper cutting position for first cutter*)
+	LOWER_CUT_POS : REAL := 2653; (*lower cutting position for second cutter*)
 END_VAR

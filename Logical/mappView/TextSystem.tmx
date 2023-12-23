@@ -2,10 +2,10 @@
 <tmx version="1.4">
   <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
     <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
-    <prop type="x-BR-TS:Namespace">TextSys</prop>
+    <prop type="x-BR-TS:Namespace">IAT/TextSys</prop>
   </header>
   <body>
-    <tu tuid="Samples.HELLO_WORLD">
+    <tu tuid="62">
       <tuv xml:lang="fr">
         <seg>Bonjour tout le monde!</seg>
       </tuv>
@@ -13,12 +13,333 @@
         <seg>Servus Welt!</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Hello world!</seg>
+        <seg>Error Reset</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>PRINT MARK CROSS-CUTTER</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="en">
+        <seg>HOME</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="en">
+        <seg>ALARM</seg>
+      </tuv>
+    </tu>
+    <tu tuid="5">
+      <tuv xml:lang="en">
+        <seg>USER</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6">
+      <tuv xml:lang="en">
+        <seg>MANUAL</seg>
+      </tuv>
+    </tu>
+    <tu tuid="7">
+      <tuv xml:lang="en">
+        <seg>DIAG.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="8">
+      <tuv xml:lang="en">
+        <seg>ACK.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="9">
+      <tuv xml:lang="en">
+        <seg>ACK. All</seg>
+      </tuv>
+    </tu>
+    <tu tuid="10">
+      <tuv xml:lang="en">
+        <seg>CUTTER AXIS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="11">
+      <tuv xml:lang="en">
+        <seg>CONVEYOR AXIS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="12">
+      <tuv xml:lang="en">
+        <seg>PowerOn</seg>
+      </tuv>
+    </tu>
+    <tu tuid="13">
+      <tuv xml:lang="en">
+        <seg>IsHomed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="14">
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="15">
+      <tuv xml:lang="en">
+        <seg>InSync</seg>
+      </tuv>
+    </tu>
+    <tu tuid="16">
+      <tuv xml:lang="en">
+        <seg>Running</seg>
+      </tuv>
+    </tu>
+    <tu tuid="17">
+      <tuv xml:lang="en">
+        <seg>Average Bag Length</seg>
+      </tuv>
+    </tu>
+    <tu tuid="18">
+      <tuv xml:lang="en">
+        <seg>Last Bag Length</seg>
+      </tuv>
+    </tu>
+    <tu tuid="19">
+      <tuv xml:lang="en">
+        <seg>Valid PM</seg>
+      </tuv>
+    </tu>
+    <tu tuid="20">
+      <tuv xml:lang="en">
+        <seg>Product WithOut PM</seg>
+      </tuv>
+    </tu>
+    <tu tuid="21">
+      <tuv xml:lang="en">
+        <seg>Set Speed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="22">
+      <tuv xml:lang="en">
+        <seg>Act. Speed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="23">
+      <tuv xml:lang="en">
+        <seg>Machine</seg>
+      </tuv>
+    </tu>
+    <tu tuid="24">
+      <tuv xml:lang="en">
+        <seg>Home</seg>
+      </tuv>
+    </tu>
+    <tu tuid="25">
+      <tuv xml:lang="en">
+        <seg>Print Mark Detect Sensor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="26">
+      <tuv xml:lang="en">
+        <seg>Cut Detection Sensor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="27">
+      <tuv xml:lang="en">
+        <seg>Start</seg>
+      </tuv>
+    </tu>
+    <tu tuid="28">
+      <tuv xml:lang="en">
+        <seg>Stop</seg>
+      </tuv>
+    </tu>
+    <tu tuid="29">
+      <tuv xml:lang="en">
+        <seg>Add</seg>
+      </tuv>
+    </tu>
+    <tu tuid="30">
+      <tuv xml:lang="en">
+        <seg>Delete</seg>
+      </tuv>
+    </tu>
+    <tu tuid="31">
+      <tuv xml:lang="en">
+        <seg>Modify</seg>
+      </tuv>
+    </tu>
+    <tu tuid="32">
+      <tuv xml:lang="en">
+        <seg>JOG</seg>
+      </tuv>
+    </tu>
+    <tu tuid="33">
+      <tuv xml:lang="en">
+        <seg>POWER</seg>
+      </tuv>
+    </tu>
+    <tu tuid="34">
+      <tuv xml:lang="en">
+        <seg>START</seg>
+      </tuv>
+    </tu>
+    <tu tuid="35">
+      <tuv xml:lang="en">
+        <seg>FWD</seg>
+      </tuv>
+    </tu>
+    <tu tuid="36">
+      <tuv xml:lang="en">
+        <seg>BACK</seg>
+      </tuv>
+    </tu>
+    <tu tuid="37">
+      <tuv xml:lang="en">
+        <seg>STOPPED</seg>
+      </tuv>
+    </tu>
+    <tu tuid="38">
+      <tuv xml:lang="en">
+        <seg>Acceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="39">
+      <tuv xml:lang="en">
+        <seg>Deceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="40">
+      <tuv xml:lang="en">
+        <seg>Print Mark Detection Sensor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="41">
+      <tuv xml:lang="en">
+        <seg>Cut Detection Sensor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="42">
+      <tuv xml:lang="en">
+        <seg>Conveyor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="43">
+      <tuv xml:lang="en">
+        <seg>Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="44">
+      <tuv xml:lang="en">
+        <seg>Current Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="45">
+      <tuv xml:lang="en">
+        <seg>Select Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="46">
+      <tuv xml:lang="en">
+        <seg>Disable Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="47">
+      <tuv xml:lang="en">
+        <seg>Automatic</seg>
+      </tuv>
+    </tu>
+    <tu tuid="48">
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="49">
+      <tuv xml:lang="en">
+        <seg>Confirm Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="50">
+      <tuv xml:lang="en">
+        <seg>Click To View Animation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="51">
+      <tuv xml:lang="en">
+        <seg>Single Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="52">
+      <tuv xml:lang="en">
+        <seg>SETTINGS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="53">
+      <tuv xml:lang="en">
+        <seg>Change Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="54">
+      <tuv xml:lang="en">
+        <seg>SETTINGS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="55">
+      <tuv xml:lang="en">
+        <seg>Select Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="56">
+      <tuv xml:lang="en">
+        <seg>Single Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="57">
+      <tuv xml:lang="en">
+        <seg>Dual Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="58">
+      <tuv xml:lang="en">
+        <seg>Confirm Cutter</seg>
+      </tuv>
+    </tu>
+    <tu tuid="59">
+      <tuv xml:lang="en">
+        <seg>Error Handling</seg>
       </tuv>
     </tu>
     <tu tuid="1">
       <tuv xml:lang="en">
         <seg>Print Mark</seg>
+      </tuv>
+    </tu>
+    <tu tuid="61">
+      <tuv xml:lang="en">
+        <seg>Jog Forward</seg>
+      </tuv>
+    </tu>
+    <tu tuid="60">
+      <tuv xml:lang="en">
+        <seg>Jog Backward</seg>
+      </tuv>
+    </tu>
+    <tu tuid="63">
+      <tuv xml:lang="en">
+        <seg>Enable</seg>
+      </tuv>
+    </tu>
+    <tu tuid="64">
+      <tuv xml:lang="en">
+        <seg>Cutting &gt;</seg>
+      </tuv>
+    </tu>
+    <tu tuid="65">
+      <tuv xml:lang="en">
+        <seg>Torque</seg>
       </tuv>
     </tu>
   </body>

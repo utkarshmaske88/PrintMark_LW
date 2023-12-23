@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingDefinition xmlns="http://www.br-automation.com/iat2014/binding/runtime/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:br="http://www.br-automation.com/iat2015/bindingList/runtime/v2">
+  
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutStart1" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutStart1" attribute="editable::value" />
+</Binding></Content>
+
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pConvCtrl.Cmd.JogBack" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogBack1" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pConvCtrl.Cmd.JogBack" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogBack1" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pConvCtrl.Cmd.JogFwd" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogFwd1" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pConvCtrl.Cmd.JogFwd" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogFwd1" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pCutterCtrl.Cmd.JogBack" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogBack" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pCutterCtrl.Cmd.JogBack" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogBack" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pCutterCtrl.Cmd.JogFwd" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogFwd" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:pCutterCtrl.Cmd.JogFwd" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutJogFwd" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.ManualCmd.ConvPowerON" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutPower1" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.ManualCmd.ConvPowerON" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutPower1" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.ManualCmd.CutterPowerON" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutPower" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.ManualCmd.CutterPowerON" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutPower" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.IsHomed" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_ishomeIL" attribute="selectedIndex" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Stop" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_Stop" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Stop" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_Stop" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_SliderSlavePos" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_SliderSlavePos" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iMI_CutActSpeed" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_outCutSpeed" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConActSpeed" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_outConvSpeed" attribute="value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.IsHomed" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_ishomeILIL" attribute="selectedIndex" />
+</Binding></Content>
+
+
+
+
+</BindingDefinition>

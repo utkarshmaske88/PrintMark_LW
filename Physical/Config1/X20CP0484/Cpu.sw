@@ -2,9 +2,9 @@
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
-    <Task Name="Cutter" Source="Cutter.Cutter.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="ConvCtrl" Source="ConvCtrl.ConvCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="AutoCtrl" Source="AutoCtrl.AutoCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Cutter" Source="Cutter.Cutter.prg" Memory="UserROM" Description="cutter axis control" Language="IEC" Debugging="true" />
+    <Task Name="ConvCtrl" Source="ConvCtrl.ConvCtrl.prg" Memory="UserROM" Description="conveyor control" Language="IEC" Debugging="true" />
+    <Task Name="AutoCtrl" Source="AutoCtrl.AutoCtrl.prg" Memory="UserROM" Description="main control" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
@@ -13,16 +13,17 @@
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8">
-    <Task Name="AlarmsX" Source="Alarms.AlarmsX.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="AlarmsX" Source="Alarms.AlarmsX.prg" Memory="UserROM" Description="alarm funcitons" Language="IEC" Debugging="true" />
+    <Task Name="DataRec" Source="Datarec.DataRec.prg" Memory="UserROM" Description="data recorder" Language="IEC" Debugging="true" />
   </TaskClass>
   <DataObjects>
     <DataObject Name="Acp10sys" Source="" Memory="UserROM" Language="Binary" />
   </DataObjects>
   <NcDataObjects>
-    <NcDataObject Name="gAxMsa" Source="Axis.gAxMaster.gAxMsa.dob" Memory="UserROM" Language="Apt" />
+    <NcDataObject Name="gAxMsa" Source="Axis.gAxMaster.gAxMsa.dob" Memory="UserROM" Description="Conv Axis " Language="Apt" />
     <NcDataObject Name="gAxMsi" Source="Axis.gAxMaster.gAxMsi.dob" Memory="UserROM" Language="Ax" />
-    <NcDataObject Name="acp10etxen" Source="Axis.acp10etxen.dob" Memory="UserROM" Language="Ett" />
-    <NcDataObject Name="gAxSlavea" Source="Axis.gAxSlave.gAxSlavea.dob" Memory="UserROM" Language="Apt" />
+    <NcDataObject Name="acp10etxen" Source="Axis.acp10etxen.dob" Memory="UserROM" Description="acp10 motion" Language="Ett" />
+    <NcDataObject Name="gAxSlavea" Source="Axis.gAxSlave.gAxSlavea.dob" Memory="UserROM" Description="Cutter Axis " Language="Apt" />
     <NcDataObject Name="gAxSlavei" Source="Axis.gAxSlave.gAxSlavei.dob" Memory="UserROM" Language="Ax" />
   </NcDataObjects>
   <Binaries>
@@ -49,6 +50,7 @@
     <BinaryObject Name="Alarms" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="UserX" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="dataReco" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="Acp10man" Source="Libraries.Acp10man.lby" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -65,11 +67,12 @@
     <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="astime" Source="Libraries.astime.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpUserX" Source="Libraries.MpUserX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpData" Source="Libraries.MpData.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="FileIO" Source="Libraries.FileIO.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="DataObj" Source="Libraries.DataObj.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="fileio" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="arcert" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="aseth" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="ashw" Source="" Memory="UserROM" Language="Binary" Debugging="true" />

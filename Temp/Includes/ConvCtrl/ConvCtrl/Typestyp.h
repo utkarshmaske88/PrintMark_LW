@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703245902_9_
-#define _BUR_1703245902_9_
+#ifndef _BUR_1703356586_9_
+#define _BUR_1703356586_9_
 
 #include <bur/plctypes.h>
 
@@ -35,5 +35,5 @@ __asm__(".ascii \"iecfile \\\"Logical/ConvCtrl/ConvCtrl/Types.typ\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1703245902_9_ */
+#endif /* _BUR_1703356586_9_ */
 

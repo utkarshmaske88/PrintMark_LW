@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="CutterDialog" height="300" width="400" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="56" left="86" width="228" height="88" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnManualMode" top="8" left="120" height="64" zIndex="0" imageAlign="top" multiLine="true" text="$IAT/TextSys/57" wordWrap="true" imageHeight="35" imageWidth="35" cornerRadius="10px" backColor="rgba(192, 255, 255, 1)" borderColor="rgba(0, 0, 0, 1)" fontSize="15px" bold="true" checkedBackColor="rgba(0, 192, 192, 1)" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnAutoMode" top="8" left="8" height="64" zIndex="1" imageAlign="top" multiLine="true" text="$IAT/TextSys/51" wordWrap="true" imageHeight="35" imageWidth="35" cornerRadius="10px" backColor="rgba(192, 255, 255, 1)" borderColor="rgba(0, 0, 0, 1)" fontSize="15px" bold="true" checkedBackColor="rgba(0, 192, 192, 1)" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="btnConfirmMode" top="184" left="158" height="60" zIndex="1" multiLine="true" text="$IAT/TextSys/58" wordWrap="true" cornerRadius="10px" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(0, 0, 0, 1)" fontSize="15px" bold="true" />
+  </Widgets>
+</Content>

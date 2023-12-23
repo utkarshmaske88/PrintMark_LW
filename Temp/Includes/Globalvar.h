@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703245902_2_
-#define _BUR_1703245902_2_
+#ifndef _BUR_1703356586_2_
+#define _BUR_1703356586_2_
 
 #include <bur/plctypes.h>
 
@@ -13,6 +13,8 @@
 
 
 /* Variables */
+_GLOBAL plcbit gMI_MODE;
+_GLOBAL plcbit gMi_ModeConfirm;
 _GLOBAL plcbit gIR_Trigger;
 _GLOBAL plcbit gManulMode;
 _GLOBAL plcbit gAutoMode;
@@ -33,5 +35,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"")
 __asm__(".previous");
 
 
-#endif /* _BUR_1703245902_2_ */
+#endif /* _BUR_1703356586_2_ */
 

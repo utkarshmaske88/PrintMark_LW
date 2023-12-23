@@ -1,37 +1,10 @@
-VAR CONSTANT
-	ZEROSPD : REAL := 0; (*zero speed to assign*)
-	UPPER_CUT_POS : LREAL := 3013;
-	START_VEL : REAL := 145;
-	SPEED : REAL := 0.25; (*speed*)
-	SCALSPEEDTEN : REAL := 10000; (*scaling of speed*)
-	PRINT_MARK_LIMIT : LREAL := 300;
-	LOWER_CUT_POS : LREAL := 2653;
-	K_ZERO : LREAL := 0.0;
-END_VAR
+(*variables used*)
 VAR
 	iVl_OldVelocity : LREAL; (*old velocity for logo  conveyor*)
 	iVl_OldAccNeg : REAL; (*old accelation for axis*)
 	iVl_OldAcc : REAL; (*old accelartion *)
 	iVa_OldRecPosition : LREAL;
-	iVa_MasterInputs : MC_BR_SetHardwareInputs;
-	iRegCapConfig : MC_BR_CFG_RM2_REF;
-	iRegCapAdvPar : ACP10APNWCPA_typ;
-	iParaSlave : MpAxisBasicParType;
-	iParamMaster : MpAxisBasicParType;
-END_VAR
-VAR CONSTANT
-	INIT_THOUSAND : REAL := 1000; (*inital value thousand*)
-	INIT_FTHOUSAND : REAL := 5000; (*inital five thousand *)
-	INIT_FIHNRD : REAL := 500; (*inital value five hundread*)
-END_VAR
-VAR
 	iMi_LogoNegDir : BOOL; (*negtive direction hmi button*)
-	iFb_RegCap : MC_BR_RegMarkCapture002;
-	iFb_MC_MoveVelocity_0 : MC_MoveVelocity; (*funciton bloack for velocity*)
-	iFb_MasterAx : MpAxisBasic; (*basic function for axis*)
-	iFb_CamSequ : MpAxisCamSequencer;
-	iFb_BasicInfo : MpAxisBasicInfoType;
-	iConCtrl : AxisCtrl_typ;
 	icmdUpdate : BOOL; (*update command*)
 END_VAR
 VAR RETAIN
@@ -47,14 +20,56 @@ VAR
 	icmdMoveAdditive : BOOL; (*move additive axis*)
 	icmdHome : BOOL; (*hooming the axis*)
 	icmdErrorReset : BOOL; (*error reseting the axis*)
+END_VAR
+(*All the structures*)
+VAR
 	iBasicParamMaster : MpAxisBasicParType; (*basic parameters for axis*)
+	iParamMaster : MpAxisBasicParType; (*parameters for slave*)
+	iRegCapAdvPar : ACP10APNWCPA_typ; (*reg capture advance parameters*)
+	iConCtrl : AxisCtrl_typ; (*axis control structure*)
+	iFb_BasicInfo : MpAxisBasicInfoType; (*basic info structure*)
+	iParaSlave : MpAxisBasicParType; (*prameters for slave*)
+END_VAR
+(*all the function blocks*)
+VAR
 	iAx_CamSequence : MpAxisCamSequencerParType; (*Cam Seq Structure*)
+	iFb_RegCap : MC_BR_RegMarkCapture002; (*reg capture fucntion *)
+	iVa_MasterInputs : MC_BR_SetHardwareInputs; (*input from the ir sensor*)
+	iRegCapConfig : MC_BR_CFG_RM2_REF; (*reg capture configuration*)
+	iFb_MC_MoveVelocity_0 : MC_MoveVelocity; (*funciton bloack for velocity*)
+	iFb_MasterAx : MpAxisBasic; (*basic function for axis*)
+	iFb_CamSequ : MpAxisCamSequencer; (*cam sequencer fucntinon*)
+END_VAR
+(*enumeration for axis control*)
+VAR
 	iAxStepMaster : AxStep_enum; (*steps for logo conveyor*)
 END_VAR
+(*all constants *)
 VAR CONSTANT
-	HOMING_VEL : REAL := 500;
-	HOFFSET_SINGLE : REAL := 1033;
+	HOMING_VEL : REAL := 500; (*homing velocity for axis*)
+	HOFFSET_SINGLE : REAL := 1033; (*offset for axis*)
+	ZEROSPD : REAL := 0; (*zero speed to assign*)
+	UPPER_CUT_POS : LREAL := 3013; (*upper cutting position*)
+	START_VEL : REAL := 145; (*starting velocity*)
+	INIT_THOUSAND : REAL := 1000; (*inital value thousand*)
+	PRODUCT_LENGTH : REAL := 700.0; (*Product length*)
+	PER_SEC : REAL := 60.0; (*Per Sec*)
+	INIT_FTHOUSAND : REAL := 5000; (*inital five thousand *)
+	INIT_FIHNRD : REAL := 500; (*inital value five hundread*)
+	SPEED : REAL := 0.25; (*speed*)
+	SCALSPEEDTEN : REAL := 10000; (*scaling of speed*)
+	PRINT_MARK_LIMIT : LREAL := 300; (*print mark limit*)
+	LOWER_CUT_POS : LREAL := 2653; (*lower cutting position*)
+	K_ZERO : LREAL := 0.0; (*zero value*)
 END_VAR
 VAR
-	HOFFSET_DUAL : LREAL := 133;
+	HOFFSET_DUAL : LREAL := 133; (*offset value for dual cutter*)
+END_VAR
+(*for hmi variables*)
+VAR
+	iMI_ConSetSpeed : REAL := 120; (*Conv Set Speed*)
+	iMI_ConActSpeed : REAL; (*Conv act speed*)
+	iMI_ConSetJogAcc : REAL := 300; (*Conv Set jog speed*)
+	iMI_ConSetJogDeacc : REAL := 300; (*Conv set jog deaccleration*)
+	iMI_ConSetJogVel : REAL := 60; (*Conv Set jog acceleration*)
 END_VAR

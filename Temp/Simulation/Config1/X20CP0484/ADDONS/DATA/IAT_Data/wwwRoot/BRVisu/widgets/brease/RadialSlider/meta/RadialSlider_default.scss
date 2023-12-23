@@ -1,0 +1,63 @@
+@import "mixins.scss";
+@mixin widgets_brease_RadialSlider_base {
+	@include elemWidth(250);
+	@include elemHeight(250);
+	&:not(.disabled) {
+		border-width: 2px;
+	}
+	&:not(.disabled) {
+		border-color: #000000;
+	}
+	border-style: solid;
+	&:not(.disabled) {
+		background-color: transparent;
+	}
+	text {
+		fill: #000000;
+	}
+	text {
+		font-size: 35px;
+	}
+	text {
+		font-family: Arial;
+	}
+	text {
+		@include font-weight-bold(false);
+	}
+	text {
+		@include font-style-italic(false);
+	}
+	opacity: 1;
+	.RadialSliderGroup .thumb .sliderThumb:not(.disabled) {
+		fill: #FF8800;
+	}
+	.RadialSliderGroup .arc .arcPath:not(.disabled) {
+		fill: #C8C8C8;
+	}
+	.RadialSliderGroup .arcFill .arcFillPath:not(.disabled) {
+		fill: transparent;
+	}
+	&.disabled {
+		border-width: 2px;
+	}
+	&.disabled {
+		border-color: #C8C8C8;
+	}
+	.RadialSliderGroup .thumb .sliderThumb.disabled {
+		fill: #F1F1F1;
+	}
+	.RadialSliderGroup .arc .arcPath.disabled {
+		fill: #EAEAEA;
+	}
+	.RadialSliderGroup .arcFill .arcFillPath.disabled {
+		fill: #C8C8C8;
+	}
+	&.disabled {
+		background-color: transparent;
+	}
+
+}
+
+.widgets_brease_RadialSlider_style_default {
+@include widgets_brease_RadialSlider_base
+}

@@ -18,5 +18,8 @@
     <Object Type="Library" Language="binary" Description="Add-on library to ACP10_MC for registration mark handling">MC_RegMa</Object>
     <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
     <Object Type="Library" Language="Binary" Description="User management based on user role system">MpUserX</Object>
+    <Object Type="Library" Language="Binary" Description="Data recording and archiving">MpData</Object>
+    <Object Type="Library" Language="binary" Description="The FileIO library provides function blocks for file handling.">FileIO</Object>
+    <Object Type="Library" Language="binary" Description="The DataObj library can be used to dynamically create, dynamically delete and copy data objects, etc. ">DataObj</Object>
   </Objects>
 </Package>

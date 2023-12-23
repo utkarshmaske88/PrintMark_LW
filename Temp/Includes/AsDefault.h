@@ -18,9 +18,12 @@ extern "C"
 	#include <sys_lib.h>
 	#include <brsystem.h>
 	#include <MpUserX.h>
+	#include <FileIO.h>
+	#include <DataObj.h>
 	#include <AsIecCon.h>
 	#include <Acp10_MC.h>
 	#include <MpAlarmX.h>
+	#include <MpData.h>
 	#include <MpAxis.h>
 	#include <MC_RegMa.h>
 #ifdef __cplusplus

@@ -1,25 +1,41 @@
+(*|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|*)
+(*| Copyright      :-  B&R Industrial Automation GmbH															 |*)
+(*| Contact Person :-  maskeu																					 |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| System       :-  auto control                                                                    	 		 |*)
+(*| Task Name    :-  auto control																		  		 |*)
+(*| Auther Name  :-  maskeu																						 |*)
+(*| Created Date :-  December 19, 2023 																		   	 |*)
+(*| Task Class   :-  Task Class# 1                                                                 				 |*)
+(*| Task Time    :-  Task Timing 2mSec                                                                           |*)
+(*| OS Version   :-  G4.93                                                                                       |*)
+(*| AS Version   :-  AS 4.12.4.107 SP                                                                            |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| Description  :-  alarmsaction file				    									 					 |*)
+(*| V1.00.0   23/12/2023	 Maskeu        added alarms and reset file							Complete	     |*)
 
 ACTION Alarms: 
-	//in Cutting zone alarm
-//	IF pSlaveAx.Position < 3013 AND pSlaveAx.Position > 2653 AND NOT iAutoCtrl.Cmd.AutoMode THEN
-//		MpAlarmXSet(gAlarmXMain,'InCuttingZone');
-//	ELSE
-//		MpAlarmXReset(gAlarmXMain,'InCuttingZone');
-//	END_IF
-//	
-//	//Product without pritn mark limit exceeded alarm
-//	IF pRegCapture.ProductsWithoutRM > PROUCT_WITHOUT_RM THEN
-//		pAx_CamSeq.In.StartSequence := FALSE;
-//		gAx_Master.In.Power := FALSE;
-//		gAx_Slave.In.Power := FALSE;
-//		MpAlarmXSet(gAlarmXMain,'CuttingError');
-//		AutoCtrlState := STOP;
-//	ELSE
-//		MpAlarmXReset(gAlarmXMain,'CuttingError');
-//	END_IF
-//	
+//	in Cutting zone alarm
+	IF pSlaveAx.Position < 3013 AND pSlaveAx.Position > 2653 AND NOT iAutoCtrl.Cmd.AutoMode THEN
+		MpAlarmXSet(gAlarmXCore,'InTheCuttingZone');
+	ELSE
+		MpAlarmXReset(gAlarmXCore,'InTheCuttingZone');
+	END_IF
+	
+	//Product without pritn mark limit exceeded alarm
+	IF pRegCapture.ProductsWithoutRM > LIMIT_ERROR_PRODUCT THEN
+		pAx_CamSeq.StartSequence 	 := FALSE;
+		pMasterAx.Power					 := FALSE;
+		pSlaveAx.Power					 := FALSE;
+		MpAlarmXSet(gAlarmXCore,'ErrorCutting');
+		iAutoCtrlState := enSTOP;
+	ELSE
+		MpAlarmXReset(gAlarmXCore,'ErrorCutting');
+	END_IF
+	
 END_ACTION
 
+//resetting all the values
 ACTION Reset: 
 	
 	CASE iResetState OF

@@ -1,25 +1,7 @@
 VAR
 	iVl_OldAcc : REAL; (*old accelartion *)
-END_VAR
-VAR CONSTANT
-	HOMING_VEL : REAL := 500;
-	HOFFSET_SINGLE : REAL := 1033;
-	SPEED : REAL := 0.25; (*speed*)
-	ZEROSPD : REAL := 0; (*zero speed to assign*)
-	SCALSPEEDTEN : REAL := 10000; (*scaling of speed*)
-	INIT_FIHNRD : REAL := 500; (*inital value five hundread*)
-	INIT_FTHOUSAND : REAL := 5000; (*inital five thousand *)
-	INIT_THOUSAND : REAL := 1000; (*inital value thousand*)
-END_VAR
-VAR
 	iMi_LogoNegDir : BOOL; (*negtive direction hmi button*)
 	icmdUpdate : BOOL; (*update command*)
-END_VAR
-VAR CONSTANT
-	START_VEL : REAL := 145;
-END_VAR
-VAR
-	iBasicParSlave : MpAxisBasicParType; (*basic parameters for axis*)
 	icmdPower : BOOL; (*powering on the axis*)
 	icmdHome : BOOL; (*hooming the axis*)
 END_VAR
@@ -35,46 +17,70 @@ END_VAR
 VAR
 	iVl_OldAccNeg : REAL; (*old accelation for axis*)
 	icmdErrorReset : BOOL; (*error reseting the axis*)
-	iFb_MC_MoveVelocity_0 : MC_MoveVelocity; (*funciton bloack for velocity*)
-	iAxStep_enum : AxStep_enum; (*steps for logo conveyor*)
 	iVl_OldVelocity : REAL; (*old velocity for logo  conveyor*)
+END_VAR
+(*all the strucutres*)
+VAR
+	iFb_MC_MoveVelocity_0 : MC_MoveVelocity; (*funciton bloack for velocity*)
 	iFb_SlaveAx : MpAxisBasic; (*basic function for axis*)
-END_VAR
-VAR CONSTANT
-	UPPER_CUT_POS : REAL := 3013;
-END_VAR
-VAR
-	HOFFSET_DUAL : REAL := 133;
+	iBasicParSlave : MpAxisBasicParType; (*basic parameters for axis*)
+	iParaSlave : MpAxisBasicParType; (*paraemeters for slave*)
+	iCutCtrl : AxisCtrl_typ; (*cutter control*)
+	iParamMaster : MpAxisBasicParType; (*parameters for master*)
 	iAx_CamSequence : MpAxisCamSequencerParType; (*Cam Seq Structure*)
+	iJogLimState : Joglim_enum; (*jog limit enumeration*)
+	iAxStep_enum : AxStep_enum; (*steps for logo conveyor*)
 END_VAR
+(*All the funciton blocks*)
+VAR
+	iFb_AxisSlave : MpAxisBasic; (*fucniton block for axis slave*)
+	iFb_AxisMater : MpAxisBasic; (*fucniton block for axis master*)
+	iFb_CamSequ : MpAxisCamSequencer; (*cam sequencer fucniton block*)
+	iFb_RegCap : MC_BR_RegMarkCapture002; (*reg capture funciton*)
+	iRegCapAdvPar : MC_BR_ADV_RM2_REF; (*reg capture parameters*)
+	iRegCapConfig : MC_BR_CFG_RM2_REF; (*reg capture configuration*)
+	iAbsVal : LREAL; (*absolute value for homing downside*)
+	icmdMoveAbsoulte : BOOL; (*move absoulte commands*)
+END_VAR
+(*Al the constatnt for homing , position , offset value etc.*)
 VAR CONSTANT
-	LOWER_CUT_POS : REAL := 2653;
+	HOMING_VEL : REAL := 500; (*homing velocity*)
+	HOFFSET_SINGLE : REAL := 1033; (*offset for single cutter*)
+	SPEED : REAL := 0.25; (*speed*)
+	ZEROSPD : REAL := 0; (*zero speed to assign*)
+	SCALSPEEDTEN : REAL := 10000; (*scaling of speed*)
+	START_VEL : REAL := 145;
+	INIT_FIHNRD : REAL := 500; (*inital value five hundread*)
+	INIT_FTHOUSAND : REAL := 5000; (*inital five thousand *)
+	INIT_THOUSAND : REAL := 1000; (*inital value thousand*)
+	UPPER_CUT_POS : REAL := 3013; (*upper cutting position for first cutter*)
 END_VAR
 VAR
-	iFb_AxisSlave : MpAxisBasic;
-	iFb_AxisMater : MpAxisBasic;
-	iParamMaster : MpAxisBasicParType;
-	iParaSlave : MpAxisBasicParType;
-	iFb_CamSequ : MpAxisCamSequencer;
-	iFb_RegCap : MC_BR_RegMarkCapture002;
-	iRegCapAdvPar : MC_BR_ADV_RM2_REF;
-	iRegCapConfig : MC_BR_CFG_RM2_REF;
-	iAbsVal : LREAL;
-	icmdMoveAbsoulte : BOOL;
+	HOFFSET_DUAL : REAL := 133; (*offset value for homing*)
 END_VAR
 VAR CONSTANT
-	HOFFSET_NEGDUAL : LREAL := 33;
-	FIRST_CUT_UPPER : LREAL := 3013;
-	HOME_POS : LREAL := 1933;
-	SEC_CUT_UPPER : LREAL := 1213;
-	FIRST_CUT_LOWER : LREAL := 2653;
-	MAX_POS_AXIS : LREAL := 3599;
-	SEC_CUT_LOWER : LREAL := 853;
-	HOME_OFFSET : LREAL := 133;
+	LOWER_CUT_POS : REAL := 2653; (*lower cutting position for second cutter*)
+	HOFFSET_NEGDUAL : LREAL := 33; (*offset for negative ohming in dual cutter*)
+	FIRST_CUT_UPPER : LREAL := 3013; (*first cutter upper positon of cutting*)
+	HOME_POS : LREAL := 1933; (*homing positon downside*)
+	SEC_CUT_UPPER : LREAL := 1213; (*second cutter upper cut position*)
+	FIRST_CUT_LOWER : LREAL := 2653; (*first cutter lower positon*)
+	MAX_POS_AXIS : LREAL := 3599; (*max axis positon*)
+	SEC_CUT_LOWER : LREAL := 853; (*second cutter lower value*)
+	HOME_OFFSET : LREAL := 133; (*offset value for homing*)
 END_VAR
 VAR
-	iCutCtrl : AxisCtrl_typ;
-	iJogLimState : Joglim_enum;
-	LOWER_BUFER : LREAL := 0;
-	ZERO : LREAL := 0;
+	LOWER_BUFER : LREAL := 0; (*lower buffer value*)
+	ZERO : LREAL := 0; (*zero vlaue*)
+END_VAR
+VAR CONSTANT
+	PRODUCT_LENGTH : REAL := 700.0; (*Product length*)
+	PER_SEC : REAL := 60.0; (*Per Sec*)
+END_VAR
+(*HMI varible*)
+VAR
+	iMI_CutSetJogAcc : REAL := 300; (*Cut set jog acceleration*)
+	iMI_CutSetJogDeacc : REAL := 300; (*Cut jog deacceleration*)
+	iMI_CutActSpeed : REAL; (*Cut act speed*)
+	iMI_CutSetJogVel : REAL := 45; (*Cut set jog velocity*)
 END_VAR

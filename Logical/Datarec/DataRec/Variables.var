@@ -1,0 +1,4 @@
+VAR
+	iFB_DataR : MpDataRecorder; (*Data recorder FB*)
+	iFB_DataRegPar : MpDataRegPar; (*Data Recorder Reg Par FB *)
+END_VAR

@@ -1,5 +1,7 @@
 
 ACTION RegCap: 
+	
+	// assinging configuration for reg capture
 	iFb_RegCap.Axis					:=ADR(gAxSlave);
 	iFb_RegCap.Master				:=ADR(gAxMaster);
 	iFb_RegCap.AdvancedParameters 	:= iRegCapAdvPar;

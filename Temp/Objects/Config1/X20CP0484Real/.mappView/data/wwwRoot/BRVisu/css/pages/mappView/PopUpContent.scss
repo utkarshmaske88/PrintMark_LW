@@ -1,0 +1,131 @@
+@import "mixins.scss";
+#PopUpContent_ButtonBar1 {	@include elemTop(40);
+}
+#PopUpContent_ButtonBar1 {	@include elemLeft(72);
+}
+#PopUpContent_ButtonBar1 {	@include elemWidth(228);
+}
+#PopUpContent_ButtonBar1 {	@include elemHeight(88);
+}
+#PopUpContent_ButtonBar1 {	z-index: 0;
+}
+#PopUpContent_btnManualMode {	@include elemAutoWidth(100);
+}
+#PopUpContent_btnManualMode {	@include elemTop(8);
+}
+#PopUpContent_btnManualMode {	@include elemLeft(120);
+}
+#PopUpContent_btnManualMode {	@include elemAutoHeight(64);
+}
+#PopUpContent_btnManualMode {	z-index: 0;
+}
+#PopUpContent_btnManualMode {	img {
+		@include imageHeight(35);
+	}
+}
+#PopUpContent_btnManualMode {	svg {
+		@include imageHeight(35);
+	}
+}
+#PopUpContent_btnManualMode {	img {
+		@include imageWidth(35);
+	}
+}
+#PopUpContent_btnManualMode {	svg {
+		@include imageWidth(35);
+	}
+}
+#PopUpContent_btnManualMode {	@include border-radius(10px);
+}
+#PopUpContent_btnManualMode {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(192, 255, 255, 1);
+	}
+}
+#PopUpContent_btnManualMode {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#PopUpContent_btnManualMode {	span {
+		font-size: 15px;
+	}
+}
+#PopUpContent_btnManualMode {	span {
+		@include font-weight-bold(true);
+	}
+}
+#PopUpContent_btnManualMode {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(0, 192, 192, 1);
+	}
+}
+#PopUpContent_btnAutoMode {	@include elemAutoWidth(100);
+}
+#PopUpContent_btnAutoMode {	@include elemTop(8);
+}
+#PopUpContent_btnAutoMode {	@include elemLeft(8);
+}
+#PopUpContent_btnAutoMode {	@include elemAutoHeight(64);
+}
+#PopUpContent_btnAutoMode {	z-index: 1;
+}
+#PopUpContent_btnAutoMode {	img {
+		@include imageHeight(35);
+	}
+}
+#PopUpContent_btnAutoMode {	svg {
+		@include imageHeight(35);
+	}
+}
+#PopUpContent_btnAutoMode {	img {
+		@include imageWidth(35);
+	}
+}
+#PopUpContent_btnAutoMode {	svg {
+		@include imageWidth(35);
+	}
+}
+#PopUpContent_btnAutoMode {	@include border-radius(10px);
+}
+#PopUpContent_btnAutoMode {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(192, 255, 255, 1);
+	}
+}
+#PopUpContent_btnAutoMode {	&:not(.disabled):not(.checked) {
+		border-color: rgba(0, 0, 0, 1);
+	}
+}
+#PopUpContent_btnAutoMode {	span {
+		font-size: 15px;
+	}
+}
+#PopUpContent_btnAutoMode {	span {
+		@include font-weight-bold(true);
+	}
+}
+#PopUpContent_btnAutoMode {	&.checked:not(.active):not(.disabled) {
+		background-color: rgba(0, 192, 192, 1);
+	}
+}
+#PopUpContent_btnConfirmMode {	@include elemAutoWidth(100);
+}
+#PopUpContent_btnConfirmMode {	@include elemTop(168);
+}
+#PopUpContent_btnConfirmMode {	@include elemLeft(144);
+}
+#PopUpContent_btnConfirmMode {	@include elemAutoHeight(60);
+}
+#PopUpContent_btnConfirmMode {	z-index: 1;
+}
+#PopUpContent_btnConfirmMode {	@include border-radius(10px);
+}
+#PopUpContent_btnConfirmMode {	&:not(.disabled):not(.active):not(.checked) {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+#PopUpContent_btnConfirmMode {	span {
+		font-size: 15px;
+	}
+}
+#PopUpContent_btnConfirmMode {	span {
+		@include font-weight-bold(true);
+	}
+}

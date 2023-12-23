@@ -2,16 +2,19 @@
 (*| Copyright      :-  B&R Industrial Automation GmbH															 |*)
 (*| Contact Person :-  maskeu																					 |*)
 (*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
-(*| System       :-  TODO:logo conv axis                                                                      	 |*)
-(*| Task Name    :-  TODO: logo conv axis																		 |*)
+(*| System       :-  cutter control                                                                    	 		 |*)
+(*| Task Name    :-  cutter control																		  		 |*)
 (*| Auther Name  :-  maskeu																						 |*)
-(*| Created Date :-  December 13, 2023 																		   	 |*)
+(*| Created Date :-  December 19, 2023 																		   	 |*)
 (*| Task Class   :-  Task Class# 1                                                                 				 |*)
-(*| Task Time    :-  Task Timing 10mSec                                                                          |*)
-(*| OS Version   :-  V4.12.4                                                                                     |*)
-(*| AS Version   :-  AS 4.12.4 .107 SP                                                                           |*)
+(*| Task Time    :-  Task Timing 2mSec                                                                           |*)
+(*| OS Version   :-  G4.93                                                                                       |*)
+(*| AS Version   :-  AS 4.12.4.107 SP                                                                            |*)
 (*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
-(*| Description  :-  TODO: basic movement of axis with the conveyor		    									 |*)
+(*| Description  :-  CUTTER cam sequnce and basic initial prameters		    									 |*)
+(*| V1.00.0   19/12/2023	 Maskeu        added homing states									Complete		 |*)
+(*| V2.00.0   20/12/2023	 Maskeu        added jog limits										Complete		 |*)
+(*| V3.00.0   23/12/2023	 Maskeu        modified positive homing state						Complete		 |*)
 
 ACTION SingleCutter: 
 	//linking the motor with axis
@@ -197,6 +200,7 @@ ACTION SingleCutter:
 	
 	CASE iJogLimState OF
 		
+		//checking the value of jog positive and negative
 		enCHECKVEL:
 			IF iFb_SlaveAx.JogNegative = TRUE THEN
 				iJogLimState							:= enUPPERPOS;
@@ -204,11 +208,14 @@ ACTION SingleCutter:
 			IF (iFb_SlaveAx.JogPositive = TRUE) THEN
 				iJogLimState							:= enLOWERPOS;
 			END_IF;
+			
+			//will give command once again
 		enADDVEL:
 			iFb_SlaveAx.JogPositive						:= TRUE;
 			iFb_SlaveAx.JogNegative						:= TRUE;
 			iJogLimState								:= enCHECKVEL;
 				
+			//if axis position is greater than upper cut
 		enUPPERPOS:
 			IF (iFb_SlaveAx.CommandAborted = TRUE) THEN
 				iJogLimState							:= enADDVEL;
@@ -221,18 +228,22 @@ ACTION SingleCutter:
 				iFb_SlaveAx.Update						:= TRUE;
 				iJogLimState							:= enUPDATE;
 			END_IF;
+			
+			//if axis position is lower than lower cut
 		enLOWERPOS:
 			IF (iFb_SlaveAx.CommandAborted = TRUE) THEN
 				iJogLimState							:= enADDVEL;
-				iFb_SlaveAx.JogPositive	:= FALSE;
+				iFb_SlaveAx.JogPositive					:= FALSE;
 			END_IF;
 				
 			IF (iFb_SlaveAx.Position < LOWER_CUT_POS)THEN
-				iBasicParSlave.Jog.LowerLimit	:=ZERO;
-				iBasicParSlave.Jog.UpperLimit	:= FIRST_CUT_LOWER;
+				iBasicParSlave.Jog.LowerLimit			:=ZERO;
+				iBasicParSlave.Jog.UpperLimit			:= FIRST_CUT_LOWER;
 				iFb_SlaveAx.Update						:= TRUE;
 				iJogLimState							:= enUPDATE;
 			END_IF;
+			
+			//updating state on position
 		enUPDATE:
 			IF iFb_SlaveAx.UpdateDone = TRUE THEN
 				iFb_SlaveAx.Update						:= FALSE;
@@ -248,10 +259,12 @@ ACTION SingleCutter:
 				iFb_SlaveAx.JogPositive					:= FALSE;
 				iJogLimState							:= enRESET;
 			END_IF;
+			
+			//reseting the values
 		enRESET:
 	
-			iBasicParSlave.Jog.LowerLimit		:= ZERO;
-			iBasicParSlave.Jog.UpperLimit		:= ZERO;
+			iBasicParSlave.Jog.LowerLimit				:= ZERO;
+			iBasicParSlave.Jog.UpperLimit				:= ZERO;
 			iFb_SlaveAx.Update							:= TRUE;
 			IF iFb_SlaveAx.UpdateDone = TRUE THEN
 				iFb_SlaveAx.Update						:= FALSE;

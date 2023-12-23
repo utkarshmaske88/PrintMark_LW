@@ -2,8 +2,8 @@
 (*| Copyright      :-  B&R Industrial Automation GmbH															 |*)
 (*| Contact Person :-  maskeu																					 |*)
 (*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
-(*| System       :-  TODO:logo conv axis                                                                      	 |*)
-(*| Task Name    :-  TODO: logo conv axis																		 |*)
+(*| System       :- conveyor control                                                                    	 	 |*)
+(*| Task Name    :- conveyor control																			 |*)
 (*| Auther Name  :-  maskeu																						 |*)
 (*| Created Date :-  December 13, 2023 																		   	 |*)
 (*| Task Class   :-  Task Class# 1                                                                 				 |*)
@@ -11,8 +11,9 @@
 (*| OS Version   :-  V4.12.4                                                                                     |*)
 (*| AS Version   :-  AS 4.12.4 .107 SP                                                                           |*)
 (*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
-(*| Description  :-  TODO: basic movement of axis with the conveyor		    									 |*)
-
+(*| Description  :-  movement of  conveyor		    															 |*)
+(*| V1.00.0   22/12/2023	 Maskeu        added homing mode 									Complete	 	 |*)
+(*| V2.00.0   23/12/2023	 Maskeu        added manual mode jog pos-neg						Complete		 |*)
 PROGRAM _INIT
 	(* Insert code here *)
 	iBasicParamMaster.Acceleration:=480000;
@@ -33,44 +34,30 @@ PROGRAM _CYCLIC
 
 	iFb_MasterAx.Parameters := ADR(iBasicParamMaster);
 	iFb_MasterAx();
-	
-	//	if new velocity by user input is different then will update
-	//	IF iVl_OldVelocity <> iBasicParamMaster.Acceleration THEN
-	//		iFb_MasterAx.Update:=TRUE ;
-	//		IF	iFb_MasterAx.UpdateDone=TRUE THEN
-	//			iVl_OldVelocity:= iBasicParamMaster.Velocity;
-	//			iFb_MasterAx.Update:=FALSE ;
-	//		END_IF;
-	//	END_IF;
-	//	
-	//	//	if new accelaration by user input is different then will update
-	//	IF iVl_OldAcc<> iBasicParamMaster.Acceleration THEN
-	//		iFb_MasterAx.Update:=TRUE ;
-	//		IF	iFb_MasterAx.UpdateDone=TRUE THEN
-	//			iVl_OldAcc:= iBasicParamMaster.Acceleration;
-	//			iFb_MasterAx.Update:=FALSE ;
-	//		END_IF;
-	//	END_IF;
-	//	
-	//	//	if new deccelaration by user input is different then will update
-	//	IF iVl_OldAccNeg<> iBasicParamMaster.Deceleration THEN
-	//		iFb_MasterAx.Update:=TRUE ;
-	//		IF	iFb_MasterAx.UpdateDone=TRUE THEN
-	//			iVl_OldAccNeg:= iBasicParamMaster.Deceleration;
-	//			iFb_MasterAx.Update:=FALSE ;
-	//		END_IF;
-	//	END_IF;
+
+	//Updating the paramters set from HMI by converting them 
+	iBasicParamMaster.Velocity := (iMI_ConSetSpeed * PRODUCT_LENGTH)/PER_SEC;
+	IF iMI_ConSetSpeed <> (iBasicParamMaster.Velocity * PER_SEC)/PRODUCT_LENGTH  
+		OR iMI_ConSetJogAcc <> (iBasicParamMaster.Jog.Acceleration * PER_SEC)/PRODUCT_LENGTH 
+		OR iMI_ConSetJogDeacc <> (iBasicParamMaster.Jog.Deceleration * PER_SEC)/PRODUCT_LENGTH 
+		OR iMI_ConSetJogVel <> (iBasicParamMaster.Jog.Velocity  * PER_SEC)/PRODUCT_LENGTH 
+		THEN
+		iFb_MasterAx.Update := TRUE;
+		IF iFb_MasterAx.UpdateDone THEN
+			iFb_MasterAx.Update := FALSE;
+		END_IF
+	END_IF
 	
 	
-	//Limit for the torque
-	iBasicParamMaster.Torque.Limit:=0.8;
-	
+	//Mapping of parameters
+	iBasicParamMaster.Jog.Acceleration := (iMI_ConSetJogAcc * PRODUCT_LENGTH)/PER_SEC;
+	iBasicParamMaster.Jog.Deceleration := (iMI_ConSetJogDeacc * PRODUCT_LENGTH)/PER_SEC;
+	iBasicParamMaster.Jog.Velocity := (iMI_ConSetJogVel * PRODUCT_LENGTH)/PER_SEC;
+	iMI_ConActSpeed := (iFb_MasterAx.Velocity * PER_SEC)/PRODUCT_LENGTH ;
 	//stopping the axis command
-	IF icmdStop=TRUE THEN
-		iFb_MasterAx.Stop:=TRUE;
+	IF	iFb_MasterAx.Stop=TRUE THEN
 		IF iFb_MasterAx.Stopped=TRUE THEN
 			iFb_MasterAx.Stop:=FALSE;
-			icmdStop:=FALSE;
 		END_IF;
 	END_IF;
 		
@@ -84,8 +71,9 @@ PROGRAM _CYCLIC
 		
 		//initializtion
 		enINITA:
-			iAxStepMaster := 	enSTARTA;
-			
+			IF iConCtrl.Cmd.Start=TRUE THEN
+				iAxStepMaster := 	enSTARTA;
+			END_IF;
 			//starting
 		enSTARTA:
 			IF iFb_MasterAx.Info.ReadyToPowerOn = TRUE THEN
@@ -104,7 +92,7 @@ PROGRAM _CYCLIC
 					iAxStepMaster:=enMANUAL;
 				END_IF;
 			END_IF;
-			//operation mode
+			//manual mode
 			
 		enMANUAL:
 			IF iConCtrl.Cmd.JogFwd THEN
@@ -149,17 +137,14 @@ PROGRAM _CYCLIC
 			//error mode
 		enERRORA:
 			iFb_MasterAx.Power := FALSE;
-			icmdMoveVelocity := FALSE;
-			icmdStop := FALSE;
-			
-			icmdErrorReset:=TRUE;
+			iFb_MasterAx.MoveVelocity:= FALSE;
 			IF iFb_MasterAx.Error = FALSE THEN;
 				iAxStepMaster := enSTARTA;
 				icmdErrorReset := FALSE;
 			END_IF
 	END_CASE
 	
-	
+	//trigger for conveyor for homing
 	iConCtrl.Cmd.PrintMark:=gIR_Trigger;
 	iVa_MasterInputs.Enable:=TRUE;
 	iVa_MasterInputs.Axis:=ADR(gAxMaster);

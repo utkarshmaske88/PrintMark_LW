@@ -38,6 +38,18 @@
     UseAsStatic="false"
     Version="" />
   <Library
+    Name="DataObj"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
+  <Library
+    Name="FileIO"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
+  <Library
     Name="MC_RegMa"
     IsDeployed="true"
     IsStatic="false"
@@ -63,6 +75,12 @@
     Version="5.23.0" />
   <Library
     Name="MpCom"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="5.23.1" />
+  <Library
+    Name="MpData"
     IsDeployed="true"
     IsStatic="false"
     UseAsStatic="false"

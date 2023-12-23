@@ -2,23 +2,21 @@
 (*| Copyright      :-  B&R Industrial Automation GmbH															 |*)
 (*| Contact Person :-  maskeu																					 |*)
 (*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
-(*| System       :-  TODO: Sewing Machine                                                                        |*)
-(*| Task Name    :-  TODO: Dosctrl                                                                   	         |*)
+(*| System       :-  alarms Control  	                                                                         |*)
+(*| Task Name    :-  alarms Control                                                                    	         |*)
 (*| Auther Name  :-  maskeu																						 |*)
 (*| Created Date :-  October 10, 2023 																		   	 |*)
 (*| Task Class   :-  Task Class #1                                                                               |*)
 (*| Task Time    :-  Task Timing 10mSec                                                                          |*)
-(*| OS Version   :-  V0.00.0                                                                                     |*)
-(*| AS Version   :-  AS 4.12.4.107                                                                               |*)
+(*| OS Version   :-  G 4.93	                                                                                     |*)
+(*| AS Version   :-  AS 4.12.4.107 SP                                                                            |*)
 (*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
-(*| Description  :-  Dosing Control                                                            |*)
+(*| Description  :-  alarms Control                                                            					 |*)
 (*|                                                                                                              |*)
 (*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
 (*| History (Task Modification):                                                                                 |*)
 (*|                                                                                                              |*)
-(*| Version      Date       Modified By      Modification                                             Status     |*)
-(*| V1.00.0   10/10/2023    maskeu        TODO: Insert Modification Done                       Update Status     |*)
-(*|______________________________________________________________________________________________________________|*)
+(*| V1.00.0   23/12/2023    maskeu        added alarms fucntion block	                       compelete	     |*)
 
 PROGRAM _INIT
 	
@@ -32,7 +30,6 @@ PROGRAM _CYCLIC
 	// alarmx on
 	iFb_AlarmX.Enable:=TRUE;
 	iFb_AlarmX.MpLink:=ADR(gAlarmXCore);
-
 	iFb_AlarmX();
 	
 	

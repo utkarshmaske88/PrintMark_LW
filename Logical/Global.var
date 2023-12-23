@@ -2,7 +2,18 @@
 VAR
 	gAxMaster : ACP10AXIS_typ; (*Master Axis*)
 	gAxSlave : ACP10AXIS_typ; (*Slave Axis*) (*	gAx_Slave : AxisBasic_type; (*Slave Axis Structure*) (*gAx_Master : AxisBasic_type; MAster axis Structure*)
-	gAutoMode : BOOL;
-	gManulMode : BOOL;
-	gIR_Trigger : BOOL;
+END_VAR
+(*Automatic mode*)
+VAR
+	gAutoMode : BOOL; (*automatic mode for machine*)
+	gManulMode : BOOL; (*manual mode for machine*)
+END_VAR
+(*IR trigger for conveyor belt*)
+VAR
+	gIR_Trigger : BOOL; (*trigger of IR for Conveyor axis master*)
+END_VAR
+(*for mappview commands given'*)
+VAR
+	gMi_ModeConfirm : BOOL; (*mode confirmation for hmi*)
+	gMI_MODE : BOOL;
 END_VAR

@@ -15,5 +15,7 @@
     <Object Type="File">logout.png</Object>
     <Object Type="File">play.png</Object>
     <Object Type="File">logoa.png</Object>
+    <Object Type="File" Description="Red Color svg">red.svg</Object>
+    <Object Type="File" Description="Green Color svg">green.svg</Object>
   </Objects>
 </Package>

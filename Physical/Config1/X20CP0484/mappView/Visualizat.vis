@@ -3,9 +3,24 @@
   <StartPage pageRefId="MainPage" />
   <Pages />
   <Navigations />
-  <BindingsSets />
-  <EventBindingsSets />
-  <Dialogs />
+  <BindingsSets>
+    <BindingsSet refId="HomeContent_binding" />
+    <BindingsSet refId="AxCtrlContent_binding" />
+    <BindingsSet refId="AxisSetContent_binding" />
+    <BindingsSet refId="ManualContent_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="NavBarContent_eventbinding" />
+    <EventBindingsSet refId="HomeContent_eventbinding" />
+    <EventBindingsSet refId="PopUpContent_eventbinding" />
+    <EventBindingsSet refId="eventbinding_0" />
+    <EventBindingsSet refId="CutterDialog_eventbinding" />
+  </EventBindingsSets>
+  <Dialogs>
+    <Dialog refId="Animation" />
+    <Dialog refId="PopUpd" />
+    <Dialog refId="CutterDialog" />
+  </Dialogs>
   <Contents>
     <Content refId="HomeContent" />
     <Content refId="NavBarContent" />
@@ -16,6 +31,9 @@
     <Content refId="AxCtrlContent" />
     <Content refId="AxisSetContent" />
     <Content refId="ManualContent" />
+    <Content refId="SingleCutterAni" />
+    <Content refId="PopUpContent" />
+    <Content refId="CutterDialog" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

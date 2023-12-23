@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703245902_12_
-#define _BUR_1703245902_12_
+#ifndef _BUR_1703356586_12_
+#define _BUR_1703356586_12_
 
 #include <bur/plctypes.h>
 
@@ -13,8 +13,6 @@
 
 
 /* Variables */
-_BUR_LOCAL struct MpAlarmXListUIConnectType UIConnectCore;
-_BUR_LOCAL struct MpAlarmXListUI iFb_AlarmUI;
 _BUR_LOCAL struct MpAlarmXCore iFb_AlarmX;
 _BUR_LOCAL struct MpAlarmXHistory iFb_AlarmHistory;
 
@@ -33,5 +31,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpAlarmX/MpAlarmX.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1703245902_12_ */
+#endif /* _BUR_1703356586_12_ */
 
