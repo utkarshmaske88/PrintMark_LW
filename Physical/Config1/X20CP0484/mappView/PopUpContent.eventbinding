@@ -22,7 +22,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="PopUpContent" widgetRefId="btnConfirmMode" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMI_ModeConfirm">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMi_ModeConfirm">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>

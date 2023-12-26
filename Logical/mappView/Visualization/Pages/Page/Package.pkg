@@ -3,14 +3,14 @@
 <Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File" Description="Page description">Page.page</Object>
-    <Object Type="File">HomeContent.content</Object>
-    <Object Type="File">NavBarContent.content</Object>
-    <Object Type="File">HeaderContent.content</Object>
-    <Object Type="File">UserContent.content</Object>
-    <Object Type="File">AlarmsContetn.content</Object>
-    <Object Type="File">DiagnosContent.content</Object>
-    <Object Type="File">AxCtrlContent.content</Object>
-    <Object Type="File">AxSetContent.content</Object>
-    <Object Type="File">ManualContent.content</Object>
+    <Object Type="File" Description="home main content">HomeContent.content</Object>
+    <Object Type="File" Description="navigation bar">NavBarContent.content</Object>
+    <Object Type="File" Description="header">HeaderContent.content</Object>
+    <Object Type="File" Description="users management">UserContent.content</Object>
+    <Object Type="File" Description="alarms configuration">AlarmsContetn.content</Object>
+    <Object Type="File" Description="SDM">DiagnosContent.content</Object>
+    <Object Type="File" Description="Axis Control">AxCtrlContent.content</Object>
+    <Object Type="File" Description="axis parameters">AxSetContent.content</Object>
+    <Object Type="File" Description="manual mode">ManualContent.content</Object>
   </Objects>
 </Package>

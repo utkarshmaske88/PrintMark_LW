@@ -1,0 +1,14 @@
+$(AS_PROJECT_PATH)/Logical/Global.var
+$(AS_PROJECT_PATH)/Logical/Cutter/Cutter/Variables.var
+$(AS_PROJECT_PATH)/Physical/Config1/X20CP0484/Cpu.sw
+$(AS_PROJECT_PATH)/Logical/Libraries/MC_RegMa/MC_RegMa.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/MC_RegMa/MC_RegMa.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpBase/MpBase.typ
+$(AS_PROJECT_PATH)/Logical/ConvCtrl/ConvCtrl/Variables.var
+$(AS_PROJECT_PATH)/Logical/AutoCtrl/AutoCtrl/Variables.var
+$(AS_PROJECT_PATH)/Logical/AutoCtrl/AutoCtrl/Types.typ
+$(AS_PROJECT_PATH)/Logical/Global.typ
+$(AS_PROJECT_PATH)/Logical/Alarms/AlarmsX/Variables.var
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAlarmX/MpAlarmX.typ

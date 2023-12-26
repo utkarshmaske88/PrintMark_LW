@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="AlarmsContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="AlarmsContent.cmdAcknowledge.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmsContent" widgetRefId="cmdAcknowledge" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AlarmsX:iUIConnectCore.Acknowledge">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AlarmsContent.cmdAckAll.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmsContent" widgetRefId="cmdAckAll" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AlarmsX:iUIConnectCore.AcknowledgeAll">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

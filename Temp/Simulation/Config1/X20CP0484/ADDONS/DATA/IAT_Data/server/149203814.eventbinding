@@ -1,19 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingDefinition xmlns="http://www.br-automation.com/iat2014/eventbinding/runtime/v2">
   <Content id="HomeContent">
-    <EventBinding id="HomeContent.btnModeChangeBit.Click">
-      <Source type="widgets.brease.ToggleButton.Event" event="Click" refId="HomeContent_btnModeChangeBit" />
-      <EventHandler>
-        <Action>
-          <Target type="clientSystem.Action">
-            <Method type="clientSystem.Action.OpenDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="PopUpd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-  </Content>
-  <Content id="HomeContent">
-    <EventBinding id="EventBinding_2">
+    <EventBinding id="EventBinding_22">
       <Source type="opcUa.Event" refId="::AsGlobalPV:gMi_ModeConfirm" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -32,7 +20,7 @@
     </EventBinding>
   </Content>
   <Content id="HomeContent">
-    <EventBinding id="EventBinding_1">
+    <EventBinding id="EventBinding_111">
       <Source type="opcUa.Event" refId="::AutoCtrl:iAutoCtrlState" event="ValueChanged" />
       <EventHandler condition="newValue = 4">
         <Action>
@@ -51,7 +39,7 @@
     </EventBinding>
   </Content>
   <Content id="HomeContent">
-    <EventBinding id="EventBinding_3">
+    <EventBinding id="EventBinding_33">
       <Source type="opcUa.Event" refId="::AutoCtrl:iAutoCtrl.Cmd.Stop" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -70,7 +58,7 @@
     </EventBinding>
   </Content>
   <Content id="HomeContent">
-    <EventBinding id="EventBinding_4">
+    <EventBinding id="EventBinding_41">
       <Source type="opcUa.Event" refId="::AutoCtrl:iAutoCtrl.Cmd.SingleCutter" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -81,7 +69,7 @@
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
-          <Target type="widgets.brease.RadialSlider.Action" refId="HomeContent_SliderSlavePos1">
+          <Target type="widgets.brease.RadialSlider.Action" refId="HomeContent_SliderSlavePos2">
             <Method type="widgets.brease.RadialSlider.Action.SetVisible"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
@@ -89,7 +77,7 @@
     </EventBinding>
   </Content>
   <Content id="HomeContent">
-    <EventBinding id="EventBinding_6">
+    <EventBinding id="EventBinding_666">
       <Source type="opcUa.Event" refId="::AutoCtrl:iMI_CutterSelected" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -108,12 +96,24 @@
     </EventBinding>
   </Content>
   <Content id="HomeContent">
+    <EventBinding id="HomeContent.btnSelectCutter.Click">
+      <Source type="widgets.brease.Button.Event" event="Click" refId="HomeContent_btnSelectCutter" />
+      <EventHandler>
+        <Action>
+          <Target type="clientSystem.Action">
+            <Method type="clientSystem.Action.OpenDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="CutterDialog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+  <Content id="HomeContent">
     <EventBinding id="HomeContent.btnChangeMode.Click">
       <Source type="widgets.brease.Button.Event" event="Click" refId="HomeContent_btnChangeMode" />
       <EventHandler>
         <Action>
           <Target type="clientSystem.Action">
-            <Method type="clientSystem.Action.OpenDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="CutterDialog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+            <Method type="clientSystem.Action.OpenDialog"><Parameter name="dialogId" xsi:type="ANY_STRING" value="PopUpd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>

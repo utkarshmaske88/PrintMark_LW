@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="AxCtrlContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Home" attribute="value" />
+<Target xsi:type="brease" contentRefId="AxCtrlContent" widgetRefId="homeTB" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Enable" attribute="value" />
+<Target xsi:type="brease" contentRefId="AxCtrlContent" widgetRefId="enableTB" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.ErrorReset" attribute="value" />
+<Target xsi:type="brease" contentRefId="AxCtrlContent" widgetRefId="errResetTB" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.Home" attribute="value" />
+<Target xsi:type="brease" contentRefId="AxCtrlContent" widgetRefId="homeTBCA" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.Enable" attribute="value" />
+<Target xsi:type="brease" contentRefId="AxCtrlContent" widgetRefId="enableTBCA" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.ErrorReset" attribute="value" />
+<Target xsi:type="brease" contentRefId="AxCtrlContent" widgetRefId="errResetTBCA" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

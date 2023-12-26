@@ -1,21 +1,21 @@
-Sun Dec 24 00:05:09 2023
+Sun Dec 24 13:03:04 2023
 COPYRIGHT (C) B&R Industrial Automation GmbH
 
-Sun Dec 24 00:05:09 2023
+Sun Dec 24 13:03:04 2023
 No ARsim registration found!
 
-Sun Dec 24 00:05:09 2023
-InstanceName: 00000000953dcb9d
+Sun Dec 24 13:03:04 2023
+InstanceName: 0000006d43fab7c1
 
-Sun Dec 24 00:05:09 2023
+Sun Dec 24 13:03:04 2023
 WorkingDirectory: C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Simulation\Config1\X20CP0484\
 
-Sun Dec 24 00:05:09 2023
+Sun Dec 24 13:03:04 2023
 COMMAND_COLDSTART
 
-Sun Dec 24 00:05:11 2023
+Sun Dec 24 13:03:18 2023
 Version: G4.93
 
-Sun Dec 24 00:06:10 2023
+Sun Dec 24 13:03:21 2023
 COMMAND_TERMINATE
 

@@ -33,18 +33,9 @@
 <Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.MoveActive" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="insyncILCA" attribute="selectedIndex" />
 </Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.IsHomed" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ishomedIL" attribute="selectedIndex" />
-</Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.PowerOn" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="poweronIL" attribute="selectedIndex" />
-</Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Error" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="errorIL" attribute="selectedIndex" />
-</Binding>
+
+
+
 <Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::ConvCtrl:iFb_CamSequ.InSync" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="insyncIL" attribute="selectedIndex" />
@@ -73,20 +64,38 @@
 <Source xsi:type="opcUa" refId="::Cutter:iFb_RegCap.ProductsWithoutRM" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outPWoPM" attribute="value" />
 </Binding>
+
+
+
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.Info.CyclicRead.Torque.Value" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="rdlCutterAxis" attribute="value" />
+<Source xsi:type="opcUa" refId="::AutoCtrl:iMi_StatusTxt" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="txtStatus" attribute="value" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Reset" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ResetTB" attribute="value" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Info.CyclicRead.Torque.Value" attribute="value" />
-<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="rdlConvAxis" attribute="value" />
+<Source xsi:type="opcUa" refId="::Cutter:iFb_SlaveAx.Error" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="errorIL" attribute="selectedIndex" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="value" />
+<Source xsi:type="opcUa" refId="::Cutter:iFb_SlaveAx.IsHomed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ishomedIL" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_SlaveAx.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="poweronIL" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_SlaveAx.Position" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SliderSlavePos2" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="value" />
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_SlaveAx.Position" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SliderSlavePos1" attribute="value" />
 </Binding>
 </Bindings>

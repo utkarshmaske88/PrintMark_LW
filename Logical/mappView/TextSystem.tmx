@@ -342,5 +342,10 @@
         <seg>Torque</seg>
       </tuv>
     </tu>
+    <tu tuid="66">
+      <tuv xml:lang="en">
+        <seg>Reset</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

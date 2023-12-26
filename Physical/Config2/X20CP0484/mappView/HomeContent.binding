@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="HomeContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="Start" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Stop" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="Stop" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.DisableCutter" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="btnDisableCutter" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.ChangeMode" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="btnModeChangeBit" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.IsHomed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ishomedILCA" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="poweronILCA" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.Error" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="errorILCA" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.MoveActive" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="insyncILCA" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.IsHomed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ishomedIL" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="poweronIL" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Error" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="errorIL" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_CamSequ.InSync" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="insyncIL" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConSetSpeed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="inSetSpeed" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iMI_LastBagLen" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outlastBagLn" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iMI_AvgBagLen" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outAvgBagLn" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iMI_ConActSpeed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outActSpeed" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_RegCap.ValidRMs" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outValidPM" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_RegCap.ProductsWithoutRM" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="outPWoPM" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::ConvCtrl:iFb_MasterAx.Info.CyclicRead.Torque.Value" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="rdlCutterAxis" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Info.CyclicRead.Torque.Value" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="rdlConvAxis" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SliderSlavePos2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SliderSlavePos1" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

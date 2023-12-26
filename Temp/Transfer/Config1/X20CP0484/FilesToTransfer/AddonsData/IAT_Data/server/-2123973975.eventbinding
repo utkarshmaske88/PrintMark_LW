@@ -24,7 +24,7 @@
       <Source type="widgets.brease.Button.Event" event="Click" refId="PopUpContent_btnConfirmMode" />
       <EventHandler>
         <Action>
-          <Target type="opcUa.NodeAction" refId="::AsGlobalPV:gMI_ModeConfirm">
+          <Target type="opcUa.NodeAction" refId="::AsGlobalPV:gMi_ModeConfirm">
             <Method type="opcUa.NodeAction.SetValueBool"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>

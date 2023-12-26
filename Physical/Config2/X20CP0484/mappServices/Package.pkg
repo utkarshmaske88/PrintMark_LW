@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="mappServices" PackageType="mappServices" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="alarms mangement">Alarms.mpalarmxcore</Object>
+    <Object Type="File" Description="users managemnt">UserX.mpuserx</Object>
+    <Object Type="File" Description="data recording">dataReco.mpdatarecorder</Object>
+  </Objects>
+</Package>

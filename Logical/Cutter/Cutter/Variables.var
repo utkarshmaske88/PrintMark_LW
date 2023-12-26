@@ -22,7 +22,6 @@ END_VAR
 (*all the strucutres*)
 VAR
 	iFb_MC_MoveVelocity_0 : MC_MoveVelocity; (*funciton bloack for velocity*)
-	iFb_SlaveAx : MpAxisBasic; (*basic function for axis*)
 	iBasicParSlave : MpAxisBasicParType; (*basic parameters for axis*)
 	iParaSlave : MpAxisBasicParType; (*paraemeters for slave*)
 	iCutCtrl : AxisCtrl_typ; (*cutter control*)
@@ -33,9 +32,8 @@ VAR
 END_VAR
 (*All the funciton blocks*)
 VAR
-	iFb_AxisSlave : MpAxisBasic; (*fucniton block for axis slave*)
-	iFb_AxisMater : MpAxisBasic; (*fucniton block for axis master*)
 	iFb_CamSequ : MpAxisCamSequencer; (*cam sequencer fucniton block*)
+	iFb_SlaveAx : MpAxisBasic; (*basic function for axis*)
 	iFb_RegCap : MC_BR_RegMarkCapture002; (*reg capture funciton*)
 	iRegCapAdvPar : MC_BR_ADV_RM2_REF; (*reg capture parameters*)
 	iRegCapConfig : MC_BR_CFG_RM2_REF; (*reg capture configuration*)

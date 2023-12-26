@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vdef:Visualization id="vis_1" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
+  <StartPage pageRefId="MainPage" />
+  <Pages />
+  <Navigations />
+  <BindingsSets>
+    <BindingsSet refId="HomeContent_binding" />
+    <BindingsSet refId="AxCtrlContent_binding" />
+    <BindingsSet refId="AxisSetContent_binding" />
+    <BindingsSet refId="ManualContent_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <!--<EventBindingsSet refId="NavBarContent_eventbinding" />
+    <EventBindingsSet refId="HomeContent_eventbinding" />
+    <EventBindingsSet refId="PopUpContent_eventbinding" />
+    <EventBindingsSet refId="eventbinding_0" />
+    <EventBindingsSet refId="CutterDialog_eventbinding" />-->
+  </EventBindingsSets>
+  <Dialogs>
+    <Dialog refId="Animation" />
+    <Dialog refId="PopUpd" />
+    <Dialog refId="CutterDialog" />
+  </Dialogs>
+  <Contents>
+    <Content refId="HomeContent" />
+    <Content refId="NavBarContent" />
+    <Content refId="HeaderContent" />
+    <Content refId="UsersContent" />
+    <Content refId="AlarmsContent" />
+    <Content refId="DiagnosContent" />
+    <Content refId="AxCtrlContent" />
+    <Content refId="AxisSetContent" />
+    <Content refId="ManualContent" />
+    <Content refId="SingleCutterAni" />
+    <Content refId="PopUpContent" />
+    <Content refId="CutterDialog" />
+  </Contents>
+  <SnippetsSets />
+  <VariablesSets />
+  <ExpressionsSets />
+  <Configurations>
+    <Configuration key="activityCount" value="false" />
+    <Gestures>
+      <!--<SystemGesture1 touchPoints="2" />
+		  <SystemGesture2 touchPoints="2" />
+		  <SystemGesture3 touchPoints="2" />-->
+    </Gestures>
+    <VirtualKeyboards>
+      <!--<InputProcessing onKeyDown="true" />-->
+    </VirtualKeyboards>
+  </Configurations>
+</vdef:Visualization>

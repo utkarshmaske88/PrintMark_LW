@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703356586_4_
-#define _BUR_1703356586_4_
+#ifndef _BUR_1703483111_4_
+#define _BUR_1703483111_4_
 
 #include <bur/plctypes.h>
 
@@ -19,5 +19,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Cutter/CutCtrl.typ\\\" scope \\\"global\\\
 __asm__(".previous");
 
 
-#endif /* _BUR_1703356586_4_ */
+#endif /* _BUR_1703483111_4_ */
 

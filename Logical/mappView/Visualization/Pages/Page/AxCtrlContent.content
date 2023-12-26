@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="AxCtrlContent" height="600" width="800" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="txeterreest" top="68" left="433" width="148" zIndex="0" text="Error Reset" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="txthom" top="188" left="433" width="148" zIndex="1" text="Home" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="textenable" top="128" left="433" width="148" zIndex="2" text="Enable" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="txterrreset" top="378" left="433" width="148" zIndex="3" text="Error Reset" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="txthome" top="498" left="433" width="148" zIndex="4" text="Home" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="txtenable" top="438" left="433" width="148" zIndex="5" text="Enable" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="errResetTB" top="56" left="650" width="72" height="52" zIndex="6" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="enableTB" top="116" left="650" width="72" height="52" zIndex="7" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="homeTB" top="176" left="650" width="72" height="52" zIndex="8" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="txtCA" top="142" left="205" width="132" zIndex="9" text="$IAT/TextSys/10" textAlign="center" fontSize="18px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="txtconvax" top="425" left="205" width="155" zIndex="10" text="$IAT/TextSys/11" textAlign="center" fontSize="18px" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="errResetTBCA" top="368" left="647" width="72" height="52" zIndex="11" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="enableTBCA" top="428" left="647" width="72" height="52" zIndex="12" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="homeTBCA" top="488" left="647" width="72" height="52" zIndex="13" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="txeterreest" top="41" left="360" width="148" zIndex="0" text="Error Reset" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="txthom" top="161" left="360" width="148" zIndex="1" text="Home" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="textenable" top="101" left="360" width="148" zIndex="2" text="Enable" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="txterrreset" top="239" left="354" width="148" zIndex="3" text="Error Reset" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="txthome" top="359" left="354" width="148" zIndex="4" text="Home" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="txtenable" top="299" left="354" width="148" zIndex="5" text="Enable" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="errResetTB" top="29" left="577" width="72" height="52" zIndex="6" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="enableTB" top="89" left="577" width="72" height="52" zIndex="7" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="homeTB" top="149" left="577" width="72" height="52" zIndex="8" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="txtCA" top="115" left="132" width="132" zIndex="9" text="$IAT/TextSys/10" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="txtconvax" top="286" left="130" width="155" zIndex="10" text="$IAT/TextSys/11" textAlign="center" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="errResetTBCA" top="229" left="575" width="72" height="52" zIndex="11" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="enableTBCA" top="289" left="575" width="72" height="52" zIndex="12" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="homeTBCA" top="349" left="575" width="72" height="52" zIndex="13" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" borderColor="rgba(0, 0, 0, 1)" checkedBackColor="rgba(255, 255, 255, 1)" />
   </Widgets>
 </Content>

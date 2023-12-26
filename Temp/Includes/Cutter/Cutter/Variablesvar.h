@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703356586_6_
-#define _BUR_1703356586_6_
+#ifndef _BUR_1703498817_1_
+#define _BUR_1703498817_1_
 
 #include <bur/plctypes.h>
 
@@ -67,9 +67,8 @@ _BUR_LOCAL double iAbsVal;
 _BUR_LOCAL struct MC_BR_CFG_RM2_REF iRegCapConfig;
 _BUR_LOCAL struct MC_BR_ADV_RM2_REF iRegCapAdvPar;
 _BUR_LOCAL struct MC_BR_RegMarkCapture002 iFb_RegCap;
+_BUR_LOCAL struct MpAxisBasic iFb_SlaveAx;
 _BUR_LOCAL struct MpAxisCamSequencer iFb_CamSequ;
-_BUR_LOCAL struct MpAxisBasic iFb_AxisMater;
-_BUR_LOCAL struct MpAxisBasic iFb_AxisSlave;
 _BUR_LOCAL enum AxStep_enum iAxStep_enum;
 _BUR_LOCAL enum Joglim_enum iJogLimState;
 _BUR_LOCAL struct MpAxisCamSequencerParType iAx_CamSequence;
@@ -77,7 +76,6 @@ _BUR_LOCAL struct MpAxisBasicParType iParamMaster;
 _BUR_LOCAL struct AxisCtrl_typ iCutCtrl;
 _BUR_LOCAL struct MpAxisBasicParType iParaSlave;
 _BUR_LOCAL struct MpAxisBasicParType iBasicParSlave;
-_BUR_LOCAL struct MpAxisBasic iFb_SlaveAx;
 _BUR_LOCAL struct MC_MoveVelocity iFb_MC_MoveVelocity_0;
 _BUR_LOCAL float iVl_OldVelocity;
 _BUR_LOCAL plcbit icmdErrorReset;
@@ -108,5 +106,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/Acp10_MC/acp10_mc.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1703356586_6_ */
+#endif /* _BUR_1703498817_1_ */
 

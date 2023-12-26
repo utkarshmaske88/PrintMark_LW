@@ -5,7 +5,9 @@
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="File">Visualizat.vis</Object>
     <Object Type="File">HomeContent.binding</Object>
+    <Object Type="File">PopUpContent.binding</Object>
     <Object Type="File">AxCtrlContent.binding</Object>
+    <Object Type="File">CutterDialog.binding</Object>
     <Object Type="File">AxisSetContent.binding</Object>
     <Object Type="File">ManualContent.binding</Object>
     <Object Type="File">NavBarContent.eventbinding</Object>
@@ -13,5 +15,7 @@
     <Object Type="File" Description="pop Content event binding">PopUpContent.eventbinding</Object>
     <Object Type="File" Description="Manual COntent binding">ManualContent.eventbinding</Object>
     <Object Type="File" Description="cutter dialog event binding">CutterDialog.eventbinding</Object>
+    <Object Type="File">AlarmsContent.eventbinding</Object>
+    <Object Type="File">AxisSetContent.eventbinding</Object>
   </Objects>
 </Package>

@@ -20,6 +20,12 @@
     UseAsStatic="false"
     Version="5.23.1" />
   <Library
+    Name="AsBrStr"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
+  <Library
     Name="AsIecCon"
     IsDeployed="false"
     IsStatic="false"
@@ -45,6 +51,12 @@
     Version="" />
   <Library
     Name="FileIO"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
+  <Library
+    Name="IecCheck"
     IsDeployed="true"
     IsStatic="false"
     UseAsStatic="false"

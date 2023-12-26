@@ -19,5 +19,7 @@
     <Widget xsi:type="widgets.brease.Label" id="txtacc1" top="424" left="418" width="116" zIndex="15" text="$IAT/TextSys/38" fontSize="17px" />
     <Widget xsi:type="widgets.brease.Label" id="setspd1" top="347" left="418" width="116" zIndex="16" text="$IAT/TextSys/21" fontSize="17px" />
     <Widget xsi:type="widgets.brease.Label" id="txtdecc1" top="502" left="418" width="116" zIndex="17" text="$IAT/TextSys/39" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAxCtrl" top="476" left="859" width="211" height="69" zIndex="18" text="Axis Control &gt;" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(0, 0, 0, 1)" fontSize="15px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnMnaulMode" top="574" left="865" width="211" height="69" zIndex="19" text="Manual Mode &gt;" cornerRadius="5px" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(0, 0, 0, 1)" fontSize="15px" />
   </Widgets>
 </Content>

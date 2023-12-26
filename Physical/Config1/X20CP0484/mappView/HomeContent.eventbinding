@@ -1,17 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingSet id="HomeContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
-    <EventBinding id="HomeContent.btnModeChangeBit.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="HomeContent" widgetRefId="btnModeChangeBit" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PopUpd" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_2">
+    <EventBinding id="EventBinding_22">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gMi_ModeConfirm" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -28,7 +18,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_1">
+    <EventBinding id="EventBinding_111">
       <Source xsi:type="opcUa.Event" refId="::AutoCtrl:iAutoCtrlState" event="ValueChanged" />
       <EventHandler condition="newValue = 4">
         <Action>
@@ -45,7 +35,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_3">
+    <EventBinding id="EventBinding_33">
       <Source xsi:type="opcUa.Event" refId="::AutoCtrl:iAutoCtrl.Cmd.Stop" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -62,7 +52,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_4">
+    <EventBinding id="EventBinding_41">
       <Source xsi:type="opcUa.Event" refId="::AutoCtrl:iAutoCtrl.Cmd.SingleCutter" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -73,14 +63,14 @@
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
-          <Target xsi:type="widgets.brease.RadialSlider.Action" contentRefId="HomeContent" widgetRefId="SliderSlavePos1">
+          <Target xsi:type="widgets.brease.RadialSlider.Action" contentRefId="HomeContent" widgetRefId="SliderSlavePos2">
             <Method xsi:type="widgets.brease.RadialSlider.Action.SetVisible" value="true" />
           </Target>
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_6">
-      <Source xsi:type="opcUa.Event" refId="::AutoCtrl:iMI_CutterSelected" event="ValueChanged" />
+    <EventBinding id="EventBinding_666">
+      <Source xsi:type="opcUa.Event" refId="::AutoCtrl:iMi_CutModeSelected" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
           <Target xsi:type="widgets.brease.Button.Action" contentRefId="HomeContent" widgetRefId="btnSelectCutter">
@@ -96,12 +86,22 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="HomeContent.btnSelectCutter.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HomeContent" widgetRefId="btnSelectCutter" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="CutterDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="HomeContent.btnChangeMode.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HomeContent" widgetRefId="btnChangeMode" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="CutterDialog" />
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PopUpd" />
           </Target>
         </Action>
       </EventHandler>

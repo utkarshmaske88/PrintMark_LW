@@ -28,7 +28,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 		//linking the motor with axis
-	iFb_MasterAx.Enable := 1;
+	//iFb_MasterAx.Enable := 1;
 	iFb_MasterAx.MpLink := ADR(gmlMaster);
 	iFb_MasterAx.Axis := ADR(gAxMaster);
 
@@ -82,19 +82,34 @@ PROGRAM _CYCLIC
 			
 			//poweron the axis
 		enPOWER_ONA:
-			iFb_MasterAx.Power 	:= TRUE;
+			IF iConCtrl.Cmd.AutoMode THEN
+				iFb_MasterAx.Power 	:= TRUE;
+			END_IF;	
+			
 			IF iFb_MasterAx.PowerOn THEN
 
 				iFb_MasterAx.Home 	:= TRUE;
-				IF gAutoMode =TRUE THEN
+				IF iConCtrl.Cmd.AutoMode =TRUE THEN
 					iAxStepMaster:=enAUTOMATIC;
-				ELSIF gManulMode=TRUE THEN
+				ELSE
 					iAxStepMaster:=enMANUAL;
 				END_IF;
 			END_IF;
 			//manual mode
+		enAUTOMATIC:
+			
+			IF iFb_MasterAx.IsHomed=TRUE THEN
+				iFb_MasterAx.Home:=FALSE;	
+			END_IF;
+			
+			IF iConCtrl.Cmd.Start = FALSE THEN
+				iAxStepMaster := enINITA;
+			END_IF
 			
 		enMANUAL:
+			IF iFb_MasterAx.IsHomed=TRUE THEN
+				iFb_MasterAx.Home:=FALSE;	
+			END_IF;
 			IF iConCtrl.Cmd.JogFwd THEN
 				iAxStepMaster		:=	enJOGPOSITIVE;
 			END_IF;
@@ -136,10 +151,12 @@ PROGRAM _CYCLIC
 		
 			//error mode
 		enERRORA:
+			
 			iFb_MasterAx.Power := FALSE;
 			iFb_MasterAx.MoveVelocity:= FALSE;
+			iFb_MasterAx.Home:= FALSE;
 			IF iFb_MasterAx.Error = FALSE THEN;
-				iAxStepMaster := enSTARTA;
+				iAxStepMaster := enINITA;
 				icmdErrorReset := FALSE;
 			END_IF
 	END_CASE
@@ -155,7 +172,6 @@ PROGRAM _CYCLIC
 		iAxStepMaster := enINITA;
 	END_IF
 	
-	iBasicParamMaster.CyclicRead.TorqueMode:=mpAXIS_READ_CYCLIC;
 END_PROGRAM
 
 PROGRAM _EXIT

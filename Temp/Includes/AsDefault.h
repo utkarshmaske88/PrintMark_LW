@@ -12,6 +12,7 @@ extern "C"
 	#include <Acp10par.h>
 	#include <NcGlobal.h>
 	#include <MpBase.h>
+	#include <AsBrStr.h>
 	#include <astime.h>
 	#include <Acp10man.h>
 	#include <MpCom.h>
@@ -26,6 +27,7 @@ extern "C"
 	#include <MpData.h>
 	#include <MpAxis.h>
 	#include <MC_RegMa.h>
+	#include <IecCheck.h>
 #ifdef __cplusplus
 };
 #endif

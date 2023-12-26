@@ -12,7 +12,7 @@
       </EventHandler>
       <EventHandler>
         <Action>
-          <Target type="opcUa.NodeAction" refId="::AutoCtrl:iMI_CutterSelected">
+          <Target type="opcUa.NodeAction" refId="::AutoCtrl:iMi_CutModeSelected">
             <Method type="opcUa.NodeAction.SetValueBool"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>

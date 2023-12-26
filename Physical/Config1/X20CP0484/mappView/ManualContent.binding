@@ -57,5 +57,13 @@
 <Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.IsHomed" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ishomeILIL" attribute="selectedIndex" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="btnCutStart" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Reset" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ResetTB" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

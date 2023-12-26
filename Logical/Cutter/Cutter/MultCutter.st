@@ -18,43 +18,13 @@
 ACTION MultCutter: 
 	//linking the motor with axis
 	gIR_Trigger:=iFb_SlaveAx.Info.DigitalInputsStatus.Trigger1;
-	iFb_SlaveAx.Enable := 1;
+	//iFb_SlaveAx.Enable := 1;
 	iFb_SlaveAx.MpLink := ADR(gmlSlave);
 	iFb_SlaveAx.Axis := ADR(gAxSlave);
 
 	iFb_SlaveAx.Parameters := ADR(iBasicParSlave);
 	iFb_SlaveAx();
 	
-	//	if new velocity by user input is different then will update
-	//	IF iVl_OldVelocity <> iBasicParSlave.Acceleration THEN
-	//		iFb_SlaveAx.Update:=TRUE ;
-	//		IF	iFb_SlaveAx.UpdateDone=TRUE THEN
-	//			iVl_OldVelocity:= iBasicParSlave.Velocity;
-	//			iFb_SlaveAx.Update:=FALSE ;
-	//		END_IF;
-	//	END_IF;
-	//	
-	//	//	if new accelaration by user input is different then will update
-	//	IF iVl_OldAcc<> iBasicParSlave.Acceleration THEN
-	//		iFb_SlaveAx.Update:=TRUE ;
-	//		IF	iFb_SlaveAx.UpdateDone=TRUE THEN
-	//			iVl_OldAcc:= iBasicParSlave.Acceleration;
-	//			iFb_SlaveAx.Update:=FALSE ;
-	//		END_IF;
-	//	END_IF;
-	//	
-	//	//	if new deccelaration by user input is different then will update
-	//	IF iVl_OldAccNeg<> iBasicParSlave.Deceleration THEN
-	//		iFb_SlaveAx.Update:=TRUE ;
-	//		IF	iFb_SlaveAx.UpdateDone=TRUE THEN
-	//			iVl_OldAccNeg:= iBasicParSlave.Deceleration;
-	//			iFb_SlaveAx.Update:=FALSE ;
-	//		END_IF;
-	//	END_IF;
-	
-	
-	//Limit for the torque
-	iBasicParSlave.Torque.Limit:=0.8;
 	
 	//position for the axis for homing
 	iBasicParSlave.Position:=1900;
@@ -164,29 +134,37 @@ ACTION MultCutter:
 			END_IF;
 			
 		enPOSHOMING:
-			IF iFb_AxisSlave.IsHomed=TRUE THEN
+			IF iFb_SlaveAx.IsHomed=TRUE THEN
 				iAxStep_enum := enOPERATIONA;
 			END_IF;
 			//operation mode			
 		enPOSHOMINGSEC:
 		
-			IF iFb_AxisSlave.IsHomed=TRUE THEN
+			IF iFb_SlaveAx.IsHomed=TRUE THEN
 				iAxStep_enum := enOPERATIONA;
 			END_IF;
 			//operation mode
 		enOPERATIONA:
 					
-			IF iFb_AxisSlave.IsHomed=TRUE THEN
+			IF iFb_SlaveAx.IsHomed=TRUE THEN
 				iFb_SlaveAx.Home:=FALSE;
+			END_IF;
+			
+			IF iCutCtrl.Cmd.Start=FALSE THEN
+				iAxStep_enum := enINITA;
+				iFb_SlaveAx.Power := FALSE;
 			END_IF;
 			//error mode
 		enERRORA:
-			iFb_AxisSlave.Power := FALSE;
-			iFb_AxisSlave.MoveVelocity:= FALSE;
+			iFb_SlaveAx.Power := FALSE;
+			iFb_SlaveAx.MoveVelocity:= FALSE;
 			IF iFb_SlaveAx.Error = FALSE THEN;
 				iAxStep_enum := enSTARTA;
 				iFb_SlaveAx.ErrorReset := FALSE;
 			END_IF
 	END_CASE
-	
+	//Reset Condition
+	IF iCutCtrl.Cmd.Start= FALSE THEN
+		iAxStep_enum 			:= enINITA;
+	END_IF
 END_ACTION

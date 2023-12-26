@@ -10,7 +10,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var"
     LogicalPath="MpComponents.var"
     Type="File"
-    LastWriteTime="133478301853800262"
+    LastWriteTime="133479567081656315"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Global.typ"
@@ -28,7 +28,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\Package.pkg"
     LogicalPath="Libraries"
     Type="Package"
-    LastWriteTime="133477844250776663" />
+    LastWriteTime="133479596502216804" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\operator\binary.lby"
     LogicalPath="Libraries.operator"
@@ -473,6 +473,46 @@
     LastWriteTime="133477844250620804"
     Private="false" />
   <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\IecCheck\IEC.lby"
+    LogicalPath="Libraries.IecCheck"
+    Type="Library"
+    LastWriteTime="133479596478975190" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\IecCheck\IecCheck.fun"
+    LogicalPath="Libraries.IecCheck.IecCheck.fun"
+    Type="File"
+    LastWriteTime="133479596478975190"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\IecCheck\IecCheck.st"
+    LogicalPath="Libraries.IecCheck.IecCheck.st"
+    Type="File"
+    LastWriteTime="133479596478975190"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\AsBrStr\binary.lby"
+    LogicalPath="Libraries.AsBrStr"
+    Type="Library"
+    LastWriteTime="133479596502060566" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\AsBrStr\AsBrStr.fun"
+    LogicalPath="Libraries.AsBrStr.AsBrStr.fun"
+    Type="File"
+    LastWriteTime="133479596501904327"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\AsBrStr\AsBrStr.typ"
+    LogicalPath="Libraries.AsBrStr.AsBrStr.typ"
+    Type="File"
+    LastWriteTime="133479596502060566"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Libraries\AsBrStr\AsBrStr.var"
+    LogicalPath="Libraries.AsBrStr.AsBrStr.var"
+    Type="File"
+    LastWriteTime="133479596502060566"
+    Private="false" />
+  <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Axis\Package.pkg"
     LogicalPath="Axis"
     Type="Package"
@@ -556,7 +596,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\Main.st"
     LogicalPath="Cutter.Cutter.Main.st"
     Type="File"
-    LastWriteTime="133478145483267023"
+    LastWriteTime="133479685781245459"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\Types.typ"
@@ -568,19 +608,19 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\Variables.var"
     LogicalPath="Cutter.Cutter.Variables.var"
     Type="File"
-    LastWriteTime="133478144099845655"
+    LastWriteTime="133479723521094158"
     Private="true" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\SingCutter.st"
     LogicalPath="Cutter.Cutter.SingCutter.st"
     Type="File"
-    LastWriteTime="133477855592843393"
+    LastWriteTime="133479728858079487"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\MultCutter.st"
     LogicalPath="Cutter.Cutter.MultCutter.st"
     Type="File"
-    LastWriteTime="133477856883438167"
+    LastWriteTime="133479728858453538"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\CamAutoSingle.st"
@@ -598,7 +638,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\Cutter\RegCap.st"
     LogicalPath="Cutter.Cutter.RegCap.st"
     Type="File"
-    LastWriteTime="133477849809793329"
+    LastWriteTime="133479724510894019"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Cutter\CutCtrl.typ"
@@ -654,7 +694,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\ConvCtrl\ConvCtrl\Main.st"
     LogicalPath="ConvCtrl.ConvCtrl.Main.st"
     Type="File"
-    LastWriteTime="133478142986713331"
+    LastWriteTime="133479728857453853"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\ConvCtrl\ConvCtrl\Types.typ"
@@ -682,7 +722,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Alarms\AlarmsX\Main.st"
     LogicalPath="Alarms.AlarmsX.Main.st"
     Type="File"
-    LastWriteTime="133477872830766594"
+    LastWriteTime="133478759541592189"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Alarms\AlarmsX\Types.typ"
@@ -694,7 +734,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Alarms\AlarmsX\Variables.var"
     LogicalPath="Alarms.AlarmsX.Variables.var"
     Type="File"
-    LastWriteTime="133477861474601663"
+    LastWriteTime="133478759792632002"
     Private="true" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\Datarec\Package.pkg"
@@ -878,7 +918,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\Package.pkg"
     LogicalPath="mappView.Visualization.Pages.Page"
     Type="Package"
-    LastWriteTime="133476528590376255" />
+    LastWriteTime="133480393456719431" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\Page.page"
     LogicalPath="mappView.Visualization.Pages.Page.Page.page"
@@ -889,7 +929,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\HomeContent.content"
     LogicalPath="mappView.Visualization.Pages.Page.HomeContent.content"
     Type="File"
-    LastWriteTime="133478290833394794"
+    LastWriteTime="133480401060024591"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\NavBarContent.content"
@@ -913,7 +953,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\AlarmsContetn.content"
     LogicalPath="mappView.Visualization.Pages.Page.AlarmsContetn.content"
     Type="File"
-    LastWriteTime="133478236243432831"
+    LastWriteTime="133478759494149243"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\DiagnosContent.content"
@@ -925,19 +965,19 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\AxCtrlContent.content"
     LogicalPath="mappView.Visualization.Pages.Page.AxCtrlContent.content"
     Type="File"
-    LastWriteTime="133478253305598983"
+    LastWriteTime="133480391091798724"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\AxSetContent.content"
     LogicalPath="mappView.Visualization.Pages.Page.AxSetContent.content"
     Type="File"
-    LastWriteTime="133478256391755527"
+    LastWriteTime="133480391524357429"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Pages\Page\ManualContent.content"
     LogicalPath="mappView.Visualization.Pages.Page.ManualContent.content"
     Type="File"
-    LastWriteTime="133478282231693808"
+    LastWriteTime="133480389027902600"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Variables\Package.pkg"
@@ -1014,7 +1054,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Dialogs\PopUp\PopUpContent.content"
     LogicalPath="mappView.Visualization.Dialogs.PopUp.PopUpContent.content"
     Type="File"
-    LastWriteTime="133478276258137306"
+    LastWriteTime="133478751885539219"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Dialogs\CutterDialog\Package.pkg"
@@ -1031,7 +1071,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Dialogs\CutterDialog\CutterDialog.content"
     LogicalPath="mappView.Visualization.Dialogs.CutterDialog.CutterDialog.content"
     Type="File"
-    LastWriteTime="133478277673002315"
+    LastWriteTime="133478753521316558"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\Visualization\Resources\Package.pkg"
@@ -1058,7 +1098,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Logical\mappView\TextSystem.tmx"
     LogicalPath="mappView.TextSystem.tmx"
     Type="File"
-    LastWriteTime="133478129697278253"
+    LastWriteTime="133480386188184830"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\Config.pkg"
@@ -1069,24 +1109,24 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkLabWork\Physical\Config1\Hardware.hw"
     LogicalPath="Config1.Hardware.hw"
     Type="File"
-    LastWriteTime="133478301738989563"
+    LastWriteTime="133479562606749400"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkLabWork\Physical\Config1\Hardware.hwl"
     LogicalPath="Config1.Hardware.hwl"
     Type="File"
-    LastWriteTime="133473602716531634"
+    LastWriteTime="133478319388072296"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\Cpu.pkg"
     LogicalPath="Config1.X20CP0484"
     Type="Cpu"
-    LastWriteTime="133478296831088061" />
+    LastWriteTime="133479729863512619" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\Cpu.sw"
     LogicalPath="Config1.X20CP0484.Cpu.sw"
     Type="File"
-    LastWriteTime="133478287230622051"
+    LastWriteTime="133479596503219582"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\Cpu.per"
@@ -1120,7 +1160,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\Connectivity\OpcUA\OpcUaMap.uad"
     LogicalPath="Config1.X20CP0484.Connectivity.OpcUA.OpcUaMap.uad"
     Type="File"
-    LastWriteTime="133478272608051601"
+    LastWriteTime="133480399709566401"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\Connectivity\OpcUaFx\Package.pkg"
@@ -1273,30 +1313,42 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\Package.pkg"
     LogicalPath="Config1.X20CP0484.mappView"
     Type="Package"
-    LastWriteTime="133478282974213715" />
+    LastWriteTime="133479715072471877" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\Config.mappviewcfg"
     LogicalPath="Config1.X20CP0484.mappView.Config.mappviewcfg"
     Type="File"
-    LastWriteTime="133476492364502785"
+    LastWriteTime="133480400388905885"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\Visualizat.vis"
     LogicalPath="Config1.X20CP0484.mappView.Visualizat.vis"
     Type="File"
-    LastWriteTime="133478282974623711"
+    LastWriteTime="133479715073096847"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\HomeContent.binding"
     LogicalPath="Config1.X20CP0484.mappView.HomeContent.binding"
     Type="File"
-    LastWriteTime="133478248424703453"
+    LastWriteTime="133480401060866953"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\PopUpContent.binding"
+    LogicalPath="Config1.X20CP0484.mappView.PopUpContent.binding"
+    Type="File"
+    LastWriteTime="133478757638433686"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\AxCtrlContent.binding"
     LogicalPath="Config1.X20CP0484.mappView.AxCtrlContent.binding"
     Type="File"
-    LastWriteTime="133478253306067730"
+    LastWriteTime="133479737292671105"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\CutterDialog.binding"
+    LogicalPath="Config1.X20CP0484.mappView.CutterDialog.binding"
+    Type="File"
+    LastWriteTime="133478757654620457"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\AxisSetContent.binding"
@@ -1308,7 +1360,7 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\ManualContent.binding"
     LogicalPath="Config1.X20CP0484.mappView.ManualContent.binding"
     Type="File"
-    LastWriteTime="133478271952902079"
+    LastWriteTime="133480389028059262"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\NavBarContent.eventbinding"
@@ -1320,13 +1372,13 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\HomeContent.eventbinding"
     LogicalPath="Config1.X20CP0484.mappView.HomeContent.eventbinding"
     Type="File"
-    LastWriteTime="133478293621189597"
+    LastWriteTime="133479590291983873"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\PopUpContent.eventbinding"
     LogicalPath="Config1.X20CP0484.mappView.PopUpContent.eventbinding"
     Type="File"
-    LastWriteTime="133478278461629819"
+    LastWriteTime="133478778248981212"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\ManualContent.eventbinding"
@@ -1338,7 +1390,19 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\CutterDialog.eventbinding"
     LogicalPath="Config1.X20CP0484.mappView.CutterDialog.eventbinding"
     Type="File"
-    LastWriteTime="133478282974203717"
+    LastWriteTime="133478775836120859"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\AlarmsContent.eventbinding"
+    LogicalPath="Config1.X20CP0484.mappView.AlarmsContent.eventbinding"
+    Type="File"
+    LastWriteTime="133478760929675116"
+    Private="false" />
+  <Object
+    Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappView\AxisSetContent.eventbinding"
+    LogicalPath="Config1.X20CP0484.mappView.AxisSetContent.eventbinding"
+    Type="File"
+    LastWriteTime="133480391784544553"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\mappVision\Package.pkg"
@@ -1377,13 +1441,13 @@
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\Motion\masteraxis.mpaxisbasic"
     LogicalPath="Config1.X20CP0484.Motion.masteraxis.mpaxisbasic"
     Type="File"
-    LastWriteTime="133475526748102165"
+    LastWriteTime="133479737293363918"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\X20CP0484\Motion\slaveaxis.mpaxisbasic"
     LogicalPath="Config1.X20CP0484.Motion.slaveaxis.mpaxisbasic"
     Type="File"
-    LastWriteTime="133475526882900535"
+    LastWriteTime="133479737362991048"
     Private="false" />
   <Object
     Path="C:\Users\maskeu\Desktop\All\projects\ECamp\PrintMarkCC_LW3\Physical\Config1\Hardware.jpg"

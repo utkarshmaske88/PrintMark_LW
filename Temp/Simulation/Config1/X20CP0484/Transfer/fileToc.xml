@@ -3,57 +3,65 @@
 	<Application>
 		<Class Name="Addons">
 			<Folder Name="IATR" ProjectDependent="1" IsGroup="1">
-				<File Name="afcomp" Size="692080" HashValue="EF6305D23C4D7CECE49E3E4CD3F13FA9" ProjectDependent="1"/>
-				<File Name="afsystem" Size="476052" HashValue="D4D81512B7E8B1108963B5590442C330" ProjectDependent="1"/>
-				<File Name="afsystem.conf" Size="1298" HashValue="3F4296D2F70EC3D2C1A9121BB4903396" ProjectDependent="1"/>
+				<File Name="afcomp.dll" Size="423424" HashValue="06AF0A0D1CDF8FF5D96719AF1220908B" ProjectDependent="1"/>
+				<File Name="afsystem.conf" Size="1156" HashValue="3FB6422AD32D87700B8B3BBAAC96CD4D" ProjectDependent="1"/>
+				<File Name="afsystem.dll" Size="233472" HashValue="EAC647F41E1EFF37A21FCFC284FF1A20" ProjectDependent="1"/>
 				<File Name="defaultConfig.mappviewcfg" Size="1922" HashValue="D95E88EF138C5A27171E8907D2448C1F" ProjectDependent="1"/>
 				<File Name="defaultOpcUaServer.uaserver" Size="514" HashValue="355E012540AA023210B4FE79E6F9EACA" ProjectDependent="1"/>
-				<File Name="iatrbigdata" Size="294340" HashValue="E4B9043C21022172593AB72E4E0C7660" ProjectDependent="1"/>
-				<File Name="iatrcore" Size="1177848" HashValue="D4D3589A98C3DDBB036625710F1D516E" ProjectDependent="1"/>
-				<File Name="iatrexpr" Size="516256" HashValue="1A8420C69D878C21C71539CA701507F4" ProjectDependent="1"/>
-				<File Name="iatrhtml" Size="488948" HashValue="30C4190FC38811D1205F4AA5D9CBE72E" ProjectDependent="1"/>
-				<File Name="iatrmapp" Size="245504" HashValue="C017112AED6327D1CC2624C7F4858035" ProjectDependent="1"/>
-				<File Name="IATRRunner" Size="93256" HashValue="EF188C6E5972489F9BAB9B9FD19E1B26" ProjectDependent="1"/>
-				<File Name="iatrserv" Size="1604332" HashValue="5553E6E470B6F35CFA143D87186599BD" ProjectDependent="1"/>
-				<File Name="iatrsnippet" Size="235660" HashValue="ABAA74B055FE55A91FB068FF7FE0A005" ProjectDependent="1"/>
-				<File Name="iatruac" Size="814648" HashValue="7E7BB6399D8952D50E5B99D1008F4F14" ProjectDependent="1"/>
-				<File Name="iatrvar" Size="327660" HashValue="89F9F7886B2A22D7757EAAA9B1023AC2" ProjectDependent="1"/>
-				<File Name="iatrwstf" Size="929860" HashValue="91D4B45449B281B9C4D44581C2142AEE" ProjectDependent="1"/>
-				<File Name="jsonBackport" Size="157048" HashValue="BBA7D3CCE793E49FCFC07FCCC2F1E472" ProjectDependent="1"/>
-				<File Name="libQtCore.a.out" Size="4348720" HashValue="1B24594B74487721E4C660F0BD2B95E6" ProjectDependent="1"/>
-				<File Name="libQtNetwork.a.out" Size="1974608" HashValue="70FCA67EA5076D5BAFC5FDA73C24F106" ProjectDependent="1"/>
-				<File Name="libQtTest.a.out" Size="246028" HashValue="07A465E4482E7EFC8DA985F2B0BAA2A7" ProjectDependent="1"/>
-				<File Name="libUaClient" Size="5376484" HashValue="6FFE28CD15ADBB05B8484D69CD2A0EFC" ProjectDependent="1"/>
-				<File Name="LoadIATRLibraries.cfg" Size="293" HashValue="6723F0D9C2D3FED3A5962F90302BABF1" ProjectDependent="1"/>
-				<File Name="mvOpenSsl" Size="2533612" HashValue="B6B59FEB9233FE1AC2A5DC1C9DCD1025" ProjectDependent="1"/>
-				<File Name="opcuaapi" Size="637992" HashValue="334F0C0DB223BAA0E50226F6441E8C1E" ProjectDependent="1"/>
-				<File Name="opcuawebapi" Size="481640" HashValue="BC148C6EF58B93EFCD84B88A637FBB0C" ProjectDependent="1"/>
-				<File Name="rbacwebapi" Size="69532" HashValue="23FCFCB3C0385664F093DF9D7B7E86FC" ProjectDependent="1"/>
-				<File Name="textwebapi" Size="117676" HashValue="5D2176CC7775869104C9DFECE3B09E17" ProjectDependent="1"/>
+				<File Name="IATR_493383.txt" Size="20" HashValue="4CCA30CB56FD2E59056B005F25D5D6A2" ProjectDependent="1"/>
+				<File Name="iatrbigdata.dll" Size="131584" HashValue="0646F45459DEE10BF77A86FD9D369670" ProjectDependent="1"/>
+				<File Name="iatrcore.dll" Size="526848" HashValue="F837A390BAEDD533CAE056C72436CBDF" ProjectDependent="1"/>
+				<File Name="iatrexpr.dll" Size="211456" HashValue="DD5608D329FAD8B707B5771EA9444A2D" ProjectDependent="1"/>
+				<File Name="iatrhtml.dll" Size="305152" HashValue="27887FF9C0D220F2C6395016AE0DD59C" ProjectDependent="1"/>
+				<File Name="iatrmapp.dll" Size="125440" HashValue="A8776896762C141C8720B8B01E120554" ProjectDependent="1"/>
+				<File Name="IATRRunner.dll" Size="29184" HashValue="A2441397987F1F7CE38A1F74EAB2B46B" ProjectDependent="1"/>
+				<File Name="iatrserv.dll" Size="1121280" HashValue="8207849074B589A3B3F88EA33E3FFF03" ProjectDependent="1"/>
+				<File Name="iatrsnippet.dll" Size="96768" HashValue="4CF0C00347A7AF5D76D62DBCE58895C0" ProjectDependent="1"/>
+				<File Name="iatruac.dll" Size="404992" HashValue="35561E36BBCB88FD38563E21E332AB72" ProjectDependent="1"/>
+				<File Name="iatrvar.dll" Size="132608" HashValue="04A1D128402958492CA8410253E7D03E" ProjectDependent="1"/>
+				<File Name="iatrwstf.dll" Size="481280" HashValue="AF7F3B695F1AB13DC3B8371C8A36AF45" ProjectDependent="1"/>
+				<File Name="jsonBackport.dll" Size="83968" HashValue="EA203DF9EFCE409440F54B8C2A695657" ProjectDependent="1"/>
+				<File Name="libeay32.dll" Size="1209344" HashValue="1C84D5275826474C1FBB04FD5A8590C5" ProjectDependent="1"/>
+				<File Name="libxml2.dll" Size="354816" HashValue="0471CE957DC386428036471C5897D0EF" ProjectDependent="1"/>
+				<File Name="LoadBurLibraries2.cfg" Size="100" HashValue="9EB6B0ECAB212582C1638638BDEEF195" ProjectDependent="1"/>
+				<File Name="LoadIATRLibraries.cfg" Size="362" HashValue="3C1B7A75CD6706E29C09AC71249C8D39" ProjectDependent="1"/>
+				<File Name="opcuaapi.dll" Size="1214976" HashValue="13DDA3CD500FBA54FA1DAECD7ECE23D1" ProjectDependent="1"/>
+				<File Name="opcuawebapi.dll" Size="263680" HashValue="3BBD17992001D15B96FA586D326BE8D6" ProjectDependent="1"/>
+				<File Name="QtCore4.dll" Size="2554368" HashValue="4DAE952009FF9815778FE31ADC1C7312" ProjectDependent="1"/>
+				<File Name="QtNetwork4.dll" Size="1028608" HashValue="D03B2BF9587DBB883C12039076E1E4B3" ProjectDependent="1"/>
+				<File Name="QtTest4.dll" Size="110080" HashValue="86643606A71C3DC794F96595ACDFEE38" ProjectDependent="1"/>
+				<File Name="rbacwebapi.dll" Size="25600" HashValue="247ADA34880E69192E84BBD238B7C3F2" ProjectDependent="1"/>
+				<File Name="sqlite3.dll" Size="650725" HashValue="EE68B052A08FEC0F574F2DAE2003DF27" ProjectDependent="1"/>
+				<File Name="ssleay32.dll" Size="271360" HashValue="CD217B0AEA765E49C18403BF277F88EF" ProjectDependent="1"/>
+				<File Name="textwebapi.dll" Size="48640" HashValue="5A4114FEF8F5982DBCA37A38A33D52C2" ProjectDependent="1"/>
+				<File Name="uastack.dll" Size="783872" HashValue="C36CC4FE33F2C812505A571783242FCE" ProjectDependent="1"/>
 				<File Name="Version.xml" Size="133" HashValue="485B786CEBDD777757230F87E543A6F8" ProjectDependent="1"/>
 			</Folder>
 		</Class>
 		<Class Name="AddonsData">
 			<Folder Name="IAT_Data" ProjectDependent="1" IsGroup="1">
 				<Folder Name="server" ProjectDependent="1">
+					<File Name="-1782208869.eventbinding" Size="1356" HashValue="3747AFF705B95B9049924552899E14DE" ProjectDependent="1"/>
 					<File Name="-2074649544.eventbinding" Size="6229" HashValue="97164D39A7E48290458DF7BFAB41F010" ProjectDependent="1"/>
-					<File Name="-2123973975.eventbinding" Size="2285" HashValue="1A7BFB7D6F3592A461A8D16B7FC77729" ProjectDependent="1"/>
+					<File Name="-2123973975.eventbinding" Size="2285" HashValue="CEE24F8105FDEF99CAEBC32C15E486FF" ProjectDependent="1"/>
 					<File Name="-501157849.binding" Size="3047" HashValue="A76E205DC5EE6E04F282A01DDA5A5147" ProjectDependent="1"/>
+					<File Name="-672976991.binding" Size="747" HashValue="3797FFD763AD7C97509D7F8293CC93AB" ProjectDependent="1"/>
 					<File Name="1140336509.binding" Size="5549" HashValue="4C194DE2B123CA41A3DE6865CC79BD5F" ProjectDependent="1"/>
-					<File Name="149203814.eventbinding" Size="6480" HashValue="17806FA07B895461BB9FE58767BC2B46" ProjectDependent="1"/>
+					<File Name="149203814.eventbinding" Size="6479" HashValue="DFC638C9D60E1C124B63EEA965FBC177" ProjectDependent="1"/>
 					<File Name="1744482635.eventbinding" Size="4257" HashValue="00A720B586F06723B1C3EE6EB94242C1" ProjectDependent="1"/>
+					<File Name="1843764047.binding" Size="759" HashValue="A11B71FC2A6B0A83BB2B6EC6004788FD" ProjectDependent="1"/>
 					<File Name="204819468.binding" Size="3039" HashValue="5D24D0FD973295866C1977CC234110BF" ProjectDependent="1"/>
 					<File Name="2099871804.binding" Size="7752" HashValue="9715F34C739B53777BFB9EB02E0CF2C0" ProjectDependent="1"/>
-					<File Name="455490023.eventbinding" Size="1701" HashValue="C6714E587477284C3F2194059ADAA571" ProjectDependent="1"/>
+					<File Name="455490023.eventbinding" Size="1702" HashValue="547BBA6A0A8EFDCC552ADF46CA018B65" ProjectDependent="1"/>
 					<File Name="__SystemVariables.sessionVar" Size="3679" HashValue="47F4015152DC77A4E81EB725C733FBD6" ProjectDependent="1"/>
 					<File Name="Config.mappviewcfg" Size="1198" HashValue="7F96E8897779840A09E5FFB60D8DB5D3" ProjectDependent="1"/>
-					<File Name="vis_1.vis" Size="1738" HashValue="2E25EADCB1E757A164DD53B0CFF4B078" ProjectDependent="1"/>
+					<File Name="PrintMark.vis" Size="1870" HashValue="072A8BEB38AE19AEA2D43D09495DB4DB" ProjectDependent="1"/>
 				</Folder>
 				<Folder Name="wwwRoot" ProjectDependent="1">
-					<File Name="0_visulist.json" Size="9" HashValue="467DC44632224D6BDAF98BE5AA9F2A1E" ProjectDependent="1"/>
+					<File Name="0_visulist.json" Size="13" HashValue="058DFFF73E762ECDA622EE2637A2FBC3" ProjectDependent="1"/>
 					<File Name="favicon.ico" Size="1406" HashValue="B3D2122594565CE5AF565BE898EF539A" ProjectDependent="1"/>
 					<File Name="index.html" Size="4385" HashValue="BC3ED7AA954B2FBC318B1E291F29D2CE" ProjectDependent="1"/>
-					<File Name="vis_1.json" Size="2569" HashValue="746965A3407F7FD60DEA533BB1E8C917" ProjectDependent="1"/>
+					<File Name="PrintMark.json" Size="2569" HashValue="746965A3407F7FD60DEA533BB1E8C917" ProjectDependent="1"/>
 					<Folder Name="BRVisu" ProjectDependent="1">
 						<File Name="bootstrapper.min.js" Size="15653" HashValue="B6639108276524CCFD2503B0704C2536" ProjectDependent="1"/>
 						<File Name="jquery.js" Size="258648" HashValue="AACC43D6F308FA362AC85E3F4FB2B30C" ProjectDependent="1"/>
@@ -735,7 +743,7 @@
 						</Folder>
 						<Folder Name="release" ProjectDependent="1">
 							<File Name="brease.js" Size="1314923" HashValue="035BA1E3B9653403FDC83291DC8E46BF" ProjectDependent="1"/>
-							<File Name="brease_core.min.css" Size="447186" HashValue="A9E778BA79752DADBCD2A9159C53BA5D" ProjectDependent="1"/>
+							<File Name="brease_core.min.css" Size="447220" HashValue="82C46C34E1E1DB8793A706557044018A" ProjectDependent="1"/>
 						</Folder>
 						<Folder Name="system" ProjectDependent="1">
 							<Folder Name="brease" ProjectDependent="1">
@@ -2285,16 +2293,16 @@
 					</Folder>
 					<Folder Name="contents" ProjectDependent="1">
 						<Folder Name="mappView" ProjectDependent="1">
-							<File Name="AlarmsContent.html" Size="3768" HashValue="BE1252E3B2997B5A798467417A58D6CC" ProjectDependent="1"/>
+							<File Name="AlarmsContent.html" Size="3768" HashValue="6DD37A4897A6186533D213FC923B6886" ProjectDependent="1"/>
 							<File Name="AxCtrlContent.html" Size="5049" HashValue="F6F80B48D948E364F7986B92719E6A4E" ProjectDependent="1"/>
 							<File Name="AxisSetContent.html" Size="6382" HashValue="4D713BAEBB774E72C59DB82373820D60" ProjectDependent="1"/>
-							<File Name="CutterDialog.html" Size="1867" HashValue="03314EFB4B2B926106EA9ED6D312CC10" ProjectDependent="1"/>
+							<File Name="CutterDialog.html" Size="1871" HashValue="3AC4729742B5CCC725772F250DF6082D" ProjectDependent="1"/>
 							<File Name="DiagnosContent.html" Size="286" HashValue="A048CF2084323B2ABFFDDD4AA86B2B99" ProjectDependent="1"/>
 							<File Name="HeaderContent.html" Size="966" HashValue="31D6CBAF160CC095C492D9BBAE611C09" ProjectDependent="1"/>
-							<File Name="HomeContent.html" Size="20234" HashValue="4BA7C5091B95D3B2B60A98BDC9A533B8" ProjectDependent="1"/>
+							<File Name="HomeContent.html" Size="20230" HashValue="D0EC7C2434E7F3616CA7468EBDC3C487" ProjectDependent="1"/>
 							<File Name="ManualContent.html" Size="12469" HashValue="46FB42673C1AC0D73423C566C42C28AE" ProjectDependent="1"/>
 							<File Name="NavBarContent.html" Size="2979" HashValue="730648E0947866996584B3F05BB7113C" ProjectDependent="1"/>
-							<File Name="PopUpContent.html" Size="1763" HashValue="F0A28F404D35B9AB878C9369E9B4E111" ProjectDependent="1"/>
+							<File Name="PopUpContent.html" Size="1797" HashValue="6737E331E0673E0E7D54DAC52B6F5979" ProjectDependent="1"/>
 							<File Name="SingleCutterAni.html" Size="3309" HashValue="9458C3773A0ED859BE3DC256CA865785" ProjectDependent="1"/>
 							<File Name="UsersContent.html" Size="3462" HashValue="471CC1C7D4BC13C4DDDC178AE2F7FFF0" ProjectDependent="1"/>
 						</Folder>
@@ -2373,7 +2381,7 @@
 			<Folder Name="OPCUA" ProjectDependent="1" IsGroup="1">
 				<Folder Name="NodeSet" ProjectDependent="1">
 					<Folder Name="Generated" ProjectDependent="1">
-						<File Name="OpcUaMap.uar.gz" Size="899" HashValue="B0D39764D21352A3C1404AACBBB0160C" ProjectDependent="1"/>
+						<File Name="OpcUaMap.uar.gz" Size="943" HashValue="B729B8EBB797457891D31802F95277E8" ProjectDependent="1"/>
 					</Folder>
 					<Folder Name="Vendor" ProjectDependent="1">
 						<File Name="plc.aprol.uanodeset" Size="6712" HashValue="08ADF5B15D3AF0566E164F0E4D4FB418" ProjectDependent="1"/>

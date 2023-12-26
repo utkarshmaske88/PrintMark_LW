@@ -10,7 +10,7 @@ ACTION RegCap:
 	iFb_RegCap.Configuration		:=iRegCapConfig;
 	iFb_RegCap.CutPosition			:=REAL_TO_DINT(iRegCapConfig.ProductLength);
 	iFb_RegCap.Enable				:=iFb_CamSequ.InSync;
-	IF iFb_AxisSlave.Info.PLCopenState= mpAXIS_SYNCHRONIZED_MOTION THEN
+	IF iFb_SlaveAx.Info.PLCopenState= mpAXIS_SYNCHRONIZED_MOTION THEN
 		iFb_RegCap();
 	END_IF;
 END_ACTION

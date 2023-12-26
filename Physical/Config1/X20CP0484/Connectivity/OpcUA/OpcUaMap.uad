@@ -21,6 +21,7 @@
             <Variable Name="ChangeMode" />
             <Variable Name="Reset" />
             <Variable Name="SingleCutter" />
+            <Variable Name="AutoMode" />
           </Variable>
           <Variable Name="ManualCmd">
             <Variable Name="CutterPowerON" />
@@ -79,22 +80,6 @@
         </Variable>
       </Task>
       <Task Name="Cutter">
-        <Variable Name="iFb_AxisSlave">
-          <Variable Name="PowerOn" />
-          <Variable Name="IsHomed" />
-          <Variable Name="Error" />
-          <Variable Name="Info">
-            <Variable Name="CyclicRead">
-              <Variable Name="Torque">
-                <Variable Name="Value" />
-              </Variable>
-            </Variable>
-          </Variable>
-          <Variable Name="Position" />
-          <Variable Name="Enable" />
-          <Variable Name="ErrorReset" />
-          <Variable Name="Home" />
-        </Variable>
         <Variable Name="iMi_LogoNegDir" />
         <Variable Name="iMI_CutActSpeed" />
         <Variable Name="iMI_CutSetJogAcc" />
@@ -103,6 +88,22 @@
         <Variable Name="iFb_RegCap">
           <Variable Name="ValidRMs" />
           <Variable Name="ProductsWithoutRM" />
+        </Variable>
+        <Variable Name="iFb_SlaveAx">
+          <Variable Name="Enable" />
+          <Variable Name="Power" />
+          <Variable Name="Home" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="PowerOn" />
+          <Variable Name="IsHomed" />
+          <Variable Name="Error" />
+          <Variable Name="Position" />
+        </Variable>
+      </Task>
+      <Task Name="AlarmsX">
+        <Variable Name="iUIConnectCore">
+          <Variable Name="Acknowledge" />
+          <Variable Name="AcknowledgeAll" />
         </Variable>
       </Task>
     </Module>

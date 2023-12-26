@@ -40,6 +40,7 @@ PROGRAM _INIT
 	iRegCapConfig.ProductLength := 700;		//length of the product
 	iRegCapConfig.RegMarkPosition := 700;	//reg par at positon 7c,
 	iRegCapConfig.RegMarkOffset := 10;		//offset value 
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -94,14 +95,14 @@ PROGRAM _CYCLIC
 	iBasicParSlave.Jog.Deceleration := (iMI_CutSetJogDeacc * PRODUCT_LENGTH)/PER_SEC;
 	iBasicParSlave.Jog.Velocity := (iMI_CutSetJogVel * PRODUCT_LENGTH)/PER_SEC;
 	
-	iMI_CutActSpeed := (iFb_SlaveAx.Velocity * PER_SEC)/PRODUCT_LENGTH ;
+	//iMI_CutActSpeed := (iFb_SlaveAx.Velocity * PER_SEC)/PRODUCT_LENGTH ;
 END_PROGRAM
 
 PROGRAM _EXIT
 	
 	//disabling all the functions
-	iFb_AxisSlave.Enable:=FALSE;
-	iFb_AxisSlave();
+	iFb_SlaveAx.Enable:=FALSE;
+	iFb_SlaveAx();
 	iFb_CamSequ.Enable:=FALSE;
 	iFb_CamSequ();
 END_PROGRAM

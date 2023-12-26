@@ -11,6 +11,7 @@
   <Operation Delete="mvLoader.br"/>
   <Operation Delete="MpData.br"/>
   <Operation Delete="MpAlarmX.br"/>
+  <Operation Delete="IecCheck.br"/>
   <Operation Delete="MpAxis.br"/>
   <Operation Delete="MpCom.br"/>
   <Operation Delete="arssl.br"/>
@@ -67,10 +68,11 @@
   <Operation Download="gAxSlavea.br" Memory="UserROM"/>
   <Operation Download="gAxSlavei.br" Memory="UserROM"/>
   <Operation Restart="warm"/>
-  <Operation Download="asbrstr.br" Memory="UserROM"/>
+  <Operation Download="AsBrStr.br" Memory="UserROM"/>
   <Operation Download="arssl.br" Memory="UserROM"/>
   <Operation Download="MpCom.br" Memory="UserROM"/>
   <Operation Download="MpAxis.br" Memory="UserROM"/>
+  <Operation Download="IecCheck.br" Memory="UserROM"/>
   <Operation Download="MpAlarmX.br" Memory="UserROM"/>
   <Operation Download="MpData.br" Memory="UserROM"/>
   <Operation Download="udbdef.br" Memory="UserROM"/>
