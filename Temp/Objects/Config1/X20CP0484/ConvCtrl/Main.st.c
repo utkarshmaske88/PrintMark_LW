@@ -26,12 +26,12 @@ void _CYCLIC __BUR__ENTRY_CYCLIC_FUNCT__(void){{
 MpAxisBasic(&iFb_MasterAx);
 
 
-(iBasicParamMaster.Velocity=((iMI_ConSetSpeed*PRODUCT_LENGTH)/CheckDivReal(PER_SEC)));
+(iBasicParamMaster.Velocity=((iMI_ConSetSpeed*PRODUCT_LENGTH)/PER_SEC));
 
 
 
 
-if((((iMI_ConSetSpeed!=((iBasicParamMaster.Velocity*PER_SEC)/CheckDivReal(PRODUCT_LENGTH))))|((iMI_ConSetJogAcc!=((iBasicParamMaster.Jog.Acceleration*PER_SEC)/CheckDivReal(PRODUCT_LENGTH))))|((iMI_ConSetJogDeacc!=((iBasicParamMaster.Jog.Deceleration*PER_SEC)/CheckDivReal(PRODUCT_LENGTH))))|((iMI_ConSetJogVel!=((iBasicParamMaster.Jog.Velocity*PER_SEC)/CheckDivReal(PRODUCT_LENGTH)))))){
+if((((iMI_ConSetSpeed!=((iFb_MasterAx.Velocity*PER_SEC)/PRODUCT_LENGTH)))|((iMI_ConSetJogAcc!=((iBasicParamMaster.Jog.Acceleration*PER_SEC)/PRODUCT_LENGTH)))|((iMI_ConSetJogDeacc!=((iBasicParamMaster.Jog.Deceleration*PER_SEC)/PRODUCT_LENGTH)))|((iMI_ConSetJogVel!=((iBasicParamMaster.Jog.Velocity*PER_SEC)/PRODUCT_LENGTH))))){
 (iFb_MasterAx.Update=1);
 if(iFb_MasterAx.UpdateDone){
 (iFb_MasterAx.Update=0);
@@ -40,10 +40,10 @@ if(iFb_MasterAx.UpdateDone){
 
 
 
-(iBasicParamMaster.Jog.Acceleration=((iMI_ConSetJogAcc*PRODUCT_LENGTH)/CheckDivReal(PER_SEC)));
-(iBasicParamMaster.Jog.Deceleration=((iMI_ConSetJogDeacc*PRODUCT_LENGTH)/CheckDivReal(PER_SEC)));
-(iBasicParamMaster.Jog.Velocity=((iMI_ConSetJogVel*PRODUCT_LENGTH)/CheckDivReal(PER_SEC)));
-(iMI_ConActSpeed=((iFb_MasterAx.Velocity*PER_SEC)/CheckDivReal(PRODUCT_LENGTH)));
+(iBasicParamMaster.Jog.Acceleration=((iMI_ConSetJogAcc*PRODUCT_LENGTH)/PER_SEC));
+(iBasicParamMaster.Jog.Deceleration=((iMI_ConSetJogDeacc*PRODUCT_LENGTH)/PER_SEC));
+(iBasicParamMaster.Jog.Velocity=((iMI_ConSetJogVel*PRODUCT_LENGTH)/PER_SEC));
+(iMI_ConActSpeed=((iFb_MasterAx.Velocity*PER_SEC)/PRODUCT_LENGTH));
 
 if((((unsigned long)(unsigned char)iFb_MasterAx.Stop==(unsigned long)(unsigned char)1))){
 if((((unsigned long)(unsigned char)iFb_MasterAx.Stopped==(unsigned long)(unsigned char)1))){
@@ -206,6 +206,10 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpDataAlarm.typ\\\" scope
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/Types.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackML.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackMLError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackMLAlarm.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/runtime/runtime.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"global\\\"\\n\"");
@@ -223,8 +227,9 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserX.fun\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpData.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/IecCheck/IecCheck.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/MpServer.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackML.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Temp/Includes/AS_TempDecl/Config1/GlobalComponents/MpComponents.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.var\\\" scope \\\"global\\\"\\n\"");
@@ -242,6 +247,7 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.var\\\" scope 
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/Constants.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/ConvCtrl/ConvCtrl/Types.typ\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/ConvCtrl/ConvCtrl/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Temp/Objects/Config1/X20CP0484/ConvCtrl/Main.st.var\\\" scope \\\"local\\\"\\n\"");

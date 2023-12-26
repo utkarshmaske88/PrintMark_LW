@@ -14,6 +14,7 @@
 (*| Description  :-  Multiple cutter fucnitoning		    													 |*)
 (*| V1.00.0   19/12/2023	 Maskeu        added homing states									Complete		 |*)
 (*| V2.00.0   21/12/2023	 Maskeu        added homing for lower positon with absolute homing	Complete		 |*)
+(*| V3.00.0   25/12/2023	 Maskeu        edited homing for negative`							Complete		 |*)
 
 ACTION MultCutter: 
 	//linking the motor with axis
@@ -70,8 +71,11 @@ ACTION MultCutter:
 					iBasicParSlave.Home.HomingVelocity := HOMING_VEL;
 					iBasicParSlave.Home.StartVelocity := START_VEL;
 					iFb_SlaveAx.Update:=TRUE;
-					iAxStep_enum := enNEGHOMING;
-					
+					IF iFb_SlaveAx.UpdateDone=TRUE THEN
+						iFb_SlaveAx.Home := TRUE;
+						iAxStep_enum := enNEGHOMING;
+						iFb_SlaveAx.Update:=FALSE;
+					END_IF;			
 					//if axis is between first blade cutting upper and homing position
 				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position < HOME_POS AND iFb_SlaveAx.Position> SEC_CUT_UPPER THEN 
 					
@@ -83,7 +87,10 @@ ACTION MultCutter:
 					iBasicParSlave.Home.HomingVelocity := HOMING_VEL;
 					iBasicParSlave.Home.StartVelocity := START_VEL;
 					iFb_SlaveAx.Update:=TRUE;
-					iAxStep_enum := enNEGHOMING;
+					IF iFb_SlaveAx.UpdateDone=TRUE THEN
+						iAxStep_enum := enNEGHOMING;
+						iFb_SlaveAx.Update:=FALSE;
+					END_IF;			
 					
 					//if axis is between first blade cutting upper and homing position
 				ELSIF iFb_SlaveAx.PowerOn AND iFb_SlaveAx.Position > FIRST_CUT_UPPER AND iFb_SlaveAx.Position < MAX_POS_AXIS THEN
@@ -95,7 +102,6 @@ ACTION MultCutter:
 					iBasicParSlave.Home.StartVelocity := 50;
 					iFb_SlaveAx.Update:=TRUE; 
 					IF iFb_SlaveAx.UpdateDone=TRUE THEN
-						iFb_SlaveAx.Home := TRUE;
 						iAxStep_enum := enPOSHOMING;
 						iFb_SlaveAx.Update:=FALSE;
 					END_IF;			
@@ -120,8 +126,9 @@ ACTION MultCutter:
 
 			//homing the motor
 		enNEGHOMING:
+			iFb_SlaveAx.MoveAbsolute:=TRUE;
 			IF iFb_SlaveAx.UpdateDone=TRUE THEN
-				iFb_SlaveAx.MoveAbsolute:=TRUE;
+				iFb_SlaveAx.MoveAbsolute:=FALSE;
 				iFb_SlaveAx.Update:=FALSE;
 				iAxStep_enum :=	enNEEGHOMEMOVE;
 			END_IF;
@@ -140,12 +147,14 @@ ACTION MultCutter:
 			//operation mode			
 		enPOSHOMINGSEC:
 		
+			iFb_SlaveAx.Home := TRUE;
 			IF iFb_SlaveAx.IsHomed=TRUE THEN
 				iAxStep_enum := enOPERATIONA;
 			END_IF;
 			//operation mode
 		enOPERATIONA:
 					
+			iFb_SlaveAx.Home:=TRUE;
 			IF iFb_SlaveAx.IsHomed=TRUE THEN
 				iFb_SlaveAx.Home:=FALSE;
 			END_IF;

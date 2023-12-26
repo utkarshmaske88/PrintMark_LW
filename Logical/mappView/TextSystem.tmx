@@ -347,5 +347,20 @@
         <seg>Reset</seg>
       </tuv>
     </tu>
+    <tu tuid="67">
+      <tuv xml:lang="en">
+        <seg>Messages</seg>
+      </tuv>
+    </tu>
+    <tu tuid="68">
+      <tuv xml:lang="en">
+        <seg>Name</seg>
+      </tuv>
+    </tu>
+    <tu tuid="69">
+      <tuv xml:lang="en">
+        <seg>TimeStamp</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

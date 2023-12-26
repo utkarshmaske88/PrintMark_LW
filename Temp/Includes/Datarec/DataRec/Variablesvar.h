@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703483111_14_
-#define _BUR_1703483111_14_
+#ifndef _BUR_1703598611_14_
+#define _BUR_1703598611_14_
 
 #include <bur/plctypes.h>
 
@@ -31,5 +31,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpData.fun\\\" scope \\\"
 __asm__(".previous");
 
 
-#endif /* _BUR_1703483111_14_ */
+#endif /* _BUR_1703598611_14_ */
 

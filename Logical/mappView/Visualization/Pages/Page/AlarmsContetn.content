@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="AlarmsContent" height="688" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="0" left="0" width="1124" height="437" zIndex="0">
+    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList" top="0" left="0" width="1124" height="205" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem1" zIndex="0" text="$IAT/TextSystem/2" />
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem2" zIndex="1" columnType="name" text="$IAT/TextSystem/3" />
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem3" zIndex="2" columnType="timestamp" text="$IAT/TextSystem/4" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="messg" width="300" zIndex="0" text="$IAT/TextSys/67" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="names" width="300" zIndex="1" columnType="name" text="$IAT/TextSys/68" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="timestampp" width="300" zIndex="2" columnType="timestamp" text="$IAT/TextSys/69" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Button" id="cmdAcknowledge" top="542" left="83" width="240" height="62" zIndex="1" image="Media/check.png" text="Acknowledge" imageHeight="50" imageWidth="50" borderWidth="2px" cornerRadius="5px" backColor="rgba(249, 248, 248, 1)" borderColor="rgba(170, 109, 163, 1)" fontSize="18px" bold="true" />

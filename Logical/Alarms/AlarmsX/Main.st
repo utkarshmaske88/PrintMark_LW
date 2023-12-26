@@ -33,9 +33,6 @@ PROGRAM _CYCLIC
 	iFb_AlarmX();
 	
 	
-	iFb_AlarmUI.Enable:=TRUE;
-	iFb_AlarmUI.MpLink:=ADR(gAlarmXCore);
-	iFb_AlarmUI.UIConnect:=ADR(iUIConnectCore);
 END_PROGRAM
 
 PROGRAM _EXIT

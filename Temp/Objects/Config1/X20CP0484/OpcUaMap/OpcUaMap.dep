@@ -11,4 +11,5 @@ $(AS_PROJECT_PATH)/Logical/AutoCtrl/AutoCtrl/Variables.var
 $(AS_PROJECT_PATH)/Logical/AutoCtrl/AutoCtrl/Types.typ
 $(AS_PROJECT_PATH)/Logical/Global.typ
 $(AS_PROJECT_PATH)/Logical/Alarms/AlarmsX/Variables.var
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAlarmX/MpAlarmX.fun
 $(AS_PROJECT_PATH)/Logical/Libraries/MpAlarmX/MpAlarmX.typ

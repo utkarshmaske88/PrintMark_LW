@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703498817_1_
-#define _BUR_1703498817_1_
+#ifndef _BUR_1703598611_6_
+#define _BUR_1703598611_6_
 
 #include <bur/plctypes.h>
 
@@ -106,5 +106,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/Acp10_MC/acp10_mc.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1703498817_1_ */
+#endif /* _BUR_1703598611_6_ */
 

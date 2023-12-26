@@ -1,0 +1,12 @@
+﻿@import '../../../../css/libs/variables.scss';
+@import '../../../../css/libs/mixins.scss';
+
+.breaseRadialSlider{
+	height: 200px;
+	width: 200px;
+	box-sizing: border-box;
+    border-width: 2px;
+    border-color: #000;
+    border-style: solid;
+    background-color: transparent;    
+}

@@ -37,7 +37,7 @@ PROGRAM _CYCLIC
 
 	//Updating the paramters set from HMI by converting them 
 	iBasicParamMaster.Velocity := (iMI_ConSetSpeed * PRODUCT_LENGTH)/PER_SEC;
-	IF iMI_ConSetSpeed <> (iBasicParamMaster.Velocity * PER_SEC)/PRODUCT_LENGTH  
+	IF iMI_ConSetSpeed <> (iFb_MasterAx.Velocity * PER_SEC)/PRODUCT_LENGTH  
 		OR iMI_ConSetJogAcc <> (iBasicParamMaster.Jog.Acceleration * PER_SEC)/PRODUCT_LENGTH 
 		OR iMI_ConSetJogDeacc <> (iBasicParamMaster.Jog.Deceleration * PER_SEC)/PRODUCT_LENGTH 
 		OR iMI_ConSetJogVel <> (iBasicParamMaster.Jog.Velocity  * PER_SEC)/PRODUCT_LENGTH 

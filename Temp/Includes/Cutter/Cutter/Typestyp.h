@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703483111_5_
-#define _BUR_1703483111_5_
+#ifndef _BUR_1703598611_5_
+#define _BUR_1703598611_5_
 
 #include <bur/plctypes.h>
 
@@ -49,5 +49,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Cutter/Cutter/Types.typ\\\" scope \\\"loca
 __asm__(".previous");
 
 
-#endif /* _BUR_1703483111_5_ */
+#endif /* _BUR_1703598611_5_ */
 

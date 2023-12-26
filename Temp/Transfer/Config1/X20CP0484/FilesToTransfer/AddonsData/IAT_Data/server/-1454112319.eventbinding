@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingDefinition xmlns="http://www.br-automation.com/iat2014/eventbinding/runtime/v2">
+  <Content id="UsersContent">
+    <EventBinding id="UsersContent.AddUser.Click">
+      <Source type="widgets.brease.Button.Event" event="Click" refId="UsersContent_AddUser" />
+      <EventHandler>
+        <Action>
+          <Target type="widgets.brease.UserList.Action" refId="UsersContent_UserList">
+            <Method type="widgets.brease.UserList.Action.OpenAddUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+</EventBindingDefinition>

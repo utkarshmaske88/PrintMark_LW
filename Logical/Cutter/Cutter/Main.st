@@ -67,14 +67,13 @@ PROGRAM _CYCLIC
 	
 	//linking the slave to cam sequence
 	iFb_CamSequ.MpLink :=ADR(gmlSlave);
-	iFb_CamSequ.Enable :=TRUE;
 	
 	//parameters for cam seqeunce
 	iFb_CamSequ.Parameters :=ADR(iAx_CamSequence);
 	
 	//linking the master with cam sequence
 	iFb_CamSequ.MpLinkMaster :=ADR(gmlMaster);
-	iFb_CamSequ.StartSequence :=iFb_CamSequ.Info.MasterReady AND iFb_CamSequ.Info.SlaveReady;
+
 	
 	//fucniton block is callled
 	iFb_CamSequ();

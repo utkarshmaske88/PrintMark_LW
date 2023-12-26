@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingDefinition xmlns="http://www.br-automation.com/iat2014/binding/runtime/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:br="http://www.br-automation.com/iat2015/bindingList/runtime/v2">
+  
+<Content id="CutterDialog"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.SingleCutter" attribute="value" />
+<Target xsi:type="brease" refId="CutterDialog_btnSingleCutM" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.SingleCutter" attribute="editable" />
+<Target xsi:type="brease" refId="CutterDialog_btnSingleCutM" attribute="editable::value" />
+</Binding></Content>
+
+
+
+
+</BindingDefinition>

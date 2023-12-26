@@ -5,15 +5,15 @@
       <Source type="opcUa.Event" refId="::AutoCtrl:pConvCtrl.Cmd.JogFwd" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogBack1">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogBack1">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogBack1">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogBack1">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>
@@ -24,15 +24,15 @@
       <Source type="opcUa.Event" refId="::AutoCtrl:pConvCtrl.Cmd.JogBack" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogFwd1">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogFwd1">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogFwd1">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogFwd1">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>
@@ -43,15 +43,15 @@
       <Source type="opcUa.Event" refId="::AutoCtrl:pCutterCtrl.Cmd.JogFwd" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogBack">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogBack">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogBack">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogBack">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>
@@ -62,15 +62,15 @@
       <Source type="opcUa.Event" refId="::AutoCtrl:pCutterCtrl.Cmd.JogBack" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogFwd">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogFwd">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
-          <Target type="widgets.brease.ToggleButton.Action" refId="ManualContent_btnCutJogFwd">
-            <Method type="widgets.brease.ToggleButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.MomentaryPushButton.Action" refId="ManualContent_btnCutJogFwd">
+            <Method type="widgets.brease.MomentaryPushButton.Action.SetEnable"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
           </Target>
         </Action>
       </EventHandler>

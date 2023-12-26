@@ -56,13 +56,13 @@ __AS__Action__RegCap();
 
 
 ((*(unsigned long*)&(iFb_CamSequ.MpLink))=((unsigned long)(&gmlSlave)));
-(iFb_CamSequ.Enable=1);
 
 
 ((*(unsigned long*)&(iFb_CamSequ.Parameters))=((unsigned long)(&iAx_CamSequence)));
 
 
 ((*(unsigned long*)&(iFb_CamSequ.MpLinkMaster))=((unsigned long)(&gmlMaster)));
+
 (iFb_CamSequ.StartSequence=(iFb_CamSequ.Info.MasterReady&iFb_CamSequ.Info.SlaveReady));
 
 
@@ -72,7 +72,7 @@ MpAxisCamSequencer(&iFb_CamSequ);
 
 
 
-if(((((iMI_CutSetJogAcc!=((iBasicParSlave.Jog.Acceleration*PER_SEC)/CheckDivReal(PRODUCT_LENGTH))))|((iMI_CutSetJogDeacc!=((iBasicParSlave.Jog.Deceleration*PER_SEC)/CheckDivReal(PRODUCT_LENGTH))))|((iMI_CutSetJogVel!=((iBasicParSlave.Jog.Velocity*PER_SEC)/CheckDivReal(PRODUCT_LENGTH)))))&(gMI_MODE^1))){
+if(((((iMI_CutSetJogAcc!=((iBasicParSlave.Jog.Acceleration*PER_SEC)/PRODUCT_LENGTH)))|((iMI_CutSetJogDeacc!=((iBasicParSlave.Jog.Deceleration*PER_SEC)/PRODUCT_LENGTH)))|((iMI_CutSetJogVel!=((iBasicParSlave.Jog.Velocity*PER_SEC)/PRODUCT_LENGTH))))&(gMI_MODE^1))){
 (iFb_SlaveAx.Update=1);
 if(iFb_SlaveAx.UpdateDone){
 (iFb_SlaveAx.Update=0);
@@ -80,9 +80,9 @@ if(iFb_SlaveAx.UpdateDone){
 }
 
 
-(iBasicParSlave.Jog.Acceleration=((iMI_CutSetJogAcc*PRODUCT_LENGTH)/CheckDivReal(PER_SEC)));
-(iBasicParSlave.Jog.Deceleration=((iMI_CutSetJogDeacc*PRODUCT_LENGTH)/CheckDivReal(PER_SEC)));
-(iBasicParSlave.Jog.Velocity=((iMI_CutSetJogVel*PRODUCT_LENGTH)/CheckDivReal(PER_SEC)));
+(iBasicParSlave.Jog.Acceleration=((iMI_CutSetJogAcc*PRODUCT_LENGTH)/PER_SEC));
+(iBasicParSlave.Jog.Deceleration=((iMI_CutSetJogDeacc*PRODUCT_LENGTH)/PER_SEC));
+(iBasicParSlave.Jog.Velocity=((iMI_CutSetJogVel*PRODUCT_LENGTH)/PER_SEC));
 
 
 }}
@@ -500,71 +500,94 @@ static void __AS__Action__CamSingle(void){
 
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(0,0,14)].Event[CheckBounds(0,0,4)].Type=ncTRIGGER1);
-(iAx_CamSequence.Configuration.State[CheckBounds(0,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncAT_ONCE);
-(iAx_CamSequence.Configuration.State[CheckBounds(0,0,14)].Event[CheckBounds(0,0,4)].NextState=4);
+(iAx_CamSequence.Configuration.State[0].Event[0].Type=ncTRIGGER1);
+(iAx_CamSequence.Configuration.State[0].Event[0].Attribute=ncAT_ONCE);
+(iAx_CamSequence.Configuration.State[0].Event[0].NextState=4);
 
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].CamProfileIndex=65534);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].SlaveFactor=(-400));
+(iAx_CamSequence.Configuration.State[4].CamProfileIndex=65534);
+(iAx_CamSequence.Configuration.State[4].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[4].SlaveFactor=(-400));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].CompMode=ncONLYCOMP);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].MasterCompDistance=900);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].SlaveCompDistance=(-1500));
+(iAx_CamSequence.Configuration.State[4].CompMode=ncONLYCOMP);
+(iAx_CamSequence.Configuration.State[4].MasterCompDistance=900);
+(iAx_CamSequence.Configuration.State[4].SlaveCompDistance=(-1500));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].Event[CheckBounds(0,0,4)].NextState=5);
-
-
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].CamProfileIndex=65535);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].SlaveFactor=(-400));
-
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].Event[CheckBounds(0,0,4)].NextState=6);
+(iAx_CamSequence.Configuration.State[4].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[4].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[4].Event[0].NextState=5);
 
 
+(iAx_CamSequence.Configuration.State[5].CamProfileIndex=65535);
+(iAx_CamSequence.Configuration.State[5].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[5].SlaveFactor=(-400));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].CamProfileIndex=65534);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].SlaveFactor=(-400));
-
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].CompMode=ncONLYCOMP);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].MasterCompDistance=400);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].SlaveCompDistance=(-3200));
-
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].Event[CheckBounds(0,0,4)].NextState=2);
+(iAx_CamSequence.Configuration.State[5].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[5].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[5].Event[0].NextState=6);
 
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].CamProfileIndex=65535);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].SlaveFactor=(-400));
+(iAx_CamSequence.Configuration.State[6].CamProfileIndex=65534);
+(iAx_CamSequence.Configuration.State[6].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[6].SlaveFactor=(-400));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].Event[CheckBounds(0,0,4)].NextState=1);
+(iAx_CamSequence.Configuration.State[6].CompMode=ncONLYCOMP);
+(iAx_CamSequence.Configuration.State[6].MasterCompDistance=400);
+(iAx_CamSequence.Configuration.State[6].SlaveCompDistance=(-3200));
+
+(iAx_CamSequence.Configuration.State[6].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[6].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[6].Event[0].NextState=2);
 
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].CamProfileIndex=65534);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].MasterFactor=400);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].SlaveFactor=(-900));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].CompMode=ncONLYCOMP);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].MasterCompDistance=400);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].SlaveCompDistance=(-3200));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].Event[CheckBounds(0,0,4)].NextState=2);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(iAx_CamSequence.Configuration.State[1].CamProfileIndex=65534);
+(iAx_CamSequence.Configuration.State[1].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[1].SlaveFactor=(-400));
+
+(iAx_CamSequence.Configuration.State[1].CompMode=ncONLYCOMP);
+(iAx_CamSequence.Configuration.State[1].MasterCompDistance=400);
+(iAx_CamSequence.Configuration.State[1].SlaveCompDistance=(-3200));
+
+(iAx_CamSequence.Configuration.State[1].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[1].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[1].Event[0].NextState=2);
+
+
+
+(iAx_CamSequence.Configuration.State[2].CamProfileIndex=65535);
+(iAx_CamSequence.Configuration.State[2].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[2].SlaveFactor=(-400));
+
+(iAx_CamSequence.Configuration.State[2].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[2].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[2].Event[0].NextState=1);
 
 }}
 #line 110 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/Cutter/Cutter/Main.nodebug"
@@ -574,73 +597,73 @@ static void __AS__Action__CamMulti(void){
 (iAx_CamSequence.Configuration.MasterParID=ACP10PAR_PCTRL_S_ACT);
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(0,0,14)].Event[CheckBounds(0,0,4)].Type=ncTRIGGER1);
-(iAx_CamSequence.Configuration.State[CheckBounds(0,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncAT_ONCE);
-(iAx_CamSequence.Configuration.State[CheckBounds(0,0,14)].Event[CheckBounds(0,0,4)].NextState=4);
+(iAx_CamSequence.Configuration.State[0].Event[0].Type=ncTRIGGER1);
+(iAx_CamSequence.Configuration.State[0].Event[0].Attribute=ncAT_ONCE);
+(iAx_CamSequence.Configuration.State[0].Event[0].NextState=4);
 
 
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].CamProfileIndex=65534);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].SlaveFactor=(-400));
+(iAx_CamSequence.Configuration.State[4].CamProfileIndex=65534);
+(iAx_CamSequence.Configuration.State[4].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[4].SlaveFactor=(-400));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].CompMode=ncONLYCOMP);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].MasterCompDistance=900);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].SlaveCompDistance=(-600));
+(iAx_CamSequence.Configuration.State[4].CompMode=ncONLYCOMP);
+(iAx_CamSequence.Configuration.State[4].MasterCompDistance=900);
+(iAx_CamSequence.Configuration.State[4].SlaveCompDistance=(-600));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(4,0,14)].Event[CheckBounds(0,0,4)].NextState=5);
-
-
-
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].CamProfileIndex=65535);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].SlaveFactor=(-400));
-
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(5,0,14)].Event[CheckBounds(0,0,4)].NextState=6);
-
-
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].CamProfileIndex=65534);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].SlaveFactor=(-400));
-
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].CompMode=ncONLYCOMP);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].MasterCompDistance=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].SlaveCompDistance=(-1310));
-
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(6,0,14)].Event[CheckBounds(0,0,4)].NextState=2);
+(iAx_CamSequence.Configuration.State[4].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[4].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[4].Event[0].NextState=5);
 
 
 
+(iAx_CamSequence.Configuration.State[5].CamProfileIndex=65535);
+(iAx_CamSequence.Configuration.State[5].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[5].SlaveFactor=(-400));
+
+(iAx_CamSequence.Configuration.State[5].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[5].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[5].Event[0].NextState=6);
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].CamProfileIndex=65535);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].SlaveFactor=(-400));
+(iAx_CamSequence.Configuration.State[6].CamProfileIndex=65534);
+(iAx_CamSequence.Configuration.State[6].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[6].SlaveFactor=(-400));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(2,0,14)].Event[CheckBounds(0,0,4)].NextState=1);
+(iAx_CamSequence.Configuration.State[6].CompMode=ncONLYCOMP);
+(iAx_CamSequence.Configuration.State[6].MasterCompDistance=300);
+(iAx_CamSequence.Configuration.State[6].SlaveCompDistance=(-1310));
+
+(iAx_CamSequence.Configuration.State[6].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[6].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[6].Event[0].NextState=2);
 
 
 
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].CamProfileIndex=65534);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].MasterFactor=300);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].SlaveFactor=(-400));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].CompMode=ncONLYCOMP);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].MasterCompDistance=400);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].SlaveCompDistance=(-1400));
 
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].Event[CheckBounds(0,0,4)].Type=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].Event[CheckBounds(0,0,4)].Attribute=ncST_END);
-(iAx_CamSequence.Configuration.State[CheckBounds(1,0,14)].Event[CheckBounds(0,0,4)].NextState=2);
+(iAx_CamSequence.Configuration.State[2].CamProfileIndex=65535);
+(iAx_CamSequence.Configuration.State[2].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[2].SlaveFactor=(-400));
+
+(iAx_CamSequence.Configuration.State[2].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[2].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[2].Event[0].NextState=1);
+
+
+
+(iAx_CamSequence.Configuration.State[1].CamProfileIndex=65534);
+(iAx_CamSequence.Configuration.State[1].MasterFactor=300);
+(iAx_CamSequence.Configuration.State[1].SlaveFactor=(-400));
+
+(iAx_CamSequence.Configuration.State[1].CompMode=ncONLYCOMP);
+(iAx_CamSequence.Configuration.State[1].MasterCompDistance=400);
+(iAx_CamSequence.Configuration.State[1].SlaveCompDistance=(-1400));
+
+(iAx_CamSequence.Configuration.State[1].Event[0].Type=ncST_END);
+(iAx_CamSequence.Configuration.State[1].Event[0].Attribute=ncST_END);
+(iAx_CamSequence.Configuration.State[1].Event[0].NextState=2);
 
 }}
 #line 110 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/Cutter/Cutter/Main.nodebug"
@@ -694,6 +717,10 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpDataAlarm.typ\\\" scope
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/Types.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackML.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackMLError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackMLAlarm.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/runtime/runtime.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"global\\\"\\n\"");
@@ -711,8 +738,9 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserX.fun\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpData.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.fun\\\" scope \\\"global\\\"\\n\"");
-__asm__(".ascii \"iecfile \\\"Logical/Libraries/IecCheck/IecCheck.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/MpServer.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackML.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Temp/Includes/AS_TempDecl/Config1/GlobalComponents/MpComponents.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.var\\\" scope \\\"global\\\"\\n\"");
@@ -730,6 +758,7 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.var\\\" scope 
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/Constants.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Cutter/Cutter/Types.typ\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Cutter/Cutter/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Temp/Objects/Config1/X20CP0484/Cutter/Main.st.var\\\" scope \\\"local\\\"\\n\"");

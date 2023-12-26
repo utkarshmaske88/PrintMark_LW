@@ -67,28 +67,26 @@ ACTION CamSingle:
 	iAx_CamSequence.Configuration.State[6].Event[0].NextState := 2; //Next State 
 	
 	
-	(** STATE 2 - Event 2 - linear motion cutting zone**) 
+	iAx_CamSequence.Configuration.State[1].CamProfileIndex := 16#FFFE; 
+	iAx_CamSequence.Configuration.State[1].MasterFactor := 300 ; //Master Dist. 
+	iAx_CamSequence.Configuration.State[1].SlaveFactor := -400; //Slave Dist. 
+	
+	iAx_CamSequence.Configuration.State[1].CompMode := ncONLYCOMP; 
+	iAx_CamSequence.Configuration.State[1].MasterCompDistance := 400; //Master Dist. 
+	iAx_CamSequence.Configuration.State[1].SlaveCompDistance := -3200; //Slave Dist. 
+	
+	iAx_CamSequence.Configuration.State[1].Event[0].Type := ncST_END; //Trigger 
+	iAx_CamSequence.Configuration.State[1].Event[0].Attribute := ncST_END; //Reaction
+	iAx_CamSequence.Configuration.State[1].Event[0].NextState := 2; //Next State
+	
+	
+	//Sync Motion of cutter and conv
 	iAx_CamSequence.Configuration.State[2].CamProfileIndex := 16#FFFF; 
-	iAx_CamSequence.Configuration.State[2].MasterFactor := 300 ; //Master Dist. 
+	iAx_CamSequence.Configuration.State[2].MasterFactor := 300; //Master Dist. 
 	iAx_CamSequence.Configuration.State[2].SlaveFactor := -400; //Slave Dist. 
 	
 	iAx_CamSequence.Configuration.State[2].Event[0].Type := ncST_END; //Trigger 
 	iAx_CamSequence.Configuration.State[2].Event[0].Attribute := ncST_END; //Reaction
-	iAx_CamSequence.Configuration.State[2].Event[0].NextState := 1; //Next State 
-		
-	
-	(** STATE 1 - Event 1 - non linear motion  non-cutting zone **) 
-	iAx_CamSequence.Configuration.State[1].CamProfileIndex := 16#FFFE; 
-	iAx_CamSequence.Configuration.State[1].MasterFactor := 400 ; //Master Dist. 
-	iAx_CamSequence.Configuration.State[1].SlaveFactor := -900; //Slave Dist. 
-	
-	iAx_CamSequence.Configuration.State[1].CompMode := ncONLYCOMP; 
-	iAx_CamSequence.Configuration.State[1].MasterCompDistance := 400; //Master Dist. 
-	iAx_CamSequence.Configuration.State[1].SlaveCompDistance :=  -3200; //Slave Dist. 
-	
-	iAx_CamSequence.Configuration.State[1].Event[0].Type := ncST_END; //Trigger 
-	iAx_CamSequence.Configuration.State[1].Event[0].Attribute := ncST_END; //Reaction
-	iAx_CamSequence.Configuration.State[1].Event[0].NextState := 2; //Next State 
-	
+	iAx_CamSequence.Configuration.State[2].Event[0].NextState := 1; //Next State
 	
 END_ACTION

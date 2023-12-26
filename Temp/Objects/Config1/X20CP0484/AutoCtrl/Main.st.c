@@ -31,6 +31,7 @@ case 0:{
 __AS__Local5_00000=(plcwstring*)iMi_StatusTxt; __AS__Local6_00000=(plcwstring*)"\x50\x00\x6C\x00\x65\x00\x61\x00\x73\x00\x65\x00\x20\x00\x73\x00\x65\x00\x6C\x00\x65\x00\x63\x00\x74\x00\x20\x00\x73\x00\x69\x00\x6E\x00\x67\x00\x6C\x00\x65\x00\x20\x00\x6F\x00\x72\x00\x20\x00\x64\x00\x75\x00\x61\x00\x6C\x00\x20\x00\x63\x00\x75\x00\x74\x00\x74\x00\x65\x00\x72\x00\x00"; for(__AS__Local0_00000=0; __AS__Local0_00000<35l && __AS__Local6_00000[__AS__Local0_00000]!=0; __AS__Local0_00000++) __AS__Local5_00000[__AS__Local0_00000] = __AS__Local6_00000[__AS__Local0_00000]; __AS__Local5_00000[__AS__Local0_00000] = 0;
 ((*(pMasterAx)).Enable=1);
 ((*(pSlaveAx)).Enable=1);
+((*(pAx_CamSeq)).Enable=1);
 if((((unsigned long)(unsigned char)iAutoCtrl.Cmd.SingleCutter==(unsigned long)(unsigned char)1))){
 ((*(pCutterCtrl)).Cmd.SingleCutter=1);
 }else{
@@ -202,6 +203,11 @@ if((((((*(pSlaveAx)).Position)<UPPER_CUT_POS))&((((*(pSlaveAx)).Position)>LOWER_
 }
 
 
+if((((((*(pSlaveAx)).Position)<1213))&((((*(pSlaveAx)).Position)>853))&(iAutoCtrl.Cmd.AutoMode^1))){
+(iAutoCtrlState=8);
+}
+
+
 
 (iMI_LastBagLen=(((*(pRegCapture)).AdditionalInfo.ActLength)/TEN));
 (iMI_AvgBagLen=(((*(pRegCapture)).AdditionalInfo.AverageProductLength)/TEN));
@@ -227,13 +233,13 @@ MC_BR_RegMarkCapture002(&((*(pRegCapture))));
 (gMI_MODE=iAutoCtrl.Cmd.AutoMode);
 __AS__Action__Alarms();
 }}
-#line 242 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
-#line 254 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.st"
+#line 248 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
+#line 260 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.st"
 void _EXIT __BUR__ENTRY_EXIT_FUNCT__(void){{
 
 
 }}
-#line 257 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
+#line 263 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
 #line 17 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Alarms_Reset.st"
 static void __AS__Action__Alarms(void){
 {
@@ -246,8 +252,8 @@ MpAlarmXReset(&gAlarmXCore,"InTheCuttingZone");
 
 if((((unsigned long)(unsigned short)((*(pRegCapture)).ProductsWithoutRM)>(unsigned long)(signed long)(short)LIMIT_ERROR_PRODUCT))){
 ((*(pAx_CamSeq)).StartSequence=0);
-((*(pMasterAx)).Power=0);
-((*(pSlaveAx)).Power=0);
+
+
 MpAlarmXSet(&gAlarmXCore,"ErrorCutting");
 (iAutoCtrlState=5);
 }else{
@@ -255,7 +261,7 @@ MpAlarmXReset(&gAlarmXCore,"ErrorCutting");
 }
 
 }imp16385_end1_0:;}
-#line 259 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
+#line 265 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
 #line 39 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Alarms_Reset.st"
 static void __AS__Action__Reset(void){
 {
@@ -272,6 +278,7 @@ case 0:{
 ((*(pSlaveAx)).Power=0);
 ((*(pSlaveAx)).ErrorReset=1);
 ((*(pMasterAx)).ErrorReset=1);
+
 ((*(pConvCtrl)).Cmd.Start=0);
 ((*(pCutterCtrl)).Cmd.Start=0);
 ((*(pAx_CamSeq)).StartSequence=0);
@@ -295,7 +302,7 @@ case 0:{
 (iAutoCtrlState=0);
 }break;}
 }imp16386_case0_2:imp16386_endcase0_0:;}
-#line 259 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
+#line 265 "C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Logical/AutoCtrl/AutoCtrl/Main.nodebug"
 
 void __AS__ImplInitMain_st(void){__BUR__ENTRY_INIT_FUNCT__();}
 
@@ -328,6 +335,11 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpDataError.typ\\\" scope
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpDataAlarm.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/Types.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackML.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackMLError.typ\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackMLAlarm.typ\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/runtime/runtime.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/astime/astime.fun\\\" scope \\\"global\\\"\\n\"");
@@ -345,6 +357,9 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpUserX/MpUserX.fun\\\" scope \\
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MpData/MpData.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/MpServer.fun\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpPackML/MpPackML.fun\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Global.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Temp/Includes/AS_TempDecl/Config1/GlobalComponents/MpComponents.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/operator/operator.var\\\" scope \\\"global\\\"\\n\"");
@@ -361,6 +376,8 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/brsystem/brsystem.var\\\" scope 
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/FileIO/FileIO.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/Libraries/DataObj/DataObj.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/AsBrStr/AsBrStr.var\\\" scope \\\"global\\\"\\n\"");
+__asm__(".ascii \"iecfile \\\"Logical/Libraries/MpServer/Constants.var\\\" scope \\\"global\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/AutoCtrl/AutoCtrl/Types.typ\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"Logical/AutoCtrl/AutoCtrl/Variables.var\\\" scope \\\"local\\\"\\n\"");
 __asm__(".ascii \"iecfile \\\"C:/Users/maskeu/Desktop/All/projects/ECamp/PrintMarkCC_LW3/Temp/Objects/Config1/X20CP0484/AutoCtrl/Main.st.var\\\" scope \\\"local\\\"\\n\"");

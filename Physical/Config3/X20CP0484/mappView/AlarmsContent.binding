@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="AlarmsContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="mapp" refId="gAlarmXCore" attribute="link" />
+<Target xsi:type="brease" contentRefId="AlarmsContent" widgetRefId="AlarmList" attribute="mpLink" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AlarmsX:iFb_AlarmX.ActiveAlarms" attribute="value" />
+<Target xsi:type="brease" contentRefId="AlarmsContent" widgetRefId="actalrmsNO" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AlarmsX:iFb_AlarmX.PendingAlarms" attribute="value" />
+<Target xsi:type="brease" contentRefId="AlarmsContent" widgetRefId="PndAlarmsNO" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

@@ -10,7 +10,6 @@
   <widget name="widgets.brease.CheckBox" />
   <widget name="widgets.brease.DataHandlerWidget" />
   <widget name="widgets.brease.DateTimeInput" />
-  <widget name="widgets.brease.DateTimeOutput" />
   <widget name="widgets.brease.DateTimePicker" />
   <widget name="widgets.brease.DialogWindow" />
   <widget name="widgets.brease.DropDownBox" />
@@ -25,6 +24,7 @@
   <widget name="widgets.brease.LoginInfo" />
   <widget name="widgets.brease.LogoutButton" />
   <widget name="widgets.brease.MessageBox" />
+  <widget name="widgets.brease.MomentaryPushButton" />
   <widget name="widgets.brease.NumericInput" />
   <widget name="widgets.brease.NumericOutput" />
   <widget name="widgets.brease.NumPad" />

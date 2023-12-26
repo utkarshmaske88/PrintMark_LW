@@ -24,11 +24,12 @@ ACTION Alarms:
 	
 	//Product without pritn mark limit exceeded alarm
 	IF pRegCapture.ProductsWithoutRM > LIMIT_ERROR_PRODUCT THEN
-		pAx_CamSeq.StartSequence 	 := FALSE;
-		pMasterAx.Power					 := FALSE;
-		pSlaveAx.Power					 := FALSE;
 		MpAlarmXSet(gAlarmXCore,'ErrorCutting');
-		iAutoCtrlState := enSTOP;
+		iAutoCtrlState 						:= enSTOP;
+		pAx_CamSeq.Enable:=FALSE;
+		pRegCapture.Enable:=FALSE;
+		pMasterAx.Power:=FALSE;
+		pSlaveAx.Power:=FALSE;
 	ELSE
 		MpAlarmXReset(gAlarmXCore,'ErrorCutting');
 	END_IF
@@ -53,8 +54,8 @@ ACTION Reset:
 			pMasterAx.ErrorReset 				:= TRUE;
 			pConvCtrl.Cmd.Start 				:= FALSE;
 			pCutterCtrl.Cmd.Start 				:= FALSE;
-			pAx_CamSeq.StartSequence 		:= FALSE;
-			iResetState:=enRESETTWO;
+			pAx_CamSeq.StartSequence 			:= FALSE;
+			iResetState						:=enRESETTWO;
 		enRESETTWO:
 
 			pMasterAx.ErrorReset 				:= FALSE;

@@ -16,6 +16,7 @@
 (*| V2.00.0   20/12/2023	 Maskeu        added automatic state							    Complete		 |*)
 (*| V3.00.0   21/12/2023	 Maskeu        added manual state									Complete		 |*)
 (*| V4.00.0   23/12/2023	 Maskeu        added cutting zone state								Complete	     |*)
+(*| V5.00.0   26/12/2023	 Maskeu        edited disable cutter zone 							Complete	     |*)
 
 PROGRAM _INIT
 	//Accessing Various Variables for Pointer references
@@ -76,12 +77,13 @@ PROGRAM _CYCLIC
 			pAx_CamSeq.ErrorReset					:=TRUE;
 			IF pMasterAx.IsHomed AND pSlaveAx.IsHomed THEN
 				pAx_CamSeq.ErrorReset				:=FALSE;
+				pAx_CamSeq.Enable						:=TRUE;
 				iAutoCtrlState						:=enAUTO;
 			END_IF
 		
 			//autoamtic mode
 		enAUTO:
-			IF pAx_CamSeq.Info.MasterReady=TRUE AND  pAx_CamSeq.Info.SlaveReady=TRUE AND pAx_CamSeq.StatusID=0 THEN
+			IF pAx_CamSeq.Info.MasterReady=TRUE AND  pAx_CamSeq.Info.SlaveReady=TRUE AND pAx_CamSeq.StatusID=0 AND pAx_CamSeq.Active THEN
 				pAx_CamSeq.StartSequence			:=TRUE;
 			END_IF;
 			
@@ -90,7 +92,7 @@ PROGRAM _CYCLIC
 			ELSE
 				pAx_CamSeq.ErrorReset				:=FALSE;
 			END_IF;
-		
+			
 			IF pAx_CamSeq.InSync = TRUE AND iAutoCtrl.Cmd.Start=TRUE THEN
 				iMi_StatusTxt						:= " In Run Mode - Auto Mode";
 				pMasterAx.MoveVelocity 				:= TRUE;
@@ -104,12 +106,14 @@ PROGRAM _CYCLIC
 					
 			//Disabled Cutter Cmd given
 			IF iAutoCtrl.Cmd.DisableCutter=TRUE THEN
-				iMi_StatusTxt := "Cutter Disabled is Pressed";
-				pAx_CamSeq.StartSequence 			:= FALSE;
 				pCutterCtrl.Cmd.Start 				:= FALSE;
-				pSlaveAx.Power		 			:= FALSE;
-				pSlaveAx.Enable 					:= FALSE;
-				iAutoCtrlState			 			:= enCUT_DISABLED;
+				iMi_StatusTxt := "Cutter Disabled is Pressed";
+				pSlaveAx.Power		 				:= FALSE;
+				pAx_CamSeq.StartSequence 			:= FALSE;
+				IF pSlaveAx.PowerOn = FALSE THEN
+					//pSlaveAx.Enable 					:= FALSE;
+					iAutoCtrlState			 			:= enCUT_DISABLED;
+				END_IF;
 			END_IF
 			
 		
@@ -169,18 +173,23 @@ PROGRAM _CYCLIC
 			//stopping all the fucniton
 		enSTOP:
 			iMi_StatusTxt							:="Machine has been stopped";
+			pMasterAx.MoveVelocity					:=FALSE;
+			pSlaveAx.MoveVelocity					:=FALSE;
 			iAutoCtrl.Cmd.Start						:=FALSE;
 			gMi_ModeConfirm							:=FALSE;
 			pMasterAx.Power							:=FALSE;
-			pMasterAx.Enable						:=FALSE;
 			pSlaveAx.Power							:=FALSE;
-			pSlaveAx.Enable							:=FALSE;
 			pConvCtrl.Cmd.Start						:=FALSE;
 			iAutoCtrl.Cmd.ChangeMode				:=FALSE;
 			iMi_CutModeSelected						:=FALSE;
 			pCutterCtrl.Cmd.Start					:=FALSE;
 			iAutoCtrl.Cmd.DisableCutter 			:= FALSE;
 			iAutoCtrl.Cmd.Stop 						:= FALSE;
+			pRegCapture.Enable:=TRUE;
+			pAx_CamSeq.StartSequence 	 			:= FALSE;
+			pAx_CamSeq.Enable:=FALSE;
+			pMasterAx.Enable						:=FALSE;
+			pSlaveAx.Enable							:=FALSE;
 			iAutoCtrlState 							:= enWAIT;
 		
 		enCUT_ZONE:
@@ -211,6 +220,11 @@ PROGRAM _CYCLIC
 	
 	//Cutting zone Logic
 	IF pSlaveAx.Position < UPPER_CUT_POS AND pSlaveAx.Position > LOWER_CUT_POS AND NOT iAutoCtrl.Cmd.AutoMode THEN
+		iAutoCtrlState := enCUT_ZONE;
+	END_IF
+		
+	//Cutting zone Logic
+	IF pSlaveAx.Position < 1213 AND pSlaveAx.Position > 853 AND NOT iAutoCtrl.Cmd.AutoMode THEN
 		iAutoCtrlState := enCUT_ZONE;
 	END_IF
 	

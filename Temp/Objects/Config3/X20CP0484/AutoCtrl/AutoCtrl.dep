@@ -1,0 +1,14 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/MC_RegMa/MC_RegMa.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/MC_RegMa/MC_RegMa.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAlarmX/MpAlarmX.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.fun
+$(AS_PROJECT_PATH)/Logical/AutoCtrl/AutoCtrl/Variables.var
+$(AS_PROJECT_PATH)/Logical/Libraries/MpBase/MpBase.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxisError.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.fun
+$(AS_PROJECT_PATH)/Logical/AutoCtrl/AutoCtrl/Types.typ
+$(AS_PROJECT_PATH)/Physical/Config3/X20CP0484/mappServices/Alarms.mpalarmxcore
+$(AS_PROJECT_PATH)/Logical/Global.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/Acp10_MC/acp10_mc.typ
+$(AS_PROJECT_PATH)/Logical/Global.var

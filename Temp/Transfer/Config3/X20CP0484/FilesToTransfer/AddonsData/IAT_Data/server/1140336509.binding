@@ -89,15 +89,6 @@
 
 
 
-<Content id="ManualContent"><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="value" />
-<Target xsi:type="brease" refId="ManualContent_SliderSlavePos" attribute="value" />
-</Binding><Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.Position" attribute="editable" />
-<Target xsi:type="brease" refId="ManualContent_SliderSlavePos" attribute="editable::value" />
-</Binding></Content>
-
-
 
 <Content id="ManualContent"><Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::Cutter:iMI_CutActSpeed" attribute="value" />
@@ -116,6 +107,36 @@
 <Content id="ManualContent"><Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::Cutter:iFb_AxisSlave.IsHomed" attribute="value" />
 <Target xsi:type="brease" refId="ManualContent_ishomeILIL" attribute="selectedIndex" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_btnCutStart" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Start" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_btnCutStart" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Reset" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_ResetTB" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCtrl:iAutoCtrl.Cmd.Reset" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_ResetTB" attribute="editable::value" />
+</Binding></Content>
+
+
+
+<Content id="ManualContent"><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_SlaveAx.Position" attribute="value" />
+<Target xsi:type="brease" refId="ManualContent_SliderSlavePos" attribute="value" />
+</Binding><Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Cutter:iFb_SlaveAx.Position" attribute="editable" />
+<Target xsi:type="brease" refId="ManualContent_SliderSlavePos" attribute="editable::value" />
 </Binding></Content>
 
 

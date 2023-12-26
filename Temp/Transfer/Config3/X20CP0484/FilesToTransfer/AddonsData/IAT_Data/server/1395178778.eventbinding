@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingDefinition xmlns="http://www.br-automation.com/iat2014/eventbinding/runtime/v2">
+  <Content id="AxisSetContent">
+    <EventBinding id="AxisSetContent.btnAxCtrl.Click">
+      <Source type="widgets.brease.Button.Event" event="Click" refId="AxisSetContent_btnAxCtrl" />
+      <EventHandler>
+        <Action>
+          <Target type="clientSystem.Action">
+            <Method type="clientSystem.Action.LoadContentInArea"><Parameter name="contentId" xsi:type="ANY_STRING" value="AxCtrlContent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /><Parameter name="pageId" xsi:type="ANY_STRING" value="MainPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /><Parameter name="areaId" xsi:type="ANY_STRING" value="MainArea" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+  <Content id="AxisSetContent">
+    <EventBinding id="AxisSetContent.btnMnaulMode.Click">
+      <Source type="widgets.brease.Button.Event" event="Click" refId="AxisSetContent_btnMnaulMode" />
+      <EventHandler>
+        <Action>
+          <Target type="clientSystem.Action">
+            <Method type="clientSystem.Action.LoadContentInArea"><Parameter name="contentId" xsi:type="ANY_STRING" value="ManualContent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /><Parameter name="pageId" xsi:type="ANY_STRING" value="MainPage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /><Parameter name="areaId" xsi:type="ANY_STRING" value="MainArea" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Content>
+</EventBindingDefinition>

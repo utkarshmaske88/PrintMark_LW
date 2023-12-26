@@ -1,8 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-#ifndef _BUR_1703483111_8_
-#define _BUR_1703483111_8_
+#ifndef _BUR_1703598611_8_
+#define _BUR_1703598611_8_
 
 #include <bur/plctypes.h>
 
@@ -70,5 +70,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/MC_RegMa/MC_RegMa.fun\\\" scope 
 __asm__(".previous");
 
 
-#endif /* _BUR_1703483111_8_ */
+#endif /* _BUR_1703598611_8_ */
 

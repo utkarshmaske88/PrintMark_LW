@@ -5,8 +5,8 @@
       <Source type="widgets.brease.Button.Event" event="Click" refId="AlarmsContent_cmdAcknowledge" />
       <EventHandler>
         <Action>
-          <Target type="opcUa.NodeAction" refId="::AlarmsX:iUIConnectCore.Acknowledge">
-            <Method type="opcUa.NodeAction.SetValueBool"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.AlarmList.Action" refId="AlarmsContent_AlarmList">
+            <Method type="widgets.brease.AlarmList.Action.Acknowledge" />
           </Target>
         </Action>
       </EventHandler>
@@ -17,8 +17,8 @@
       <Source type="widgets.brease.Button.Event" event="Click" refId="AlarmsContent_cmdAckAll" />
       <EventHandler>
         <Action>
-          <Target type="opcUa.NodeAction" refId="::AlarmsX:iUIConnectCore.AcknowledgeAll">
-            <Method type="opcUa.NodeAction.SetValueBool"><Parameter name="value" xsi:type="BOOL" value="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /></Method>
+          <Target type="widgets.brease.AlarmList.Action" refId="AlarmsContent_AlarmList">
+            <Method type="widgets.brease.AlarmList.Action.AcknowledgeAll" />
           </Target>
         </Action>
       </EventHandler>

@@ -10,6 +10,7 @@
     <BindingsSet refId="1140336509" />
     <BindingsSet refId="-672976991" />
     <BindingsSet refId="1843764047" />
+    <BindingsSet refId="-1275084005" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="1744482635" />
@@ -19,6 +20,7 @@
     <EventBindingsSet refId="455490023" />
     <EventBindingsSet refId="-1782208869" />
     <EventBindingsSet refId="1395178778" />
+    <EventBindingsSet refId="-1454112319" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="Animation" />

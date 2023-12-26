@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.12.4.107 SP?>
 <InitParameter Version="5.23.1" NcSwId="ACP10">
   <Group ID="ACP10AXIS_typ">
     <Group ID="dig_in">
@@ -44,7 +43,7 @@
     <Group ID="controller">
       <Parameter ID="mode" Value="ncPOSITION + ncFF" />
       <Group ID="position">
-        <Parameter ID="kv" Value="241.0" />
+        <Parameter ID="kv" Value="295.0" />
         <Parameter ID="tn" Value="0.0" />
         <Parameter ID="t_predict" Value="0.0004" />
         <Parameter ID="t_total" Value="0.0004" />
@@ -52,7 +51,7 @@
         <Parameter ID="i_max" Value="0.0" />
       </Group>
       <Group ID="speed">
-        <Parameter ID="kv" Value="0.55" />
+        <Parameter ID="kv" Value="0.6" />
         <Parameter ID="tn" Value="0.0" />
         <Parameter ID="t_filter" Value="0.0" />
         <Group ID="isq_filter1">
@@ -97,10 +96,10 @@
       <Group ID="ff">
         <Parameter ID="mode" Value="ncSTANDARD" />
         <Parameter ID="torque_load" Value="0.0" />
-        <Parameter ID="torque_pos" Value="0.0" />
-        <Parameter ID="torque_neg" Value="0.0" />
-        <Parameter ID="kv_torque" Value="0.00398844" />
-        <Parameter ID="inertia" Value="0.00010255" />
+        <Parameter ID="torque_pos" Value="0.00623549" />
+        <Parameter ID="torque_neg" Value="0.00399368" />
+        <Parameter ID="kv_torque" Value="0.0016169" />
+        <Parameter ID="inertia" Value="9.44476E-05" />
         <Parameter ID="t_filter_a" Value="0.0" />
       </Group>
       <Group ID="fb">
